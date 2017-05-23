@@ -23,7 +23,13 @@
                         {% if prop[1].format %}
                             {{prop[1].format}}<br>
                         {% elsif prop[1].enum %}
-                            <a href="/{{page.product}}/enums/{{prop[1]['x-enum-type']}}">{{prop[1]["x-enum-type"]}}</a><br>
+                            Enum:<br>
+                            <!--
+                            TODO(DX-347): will need ticket to implement enum pages before uncommenting these links
+                            <a href="/{{page.product}}/enums/{{prop[1]['x-enum-type']}}">{{prop[1]["x-enum-type"]}}</a><br>-->
+                            {% for enum in prop[1]["enum"] %}
+                                &nbsp;&nbsp;&nbsp;{{enum}}<br>
+                            {% endfor %}
                         {% elsif prop[1].type == "array" %}
                             {% assign ref = prop[1].items["$ref"] | split:"/" | last %}
                             <a href="/{{page.product}}/models/{{ref}}">{{ref}}</a><br>
@@ -48,7 +54,7 @@
                 </td>
                 <td>
                     {{prop[1].description}}
-                    {% if prop[1].example %}
+                    {% if prop[1].example and prop[1].type != "array" %}
                         <br><br>
                         <b>Example:</b>
                         <br>
