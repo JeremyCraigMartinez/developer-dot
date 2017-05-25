@@ -66,7 +66,7 @@ redcarpet:
         'hardwrap'
     ]
 
-paginate: 9
+paginate: 8
 paginate_path: "/blog/page:num/"
 
 # applies to _posts only for some reason
@@ -75,3 +75,15 @@ excerpt_separator: <!--more-->
 
 collections:
     permalink: :basename/
+    
+## Jekyll Archives configuration
+jekyll-archives:
+  enabled: 
+    - categories
+  layouts:
+    category: archive-tag
+  permalinks:
+    category: 'blog/:name/'
+    
+    
+
