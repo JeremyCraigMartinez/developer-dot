@@ -1,8 +1,9 @@
 /* eslint no-console:0 */
-const fs = require('fs');
-const yaml = require('js-yaml');
-const mkdirp = require('mkdirp');
-const path = require('path');
+import fs from 'fs';
+import yaml from 'js-yaml';
+import mkdirp from 'mkdirp';
+import path from 'path';
+import SWAGGER_CONFIG from './SWAGGER_CONFIG';
 
 const dataDir = `${__dirname}/../_data/swagger`;
 
@@ -18,51 +19,67 @@ const loadFile = function(file) {
     return {};
 };
 
-const writeHtml = function(dir, modelName, html) {
-    mkdirp(dir, (error) => {
-        if (error) {
-            console.log(error);
-            return;
-        }
-        fs.writeFile(`${dir}/${modelName}.html`, html, function(err) {
-            if (err) {
-                console.log(err);
-            }
-        });
-    });
-};
-
-const buildHtml = function(fileName, parsedContents) {
-    const defs = parsedContents.definitions || {};
-
-    Object.keys(defs).forEach((def) => {
-        const prettyJson = JSON.stringify(defs[def].example, null, 4);
-        const trimmedFilePath = fileName.substr(`${dataDir}/`.length);
-
-        /* used in combination with `fields` to access swagger
-         * data linked in _data folder
-         */
-        let basename = path.basename(trimmedFilePath);
-
-        basename = basename.substr(0, basename.lastIndexOf('.'));
-
-        /* used for bracket notation of dynamic length
-         * some key values cannot be accessed by dot notation
-         * i.e. trustfile["api.trustfile"]
-         */
-        let fields = trimmedFilePath.split('/');
-
-        fields.pop();
-        fields = `["${fields.join('"]["')}"]["${basename}"]`;
-
-        const product = trimmedFilePath.substr(0, trimmedFilePath.lastIndexOf('/'));
-        const siteDir = `${__dirname}/../${product}/models`;
-
-        const html = `---
+const writeDirectoryIndex = function(dir, defs, product, apiName) {
+    let table = `---
 layout: default
 title: "API Console"
 api_console: 1
-api_name: Avatax REST API v2
+api_name: ${apiName}
+nav: apis
+product: ${product}
+doctype: api_references
+endpoint_links: []
+---
+
+<h1>{{page.api_name}} - Models</h1>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Summary</th>
+        </tr>
+    </thead>
+    <tbody>
+`;
+
+    Object.keys(defs).forEach((def) => {
+        table = `${table}
+        <tr>
+            <td><a href="${encodeURIComponent(def)}">${def}</a></td>
+            <td>${defs[def].description || ''}</td>
+        </tr>`;
+    });
+
+    table = `${table}
+    </tbody>
+</table>
+<br>`;
+
+    fs.writeFile(`${dir}/index.html`, table);
+};
+
+const writeHtml = function(dir, defs, product, fields, apiName) {
+    // write directory where all models will be written
+    mkdirp(dir, (error) => {
+        if (error) {
+            console.log(`Error writing directory: ${error}`);
+            return;
+        }
+
+        // write index for entire directory
+        writeDirectoryIndex(dir, defs, product, apiName);
+
+        Object.keys(defs).forEach((def) => {
+            let prettyJson = JSON.stringify(defs[def].example, null, 4);
+
+            prettyJson = (prettyJson) ? prettyJson.replace("'", '') : prettyJson;
+
+            const html = `---
+layout: default
+title: "API Console"
+api_console: 1
+api_name: ${apiName}
 nav: apis
 product: ${product}
 doctype: api_references
@@ -76,8 +93,47 @@ endpoint_links: []
 {% include models.html name=name ${(prettyJson) ? 'examplePretty=ep' : ''} model=model_ %}
 `;
 
-        writeHtml(siteDir, def, html);
+            fs.writeFile(`${dir}/${def}.html`, html, function(err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
+        });
     });
+};
+
+const buildHtml = function(fileName, api) {
+    const defs = api.definitions || {};
+    const trimmedFilePath = fileName.substr(`${dataDir}/`.length);
+
+    /* used in combination with `fields` to access swagger
+     * data linked in _data folder
+     */
+    const product = trimmedFilePath.substr(0, trimmedFilePath.lastIndexOf('/'));
+    let basename = path.basename(trimmedFilePath);
+    let apiName;
+
+    try {
+        apiName = SWAGGER_CONFIG[`${product}/${basename}`].name;
+    } catch (e) {
+        // TODO(DX-347): no config for avataxbr index.json and default-api.json
+        return;
+    }
+
+    basename = basename.substr(0, basename.lastIndexOf('.'));
+
+    /* used for bracket notation of dynamic length
+     * some key values cannot be accessed by dot notation
+     * i.e. trustfile["api.trustfile"]
+     */
+    let fields = trimmedFilePath.split('/');
+
+    fields.pop();
+    fields = `["${fields.join('"]["')}"]["${basename}"]`;
+
+    const siteDir = `${__dirname}/../${product}/${basename}/models`;
+
+    writeHtml(siteDir, defs, product, fields, apiName);
 };
 
 const fsReadRecursive = function(fileOrDir) {
@@ -100,6 +156,6 @@ const fsReadRecursive = function(fileOrDir) {
     });
 };
 
-fs.link(`${__dirname}/../dynamic/swagger`, dataDir, function() {
+fs.symlink(`${__dirname}/../dynamic/swagger`, dataDir, function() {
     fsReadRecursive(dataDir);
 });
