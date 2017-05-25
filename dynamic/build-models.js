@@ -69,10 +69,11 @@ doctype: api_references
 endpoint_links: []
 ---
 
-{% assign model_ = site.data.swagger${fields}.definitions["${def}"] %}
+{% assign name = "${def}" %}
+{% assign model_ = site.data.swagger${fields}.definitions[name] %}
 {% assign ep = '${prettyJson}' %}
 
-{% include models.html name="${def}" ${(prettyJson) ? 'examplePretty=ep' : ''} model=model_ %}
+{% include models.html name=name ${(prettyJson) ? 'examplePretty=ep' : ''} model=model_ %}
 `;
 
         writeHtml(siteDir, def, html);
