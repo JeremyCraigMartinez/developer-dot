@@ -36,9 +36,16 @@ TODO(DX-347): split into sub task from this ticket
                         {% elsif prop[1].type == "array" %}
                             {% assign ref = prop[1].items["$ref"] | split:"/" | last %}
                             <a href="/{{page.product}}/models/{{ref}}">{{ref}}</a><br>
+                        {% elsif prop[1].type == "object" %}
+                            {% assign ref = prop[1]["$ref"] | split:"/" | last %}
+                            <a href="/{{page.product}}/models/{{ref}}">{{ref}}</a><br>
                         {% else %}
                             {{prop[1].type}}<br>
                         {% endif %}
+                    {% else %}
+                        <!-- Props without a type are objects, also want to link to these -->
+                        {% assign ref = prop[1]["$ref"] | split:"/" | last %}
+                        <a href="/{{page.product}}/models/{{ref}}">{{ref}}</a><br>
                     {% endif %}
                     {% assign is_required = false %}
                     {% for field in include.model.required %}
