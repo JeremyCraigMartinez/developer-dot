@@ -109,13 +109,14 @@ const buildHtml = function(fileName, api) {
     /* used in combination with `fields` to access swagger
      * data linked in _data folder
      */
-    let product;
+    const keyName = trimmedFilePath.substr(0, trimmedFilePath.lastIndexOf('/'));
     let basename = path.basename(trimmedFilePath);
     let apiName;
+    let product;
 
     try {
-        product = SWAGGER_CONFIG[`${product}/${basename}`].product;
-        apiName = SWAGGER_CONFIG[`${product}/${basename}`].name;
+        product = SWAGGER_CONFIG[`${keyName}/${basename}`].product;
+        apiName = SWAGGER_CONFIG[`${keyName}/${basename}`].name;
     } catch (e) {
         // TODO(DX-347): no config for avataxbr index.json and default-api.json
         return;
