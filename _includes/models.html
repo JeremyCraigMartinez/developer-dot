@@ -1,0 +1,75 @@
+<h1>{{include.name}}</h1>
+<h2 id="description">Description</h2>
+<p>{{include.model.description}}</p>
+<!--
+TODO(DX-347): split into sub task from this ticket
+<h2 id="references">References</h2>
+<p>This model is used in the following APIs:</p>
+-->
+<ul class="normal"></ul>
+<h2 id="fields">Fields</h2>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>Attributes</th>
+            <th>Summary</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for prop in include.model.properties %}
+            <tr>
+                <td>{{prop[0]}}</td>
+                <td>
+                    {% if prop[1].type %}
+                        {% if prop[1].format %}
+                            {{prop[1].format}}<br>
+                        {% elsif prop[1].enum %}
+                            Enum:<br>
+                            <!--
+                            TODO(DX-347): will need ticket to implement enum pages before uncommenting these links
+                            <a href="/{{page.product}}/enums/{{prop[1]['x-enum-type']}}">{{prop[1]["x-enum-type"]}}</a><br>-->
+                            {% for enum in prop[1]["enum"] %}
+                                &nbsp;&nbsp;&nbsp;{{enum}}<br>
+                            {% endfor %}
+                        {% elsif prop[1].type == "array" %}
+                            {% assign ref = prop[1].items["$ref"] | split:"/" | last %}
+                            <a href="/{{page.product}}/models/{{ref}}">{{ref}}</a><br>
+                        {% else %}
+                            {{prop[1].type}}<br>
+                        {% endif %}
+                    {% endif %}
+                    {% assign is_required = false %}
+                    {% for field in include.model.required %}
+                        {% if field == prop[0] %}
+                            {% assign is_required = true %}
+                        {% endif %}
+                    {% endfor %}
+                    {% if is_required %}
+                        Required<br>
+                    {% else %}
+                        Optional<br>
+                    {% endif %}
+                    {% if prop[1].readOnly %}Read Only<br>{% endif %}
+                    {% if prop[1].maxLength %}Maximum Length: {{prop[1].maxLength}}<br>{% endif %}
+                    {% if prop[1].minLength %}Minimum Length: {{prop[1].minLength}}<br>{% endif %}
+                </td>
+                <td>
+                    {{prop[1].description}}
+                    {% if prop[1].example and prop[1].type != "array" %}
+                        <br><br>
+                        <b>Example:</b>
+                        <br>
+                        <pre class="highlight">{{prop[1].example}}</pre>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+</table>
+{% if include.examplePretty %}
+    <h2 id="example-addressresolutionmodel">Example {{name}}</h2>
+    <pre class="highlight">{{include.examplePretty}}</pre>
+{% endif %}
+<p><br></p>

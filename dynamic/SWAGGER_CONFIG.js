@@ -9,12 +9,12 @@ export default {
         path: 'avatax/api-reference/account/soap',
         product: 'avaTax'
     },
-    'avatax/rest.yaml': {
+    'avatax/rest-v1.yaml': {
         name: 'Avatax REST API',
         path: 'avatax/api-reference/tax/v1',
         product: 'avaTax'
     },
-    'avatax/v2/rest.json': {
+    'avatax/rest-v2.json': {
         name: 'Avatax REST API v2',
         path: 'avatax/api-reference/tax/v2',
         product: 'avaTax'
@@ -59,17 +59,17 @@ export default {
         path: 'avatax/api-reference/onboarding/v1',
         product: 'avaTax'
     },
-    'trustfile/api.trustfile/swagger.yaml': {
+    'trustfile/api.trustfile.yaml': {
         name: 'Trustfile - Core',
         path: 'trustfile/api-reference/core/v3',
         product: 'trustFile'
     },
-    'trustfile/app.trustfile/swagger.yaml': {
+    'trustfile/app.trustfile.yaml': {
         name: 'Trustfile - Provisioning',
         path: 'trustfile/api-reference/provisioning/v3',
         product: 'trustFile'
     },
-    'trustfile/connector-microservice/swagger.yaml': {
+    'trustfile/connector-microservice.yaml': {
         name: 'Trustfile - Connector',
         path: 'trustfile/api-reference/connector-management/v3',
         product: 'trustFile'
