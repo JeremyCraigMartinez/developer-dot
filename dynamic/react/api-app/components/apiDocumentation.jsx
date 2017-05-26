@@ -1,34 +1,104 @@
 import React from 'react';
+import url from 'url';
 
-import ApiDocumentationItem from './apiDocumentationItem';
-
-const DOC_TYPES = {
-    REQUEST: 'REQUEST',
-    RESPONSE: 'RESPONSE'
-};
-
-const ApiDocumentation = (props) => (
+const ApiDocumentation = ({endpoint}) => (
     <div>
-        <h4 className={'api-doc-header'}>{props.documentationFor === DOC_TYPES.REQUEST ? 'Post Body Parameters' : 'Response'}<span>{props.requestOrResponseSchema.fieldType && props.requestOrResponseSchema.fieldType === 'array' ? '[Array]' : ''}</span></h4>
-        <ApiDocumentationItem
-            canRemove={false}
-            displayName={'Post Body Parameters'}
-            documentationFor={props.documentationFor}
-            endpointId={props.endpointId}
-            isRoot={true}
-            item={props.requestOrResponseSchema}
-            name={''}
-            nestingLevel={0}
-        />
+        <h1>{endpoint.operationId}</h1>
+        <table className='styled-table'>
+            <thead>
+                <tr>
+                    <th>{'API'}</th>
+                    <td>{endpoint.operationId}</td>
+                </tr>
+                <tr>
+                    <th>{'Purpose'}</th>
+                    <td>{endpoint.name}</td>
+                </tr>
+                <tr>
+                    <th>{'HTTP Verb'}</th>
+                    <td>{endpoint.action.toUpperCase()}</td>
+                </tr>
+                <tr>
+                    <th>{'REST Path'}</th>
+                    <td>{decodeURI(url.parse(endpoint.path).pathname)}</td>
+                </tr>
+                <tr>
+                    <th>{'URL (Sandbox)'}</th>
+                    <td>{endpoint.path}</td>
+                </tr>
+                <tr>
+                    <th>{'URL (Production)'}</th>
+                    <td>{endpoint.path.replace('sandbox-', '')}</td>
+                </tr>
+                <tr>
+                    <th>{'Query String'}</th>
+                    <td>{(endpoint.queryString) ? '?' : ''}{Object.keys(endpoint.queryString || {}).join('&')}</td>
+                </tr>
+                <tr>
+                    <th>{'Response Type'}</th>
+                    <td>{(endpoint.responseSchemaWithRefs && endpoint.responseSchemaWithRefs.schema.$ref) ?
+                        <a href='#'>{endpoint.responseSchemaWithRefs.schema.$ref.split('/').pop()}</a> : null
+                    }</td>
+                </tr>
+                <tr>
+                    <th>{'Content-Type'}</th>
+                    <td>{endpoint.produces.join(', ')}</td>
+                </tr>
+            </thead>
+        </table>
+        <h3 id='description'>{'Description'}</h3>
+        <p>{endpoint.description}</p>
+        <h3 id='parameters'>{'Parameters'}</h3>
+        <table className='styled-table'>
+            <thead>
+                <tr>
+                    <th>{'Location'}</th>
+                    <th>{'Parameter'}</th>
+                    <th>{'Attributes'}</th>
+                    <th>{'Summary'}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {Object.keys(endpoint.pathParams || {}).map((param) => {
+                    return (<tr>
+                        <td>{'UriPath'}</td>
+                        <td>{param}</td>
+                        <td>{(endpoint.pathParams[param].required) ? 'Required' : 'Optional'}{', '}{endpoint.pathParams[param].fieldType}</td>
+                        <td>{endpoint.pathParams[param].description}</td>
+                    </tr>);
+                })}
+                {Object.keys(endpoint.headerParams || {}).map((param) => {
+                    return (<tr>
+                        <td>{'Header'}</td>
+                        <td>{param}</td>
+                        <td>{(endpoint.headerParams[param].required) ? 'Required' : 'Optional'}{', '}{endpoint.headerParams[param].fieldType}</td>
+                        <td>{endpoint.headerParams[param].description}</td>
+                    </tr>);
+                })}
+                {Object.keys(endpoint.queryString || {}).map((param) => {
+                    return (<tr>
+                        <td>{'QueryString'}</td>
+                        <td>{param}</td>
+                        <td>{(endpoint.queryString[param].required) ? 'Required' : 'Optional'}{', '}{endpoint.queryString[param].fieldType}</td>
+                        <td>{endpoint.queryString[param].description}</td>
+                    </tr>);
+                })}
+                {(endpoint.requestSchemaWithRefs) ?
+                    <tr>
+                        <td>{'RequestBody'}</td>
+                        <td>{endpoint.requestSchemaWithRefs.name}</td>
+                        <td>{(endpoint.requestSchemaWithRefs.required) ? 'Required' : 'Optional'}{', '}{(endpoint.requestSchemaWithRefs.schema.$ref) ? <a href='#'>{endpoint.requestSchemaWithRefs.schema.$ref.split('/').pop()}</a> : null}</td>
+                        <td>{endpoint.requestSchemaWithRefs.description}</td>
+                    </tr> : null
+                }
+            </tbody>
+        </table>
     </div>
 );
 
 ApiDocumentation.displayName = 'API Documentation';
 ApiDocumentation.propTypes = {
-    documentationFor: React.PropTypes.oneOf([DOC_TYPES.REQUEST, DOC_TYPES.RESPONSE]),
-    endpointId: React.PropTypes.number.isRequired,
-    name: React.PropTypes.string.isRequired,
-    requestOrResponseSchema: React.PropTypes.object.isRequired
+    endpoint: React.PropTypes.object
 };
 
 export default ApiDocumentation;
