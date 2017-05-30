@@ -1,5 +1,6 @@
 import React from 'react';
 import url from 'url';
+import ReactMarkdown from 'react-markdown';
 
 const ApiDocumentation = ({endpoint}) => (
     <div>
@@ -49,7 +50,7 @@ const ApiDocumentation = ({endpoint}) => (
             </thead>
         </table>
         <h3 id='description'>{'Description'}</h3>
-        <p>{endpoint.description}</p>
+        <ReactMarkdown source={endpoint.description} />
         <h3 id='parameters'>{'Parameters'}</h3>
         <table className='styled-table'>
             <thead>
@@ -66,7 +67,7 @@ const ApiDocumentation = ({endpoint}) => (
                         <td>{'UriPath'}</td>
                         <td>{param}</td>
                         <td>{(endpoint.pathParams[param].required) ? 'Required' : 'Optional'}{', '}{endpoint.pathParams[param].fieldType}</td>
-                        <td>{endpoint.pathParams[param].description}</td>
+                        <td><ReactMarkdown source={endpoint.pathParams[param].description} /></td>
                     </tr>);
                 })}
                 {Object.keys(endpoint.headerParams || {}).map((param) => {
@@ -74,7 +75,7 @@ const ApiDocumentation = ({endpoint}) => (
                         <td>{'Header'}</td>
                         <td>{param}</td>
                         <td>{(endpoint.headerParams[param].required) ? 'Required' : 'Optional'}{', '}{endpoint.headerParams[param].fieldType}</td>
-                        <td>{endpoint.headerParams[param].description}</td>
+                        <td><ReactMarkdown source={endpoint.headerParams[param].description} /></td>
                     </tr>);
                 })}
                 {Object.keys(endpoint.queryString || {}).map((param) => {
@@ -82,7 +83,7 @@ const ApiDocumentation = ({endpoint}) => (
                         <td>{'QueryString'}</td>
                         <td>{param}</td>
                         <td>{(endpoint.queryString[param].required) ? 'Required' : 'Optional'}{', '}{endpoint.queryString[param].fieldType}</td>
-                        <td>{endpoint.queryString[param].description}</td>
+                        <td><ReactMarkdown source={endpoint.queryString[param].description} /></td>
                     </tr>);
                 })}
                 {(endpoint.requestSchemaWithRefs) ?
