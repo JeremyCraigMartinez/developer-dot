@@ -37,8 +37,10 @@ const ApiDocumentation = ({endpoint}) => (
                 <tr>
                     <th>{'Response Type'}</th>
                     <td>{(endpoint.responseSchemaWithRefs && endpoint.responseSchemaWithRefs.schema.$ref) ?
-                        <a href='#'>{endpoint.responseSchemaWithRefs.schema.$ref.split('/').pop()}</a> : null
-                    }</td>
+                        <a href={`/{{page.modelsPath}}/${encodeURI(endpoint.responseSchemaWithRefs.schema.$ref.split('/').pop())}`}>
+                            {endpoint.responseSchemaWithRefs.schema.$ref.split('/').pop()}
+                        </a> : null}
+                    </td>
                 </tr>
                 <tr>
                     <th>{'Content-Type'}</th>
@@ -87,7 +89,11 @@ const ApiDocumentation = ({endpoint}) => (
                     <tr>
                         <td>{'RequestBody'}</td>
                         <td>{endpoint.requestSchemaWithRefs.name}</td>
-                        <td>{(endpoint.requestSchemaWithRefs.required) ? 'Required' : 'Optional'}{', '}{(endpoint.requestSchemaWithRefs.schema.$ref) ? <a href='#'>{endpoint.requestSchemaWithRefs.schema.$ref.split('/').pop()}</a> : null}</td>
+                        <td>{(endpoint.requestSchemaWithRefs.required) ? 'Required' : 'Optional'}{', '}{(endpoint.requestSchemaWithRefs.schema.$ref) ?
+                            <a href={`/{{page.modelsPath}}/${encodeURI(endpoint.requestSchemaWithRefs.schema.$ref.split('/').pop())}`}>
+                                {endpoint.requestSchemaWithRefs.schema.$ref.split('/').pop()}
+                            </a> : null}
+                        </td>
                         <td>{endpoint.requestSchemaWithRefs.description}</td>
                     </tr> : null
                 }

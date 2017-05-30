@@ -81,6 +81,7 @@ ${tagName ? `tag_name: ${tagName}` : ''}
 nav: apis
 product: ${product}
 doctype: api_references
+modelsPath: ${fileName.substr(0, fileName.lastIndexOf('.'))}/models
 endpoint_links: [
     ${endpointLinks}
 ]
