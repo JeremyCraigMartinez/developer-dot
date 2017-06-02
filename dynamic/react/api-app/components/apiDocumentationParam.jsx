@@ -2,7 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
 const ApiDocumentationParam = ({params, type}) => (
-    <div>
+    <tbody>
 
         {Object.keys(params || {}).map((param) => {
             return (<tr>
@@ -16,7 +16,7 @@ const ApiDocumentationParam = ({params, type}) => (
                 <td><ReactMarkdown source={params[param].description} /></td>
             </tr>);
         })}
-    </div>
+    </tbody>
 );
 
 ApiDocumentationParam.displayName = 'API Documentation';

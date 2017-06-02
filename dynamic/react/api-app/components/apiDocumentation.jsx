@@ -2,10 +2,11 @@ import React from 'react';
 import url from 'url';
 import ReactMarkdown from 'react-markdown';
 import ApiDocumentationParam from './apiDocumentationParam';
+import ApiDocModelLink from './apiDocModelLink';
 
 const ApiDocumentation = ({endpoint}) => (
     <div>
-        <h1 id={endpoint.operationId}>{endpoint.operationId}</h1>
+        <h1 id={endpoint.operationId}>{endpoint.name || endpoint.operationId}</h1>
         <table className='styled-table'>
             <thead>
                 <tr>
@@ -38,10 +39,8 @@ const ApiDocumentation = ({endpoint}) => (
                 </tr>
                 <tr>
                     <th>{'Response Type'}</th>
-                    <td>{(endpoint.responseSchemaWithRefs && endpoint.responseSchemaWithRefs.schema.$ref) ?
-                        <a href={`/{{page.modelsPath}}/${encodeURI(endpoint.responseSchemaWithRefs.schema.$ref.split('/').pop())}`}>
-                            {endpoint.responseSchemaWithRefs.schema.$ref.split('/').pop()}
-                        </a> : null}
+                    <td>
+                        <ApiDocModelLink refSchema={endpoint.responseSchemaWithRefs} />
                     </td>
                 </tr>
                 <tr>
@@ -62,27 +61,24 @@ const ApiDocumentation = ({endpoint}) => (
                     <th>{'Summary'}</th>
                 </tr>
             </thead>
-            <tbody>
-                <ApiDocumentationParam params={endpoint.pathParams} type={'UriPath'} />
-                <ApiDocumentationParam params={endpoint.headerParams} type={'Header'} />
-                <ApiDocumentationParam params={endpoint.queryString} type={'QueryString'} />
-                {(endpoint.requestSchemaWithRefs) ?
+            <ApiDocumentationParam params={endpoint.pathParams} type={'UriPath'} />
+            <ApiDocumentationParam params={endpoint.headerParams} type={'Header'} />
+            <ApiDocumentationParam params={endpoint.queryString} type={'QueryString'} />
+            {endpoint.requestSchemaWithRefs ?
+                <tbody>
                     <tr>
                         <td>{'RequestBody'}</td>
-                        <td>{endpoint.requestSchemaWithRefs.name}</td>
+                        <td>{'Model'}</td>
                         <td>
-                            {(endpoint.requestSchemaWithRefs.required) ? 'Required' : 'Optional'}
-                            {', '}
-                            {(endpoint.requestSchemaWithRefs.schema.$ref) ?
-                                <a href={`/{{page.modelsPath}}/${encodeURI(endpoint.requestSchemaWithRefs.schema.$ref.split('/').pop())}`}>
-                                    {endpoint.requestSchemaWithRefs.schema.$ref.split('/').pop()}
-                                </a> : null
-                            }
+                            <ApiDocModelLink refSchema={endpoint.requestSchemaWithRefs} />
                         </td>
-                        <td>{endpoint.requestSchemaWithRefs.description}</td>
-                    </tr> : null
-                }
-            </tbody>
+                        <td>
+                            {endpoint.requestSchemaWithRefs.description || null}
+                        </td>
+                    </tr>
+                </tbody> :
+                null
+            }
         </table>
     </div>
 );
