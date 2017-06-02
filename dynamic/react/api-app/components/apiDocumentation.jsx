@@ -1,10 +1,11 @@
 import React from 'react';
 import url from 'url';
 import ReactMarkdown from 'react-markdown';
+import ApiDocumentationParam from './apiDocumentationParam';
 
 const ApiDocumentation = ({endpoint}) => (
     <div>
-        <h1>{endpoint.operationId}</h1>
+        <h1 id={endpoint.operationId}>{endpoint.operationId}</h1>
         <table className='styled-table'>
             <thead>
                 <tr>
@@ -62,38 +63,21 @@ const ApiDocumentation = ({endpoint}) => (
                 </tr>
             </thead>
             <tbody>
-                {Object.keys(endpoint.pathParams || {}).map((param) => {
-                    return (<tr>
-                        <td>{'UriPath'}</td>
-                        <td>{param}</td>
-                        <td>{(endpoint.pathParams[param].required) ? 'Required' : 'Optional'}{', '}{endpoint.pathParams[param].fieldType}</td>
-                        <td><ReactMarkdown source={endpoint.pathParams[param].description} /></td>
-                    </tr>);
-                })}
-                {Object.keys(endpoint.headerParams || {}).map((param) => {
-                    return (<tr>
-                        <td>{'Header'}</td>
-                        <td>{param}</td>
-                        <td>{(endpoint.headerParams[param].required) ? 'Required' : 'Optional'}{', '}{endpoint.headerParams[param].fieldType}</td>
-                        <td><ReactMarkdown source={endpoint.headerParams[param].description} /></td>
-                    </tr>);
-                })}
-                {Object.keys(endpoint.queryString || {}).map((param) => {
-                    return (<tr>
-                        <td>{'QueryString'}</td>
-                        <td>{param}</td>
-                        <td>{(endpoint.queryString[param].required) ? 'Required' : 'Optional'}{', '}{endpoint.queryString[param].fieldType}</td>
-                        <td><ReactMarkdown source={endpoint.queryString[param].description} /></td>
-                    </tr>);
-                })}
+                <ApiDocumentationParam params={endpoint.pathParams} type={'UriPath'} />
+                <ApiDocumentationParam params={endpoint.headerParams} type={'Header'} />
+                <ApiDocumentationParam params={endpoint.queryString} type={'QueryString'} />
                 {(endpoint.requestSchemaWithRefs) ?
                     <tr>
                         <td>{'RequestBody'}</td>
                         <td>{endpoint.requestSchemaWithRefs.name}</td>
-                        <td>{(endpoint.requestSchemaWithRefs.required) ? 'Required' : 'Optional'}{', '}{(endpoint.requestSchemaWithRefs.schema.$ref) ?
-                            <a href={`/{{page.modelsPath}}/${encodeURI(endpoint.requestSchemaWithRefs.schema.$ref.split('/').pop())}`}>
-                                {endpoint.requestSchemaWithRefs.schema.$ref.split('/').pop()}
-                            </a> : null}
+                        <td>
+                            {(endpoint.requestSchemaWithRefs.required) ? 'Required' : 'Optional'}
+                            {', '}
+                            {(endpoint.requestSchemaWithRefs.schema.$ref) ?
+                                <a href={`/{{page.modelsPath}}/${encodeURI(endpoint.requestSchemaWithRefs.schema.$ref.split('/').pop())}`}>
+                                    {endpoint.requestSchemaWithRefs.schema.$ref.split('/').pop()}
+                                </a> : null
+                            }
                         </td>
                         <td>{endpoint.requestSchemaWithRefs.description}</td>
                     </tr> : null
