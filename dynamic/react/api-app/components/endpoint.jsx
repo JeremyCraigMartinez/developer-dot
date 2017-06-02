@@ -1,7 +1,8 @@
 import React from 'react';
 import ApiConsole from '../../shared/components/apiConsole';
-import ExpanderIcon from './expanderIcon';
 import ApiDocumentation from './apiDocumentation';
+import EndpointExamples from './endpointExamples';
+import ExpanderIcon from './expanderIcon';
 
 const replaceSpaces = (str) => str.replace(/\s/g, '');
 
@@ -31,6 +32,7 @@ const EndPointComponent = ({endpoint, apiType, onFillConsoleSampleData, onSubmit
                     <ApiConsole endpoint={endpoint} onAddItemToPostbodyCollection={onAddItemToPostbodyCollection} onFillConsoleSampleData={onFillConsoleSampleData} onPathParamChanged={onPathParamChanged} onPostBodyInputChanged={onPostBodyInputChanged} onQueryParamChanged={onQueryParamChanged} onRemovePostbodyCollectionItem={onRemovePostbodyCollectionItem} onResetConsole={onResetConsole} onSubmitConsoleRequest={onSubmitConsoleRequest} onToggleShowExcludedPostBodyProps={onToggleShowExcludedPostBodyProps} showExcludedPostBodyFields={endpoint.showExcludedPostBodyFields}/>
                 </div>
             </div> : null}
+            <EndpointExamples endpoint={endpoint} />
     </div>
 );
 
