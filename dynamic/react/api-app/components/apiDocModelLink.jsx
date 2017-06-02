@@ -9,9 +9,13 @@ const ApiDocModelLink = ({refSchema}) => {
 
     if (schema.type === 'array' && schema.items && schema.items.$ref) {
         return (
-            <a href={`/{{page.modelsPath}}/${encodeURI(schema.items.$ref.split('/').pop())}`}>
-                {`Array[${schema.items.$ref.split('/').pop()}]`}
-            </a>
+            <span>
+                {'Array['}
+                <a href={`/{{page.modelsPath}}/${encodeURI(schema.items.$ref.split('/').pop())}`}>
+                    {schema.items.$ref.split('/').pop()}
+                </a>
+                {']'}
+            </span>
         );
     } else if (schema.$ref) {
         return (
