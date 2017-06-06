@@ -1,4 +1,4 @@
-const {nav} = require('./helpers/generalTests');
+const {nav} = require('../helpers/api-reference/generalTests');
 
 const NUMAPIS = 3;
 
