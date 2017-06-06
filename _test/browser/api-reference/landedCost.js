@@ -1,4 +1,7 @@
 const assert = require('../helpers/assert');
+const {nav} = require('./helpers/generalTests');
+
+const NUMAPIS = 1;
 
 module.exports = {
     'baseURL': process.env.BASEURL ? process.env.BASEURL.replace(/\/$/, '') : 'http://localhost:4000',
@@ -23,6 +26,8 @@ module.exports = {
                 this.assert.equal(result.value.length, expectedNumberOfApiEndpoints, 'expected ' + expectedNumberOfApiEndpoints + ' endpoints, received ' + result.value.length);
                 /* eslint-enable no-invalid-this */
             })
+            .elements('css selector', nav.LISTSELECTOR, nav.check(browser.verify, NUMAPIS))
+            .elements('css selector', nav.SUBLISTSELECTOR, nav.check(browser.verify, expectedNumberOfApiEndpoints))
             .end();
     },
     'API Reference: LandedCost: validateCreds': function(browser) {

@@ -24,6 +24,7 @@
             },
             "exclude": [
                 "helpers",
+                "api-reference/helpers",
                 "exclude"
             ]
         },
