@@ -90,7 +90,7 @@ endpoint_links: []
     });
 };
 
-const createEndpointUrl = (apiPath, operationId, tag) => `api-reference/${apiPath}/methods/${tag ? tag + '/' : ''}${operationId.replace(/\s/g, '')}`;
+const createEndpointUrl = (apiPath, operationId, tag) => `${apiPath}/methods/${tag ? tag + '/' : ''}${operationId.replace(/\s/g, '')}`;
 
 export default (fileName, apiName, apiPath, product) => {
     if (!fileName || !apiName || !apiPath) {
@@ -172,16 +172,16 @@ endpoint_links: [
                     });
 
                     // Save off a simplified version of the App for our set of tags' 'root page'
-                    saveStaticPage(null, 'api-reference/' + apiPath, buildHtml, {...staticState, apiEndpoints: []});
+                    saveStaticPage(null, apiPath, buildHtml, {...staticState, apiEndpoints: []});
                     const tagLinks = Object.keys(tagMap).map((tag) => {
                         return {
-                            link: `api-reference/${apiPath}/methods/${tag}`,
+                            link: `${apiPath}/methods/${tag}`,
                             name: tag
                             // description: tag.description
                         };
                     });
 
-                    saveMethodsIndex(apiName, `api-reference/${apiPath}/methods`, product, tagLinks);
+                    saveMethodsIndex(apiName, `${apiPath}/methods`, product, tagLinks);
 
                     // Want to save off pages for each tagin the API's endpoints
                     Object.keys(tagMap).forEach((tag) => {
@@ -195,7 +195,7 @@ endpoint_links: [
                             };
                         });
 
-                        saveMethodsIndex(apiName, `api-reference/${apiPath}/methods/${tag}`, product, apiEndpointLinks, tag);
+                        saveMethodsIndex(apiName, `${apiPath}/methods/${tag}`, product, apiEndpointLinks, tag);
 
                         staticState.apiEndpoints.filter((ep) => operationIdsForTag.indexOf(ep.operationId) !== -1).forEach((ep) => {
                             const singleEndpointStaticState = {...staticState, apiEndpoints: [ep]};
@@ -213,7 +213,7 @@ endpoint_links: [
                         };
                     });
 
-                    saveMethodsIndex(apiName, `api-reference/${apiPath}/methods`, product, apiEndpointLinks);
+                    saveMethodsIndex(apiName, `${apiPath}/methods`, product, apiEndpointLinks);
 
                     staticState.apiEndpoints.forEach((ep) => {
                         const singleEndpointStaticState = {...staticState, apiEndpoints: [ep]};
