@@ -11,6 +11,23 @@ import mkdirp from 'mkdirp';
 import fs from 'fs';
 
 
+// extraExtension just to write index.html for static pages
+const saveToFs = (folder, file, html, extraExtension) => {
+    mkdirp(folder, (err) => {
+        if (err) {
+            throw err;
+        }
+        fs.writeFile(file, html, (writeErr) => {
+            if (writeErr) {
+                throw writeErr;
+            }
+            /* eslint-disable no-console */
+            console.log(`${file.replace(path.join(__dirname, '..'), '')}${extraExtension || ''} saved successfully!`);
+            /* eslint-enable no-console */
+        });
+    });
+};
+
 const saveStaticPage = (tagName, apiPath, buildHtmlFunc, state) => {
     const store = createStore(reducer, state);
 
@@ -23,20 +40,7 @@ const saveStaticPage = (tagName, apiPath, buildHtmlFunc, state) => {
     const savePath = path.join(__dirname, '..', apiPath);
     const saveFolder = savePath.substring(0, savePath.lastIndexOf('/'));
 
-    mkdirp(saveFolder, (err) => {
-        if (err) {
-            throw err;
-        }
-
-        fs.writeFile(`${savePath}.html`, html, (writeErr) => {
-            if (writeErr) {
-                throw writeErr;
-            }
-            /* eslint-disable no-console */
-            console.log(`/${apiPath}.html saved successfully!`);
-            /* eslint-enable no-console */
-        });
-    });
+    saveToFs(saveFolder, `${savePath}.html`, html);
 };
 
 const saveMethodsIndex = (apiName, saveRoot, product, linksArray, methodSubsetName) => {
@@ -48,6 +52,11 @@ const saveMethodsIndex = (apiName, saveRoot, product, linksArray, methodSubsetNa
 </tr>`;
     }, '');
 
+    const endpointLinks = {home: saveRoot};
+
+    linksArray.map((l) => {
+        endpointLinks[l.name] = `/${l.link}`;
+    });
 
     const table = `---
 layout: default
@@ -58,6 +67,7 @@ nav: apis
 product: ${product}
 doctype: api_references
 endpoint_links: []
+${(!methodSubsetName) ? 'homepage: true' : ''}
 ---
 <h1>{{page.api_name}} - ${methodSubsetName || 'Methods'}</h1>
 <table class="styled-table">
@@ -74,20 +84,10 @@ endpoint_links: []
 <br>
 `;
 
-    mkdirp(saveRoot, (err) => {
-        if (err) {
-            throw err;
-        }
+    saveToFs(saveRoot, `${saveRoot}/index.html`, table, '/index.html');
+    const dataRoot = path.join(__dirname, '..', '_data/api_tag_pages', product, apiName);
 
-        fs.writeFile(saveRoot + '/index.html', table, (writeErr) => {
-            if (writeErr) {
-                throw writeErr;
-            }
-            /* eslint-disable no-console */
-            console.log(`${saveRoot}/index.html saved successfully!`);
-            /* eslint-enable no-console */
-        });
-    });
+    saveToFs(dataRoot, `${dataRoot}/${methodSubsetName || 'index'}.json`, JSON.stringify(endpointLinks, null, 4));
 };
 
 const createEndpointUrl = (apiPath, operationId, tag) => `${apiPath}/methods/${tag ? tag + '/' : ''}${operationId.replace(/\s/g, '')}`;
