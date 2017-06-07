@@ -44,7 +44,7 @@ const saveMethodsIndex = (apiName, saveRoot, product, linksArray, methodSubsetNa
         return `${accum}
 <tr>
     <td><a href="/${encodeURIComponent(l.link)}">${l.name}</a></td>
-    <td>In Progress</td>
+    <td>{{"${(l.description || '').replace(/"/g, "'")}" | markdownify}}</td>
 </tr>`;
     }, '');
 
