@@ -146,6 +146,10 @@ endpoint_links: [
                     );
                 };
 
+                // Save our root documentation page, with Postman Collection download link,
+                // API name/description, and links to models and methods documentation!
+                saveStaticPage(null, apiPath, buildHtml, {...staticState, apiEndpoints: []});
+
                 const tagMap = {...staticState.tagMap};
 
                 if (tagMap && Object.keys(tagMap).length > 0) {
@@ -171,8 +175,6 @@ endpoint_links: [
                         });
                     });
 
-                    // Save off a simplified version of the App for our set of tags' 'root page'
-                    saveStaticPage(null, apiPath, buildHtml, {...staticState, apiEndpoints: []});
                     const tagLinks = Object.keys(tagMap).map((tag) => {
                         return {
                             link: `${apiPath}/methods/${tag}`,
