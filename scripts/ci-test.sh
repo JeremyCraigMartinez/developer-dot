@@ -7,4 +7,4 @@ npm i --progress=false --silent
 bundle install
 npm run lint
 npm run test
-npm run test-web -- --ci-test --skip-initial-build
+npm run test-web -- --ci-test --skip-initial-build --skip-npm-build

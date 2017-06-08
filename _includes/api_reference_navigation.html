@@ -12,14 +12,15 @@
             {% assign baseLinks = allLinks.index %}
 
             {% if apiName == product_api_pretty %}
-                <li><a href="#top">{{ apiName }}</a></li>
-                {% if page.homepage != true %}
-                    {% include api_reference_subnavigation.html tags=baseLinks allLinks=allLinks %}
-                {% endif %}
+                <li>
+                    <a href="#top">{{ apiName }}</a>
+                    {% if page.homepage != true %}
+                        {% include api_reference_subnavigation.html tags=baseLinks allLinks=allLinks %}
+                    {% endif %}
+                </li>
             {% else %}
                 <li><a href="/{{baseLinks.home}}">{{product_api_pretty}}</a></li>
             {% endif %}
         {% endfor %}
     </ul>
 </div>
-<br>
