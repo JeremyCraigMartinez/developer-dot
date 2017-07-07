@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatax REST API v2 | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="Avatax REST API v2 | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="API solutions for end-to-end tax compliance"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=avaTax>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/avatax">avaTax</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav apis ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Avatax" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid api_references">
+        
+          
+
+
+<div class="breadcrumbs">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li><span class="text-uppercase">Tax Calculation API</span>s</li>
+            <li class="text-uppercase"><a href="/developer-dot/avatax">Avalara avaTax</a></li>
+            <li class="text-uppercase">api reference</li>
+        </ul>
+    </div>
+</div>
+  
+        <section class="row padding-sides">
+            <nav class="col-md-3 api-ref">
+                 <div id='the-nav' class='nav-wrapper hidden-xs hidden-sm api-ref-nav' style='height: 100%; overflow-y: auto;'>
+    <ul class='api-ref-side-nav nav nav-pills nav-stacked'>
+        
+        
+
+        
+        
+
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/soap">Avatax SOAP API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/rest/v2">Avatax REST API v2</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                            
+                                <div style="padding-left:10px;">
+    <ul class='api-ref-side-nav-active nav nav-pills nav-stacked sub-nav'>
+        
+            
+            
+            
+
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Accounts">Accounts</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Addresses">Addresses</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Batches">Batches</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Companies">Companies</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Contacts">Contacts</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Definitions">Definitions</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/FilingCalendars">FilingCalendars</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Filings">Filings</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Free">Free</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/FundingRequests">FundingRequests</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Items">Items</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/JurisdictionOverrides">JurisdictionOverrides</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Locations">Locations</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Nexus">Nexus</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Notices">Notices</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Onboarding">Onboarding</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Registrar">Registrar</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Settings">Settings</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Subscriptions">Subscriptions</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/TaxCodes">TaxCodes</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/TaxContent">TaxContent</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/TaxRules">TaxRules</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Transactions">Transactions</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Upcs">Upcs</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Users">Users</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Utilities">Utilities</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+            <li><a style="color:#ff6600; overflow: hidden;" href="/developer-dot/api-reference/avatax/rest/v2/models">Models</a></li>
+            
+        
+    </ul>
+</div>
+
+                            
+                        
+                    </li>
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+
+        
+        <li class="older-api">
+            Older APIs
+            <div style="padding-left:10px;">
+    <ul class='api-ref-side-nav-active nav nav-pills nav-stacked sub-nav'>
+            
+            
+
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/onboarding">Onboarding API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/batch/soap">Avatax BatchSvc SOAP API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+                
+                
+
+                
+                
+                
+            
+                
+                
+
+                
+                
+                
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/account/soap">Avatax AccountSvc SOAP API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/rest/v1">Avatax REST API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+    </ul>
+</div>
+        </li>
+        
+    </ul>
+</div>
+ 
+            </nav>
+            <main class="col-md-9 small-no-padding"><h1>Avatax REST API v2 - Models</h1>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Summary</th>
+        </tr>
+    </thead>
+    <tbody>
+
+            <tr>
+                <td><a href="AccountConfigurationModel">AccountConfigurationModel</a></td>
+                <td><p>Represents one configuration setting for this account</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="AccountModel">AccountModel</a></td>
+                <td><p>An AvaTax account.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ActivateAccountModel">ActivateAccountModel</a></td>
+                <td><p>Represents a request to activate an account by reading and accepting its terms and conditions.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="AddTransactionLineModel">AddTransactionLineModel</a></td>
+                <td><p>Model to add specific lines to exising transaction</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="AddressInfo">AddressInfo</a></td>
+                <td><p>Represents a base address element.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="AddressLocationInfo">AddressLocationInfo</a></td>
+                <td><p>Represents an address to resolve.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="AddressResolutionModel">AddressResolutionModel</a></td>
+                <td><p>Address Resolution Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="AddressValidationInfo">AddressValidationInfo</a></td>
+                <td><p>TextCase info for input address</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="AddressesModel">AddressesModel</a></td>
+                <td><p>Information about all the addresses involved in this transaction.</p>
+
+<p>For a physical in-person transaction at a retail point-of-sale location, please specify only one address using
+the <code class="highlighter-rouge">singleLocation</code> field.</p>
+
+<p>For a transaction that was shipped, delivered, or provided from an origin location such as a warehouse to
+a destination location such as a customer, please specify the <code class="highlighter-rouge">shipFrom</code> and <code class="highlighter-rouge">shipTo</code> addresses.</p>
+
+<p>In the United States, some jurisdictions recognize the address types <code class="highlighter-rouge">pointOfOrderOrigin</code> and <code class="highlighter-rouge">pointOfOrderAcceptance</code>.
+These address types affect the sourcing models of some transactions.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="AdjustTransactionModel">AdjustTransactionModel</a></td>
+                <td><p>A request to adjust tax for a previously existing transaction</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ApproveFilingsModel">ApproveFilingsModel</a></td>
+                <td><p>Approve a set of filings.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="AuditTransactionModel">AuditTransactionModel</a></td>
+                <td><p>Information about a previously created transaction</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="AvaFileFormModel">AvaFileFormModel</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="AvaTaxMessage">AvaTaxMessage</a></td>
+                <td><p>Informational or warning messages returned by AvaTax with a transaction</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="BatchFileModel">BatchFileModel</a></td>
+                <td><p>Represents one file in a batch upload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="BatchModel">BatchModel</a></td>
+                <td><p>Represents a batch of uploaded documents.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="BulkLockTransactionModel">BulkLockTransactionModel</a></td>
+                <td><p>Bulk lock documents model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="BulkLockTransactionResult">BulkLockTransactionResult</a></td>
+                <td><p>Returns information about transactions that were locked</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ChangeTransactionCodeModel">ChangeTransactionCodeModel</a></td>
+                <td><p>Settle this transaction with your ledger by verifying its amounts.
+If the transaction is not yet committed, you may specify the ‘commit’ value to commit it to the ledger and allow it to be reported.
+You may also optionally change the transaction’s code by specifying the ‘newTransactionCode’ value.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CommitTransactionModel">CommitTransactionModel</a></td>
+                <td><p>Commit this transaction as permanent</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CommunicationsTSPairModel">CommunicationsTSPairModel</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CommunicationsTransactionTypeModel">CommunicationsTransactionTypeModel</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CompanyConfigurationModel">CompanyConfigurationModel</a></td>
+                <td><p>Represents one configuration setting for this company</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CompanyInitializationModel">CompanyInitializationModel</a></td>
+                <td><p>Company Initialization Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CompanyModel">CompanyModel</a></td>
+                <td><p>A company or business entity.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ContactModel">ContactModel</a></td>
+                <td><p>A contact person for a company.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CoordinateInfo">CoordinateInfo</a></td>
+                <td><p>Coordinate Info</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CreateMultiCompanyTransactionModel">CreateMultiCompanyTransactionModel</a></td>
+                <td><p>Create a multi company transaction</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CreateOrAdjustTransactionModel">CreateOrAdjustTransactionModel</a></td>
+                <td><p>Create or adjust transaction model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CreateTransactionModel">CreateTransactionModel</a></td>
+                <td><p>Create a transaction</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CycleAddOptionModel">CycleAddOptionModel</a></td>
+                <td><p>Model with options for adding a new filing calendar</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CycleEditOptionModel">CycleEditOptionModel</a></td>
+                <td><p>Model with options for actual filing calendar output based on user edits to filing calendar.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CycleExpireModel">CycleExpireModel</a></td>
+                <td><p>Cycle Safe Expiration results.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CycleExpireOptionModel">CycleExpireOptionModel</a></td>
+                <td><p>Options for expiring a filing calendar.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="EcmsDetailModel">EcmsDetailModel</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="EcmsDetailTaxCodeModel">EcmsDetailTaxCodeModel</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="EcmsModel">EcmsModel</a></td>
+                <td><p>Exempt certificate</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="EntityUseCodeModel">EntityUseCodeModel</a></td>
+                <td><p>Represents a code describing the intended use for a product that may affect its taxability</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ErrorDetail">ErrorDetail</a></td>
+                <td><p>Message object</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingAdjustmentModel">FilingAdjustmentModel</a></td>
+                <td><p>A model for return adjustments.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingAnswerModel">FilingAnswerModel</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingAugmentationModel">FilingAugmentationModel</a></td>
+                <td><p>A model for return augmentations.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingCalendarEditModel">FilingCalendarEditModel</a></td>
+                <td><p>An edit to be made on a filing calendar.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingCalendarModel">FilingCalendarModel</a></td>
+                <td><p>Represents a commitment to file a tax return on a recurring basis.
+Only used if you subscribe to Avalara Returns.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingFrequencyModel">FilingFrequencyModel</a></td>
+                <td><p>FilingFrequency Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingModel">FilingModel</a></td>
+                <td><p>Represents a listing of all tax calculation data for filings and for accruing to future filings.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingRegionModel">FilingRegionModel</a></td>
+                <td><p>Regions</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingRequestDataModel">FilingRequestDataModel</a></td>
+                <td><p>Represents a commitment to file a tax return on a recurring basis.
+Only used if you subscribe to Avalara Returns.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingRequestModel">FilingRequestModel</a></td>
+                <td><p>Represents a commitment to file a tax return on a recurring basis.
+Only used if you subscribe to Avalara Returns.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingReturnModel">FilingReturnModel</a></td>
+                <td><p>Filing Returns Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingReturnModelBasic">FilingReturnModelBasic</a></td>
+                <td><p>Filing Returns Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingStatusChangeModel">FilingStatusChangeModel</a></td>
+                <td><p>Represents a change request for filing status for a company</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingsCheckupAuthorityModel">FilingsCheckupAuthorityModel</a></td>
+                <td><p>Cycle Safe Expiration results.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingsCheckupModel">FilingsCheckupModel</a></td>
+                <td><p>Results of the Worksheet Checkup report</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FilingsCheckupSuggestedFormModel">FilingsCheckupSuggestedFormModel</a></td>
+                <td><p>Worksheet Checkup Report Suggested Form Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FreeTrialRequestModel">FreeTrialRequestModel</a></td>
+                <td><p>Represents a request for a free trial account for AvaTax.
+Free trial accounts are only available on the Sandbox environment.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FundingESignMethodReturn">FundingESignMethodReturn</a></td>
+                <td><p>Represents the current status of a funding ESign method</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FundingInitiateModel">FundingInitiateModel</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FundingStatusModel">FundingStatusModel</a></td>
+                <td><p>Status of an Avalara Managed Returns funding configuration for a company</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="IsoCountryModel">IsoCountryModel</a></td>
+                <td><p>Represents an ISO 3166 recognized country</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="IsoRegionModel">IsoRegionModel</a></td>
+                <td><p>Represents a region, province, or state within a country</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ItemModel">ItemModel</a></td>
+                <td><p>Represents an item in your company’s product catalog.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="JurisdictionModel">JurisdictionModel</a></td>
+                <td><p>Represents information about a single legal taxing jurisdiction</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="JurisdictionOverrideModel">JurisdictionOverrideModel</a></td>
+                <td><p>Represents an override of tax jurisdictions for a specific address.</p>
+
+<p>During the time period represented by EffDate through EndDate, all tax decisions for addresses matching
+this override object will be assigned to the list of jurisdictions designated in this object.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="LicenseKeyModel">LicenseKeyModel</a></td>
+                <td><p>Represents a license key for this account.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="LineItemModel">LineItemModel</a></td>
+                <td><p>Represents one line item in a transaction</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="LocationModel">LocationModel</a></td>
+                <td><p>A location where this company does business.
+Some jurisdictions may require you to list all locations where your company does business.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="LocationQuestionModel">LocationQuestionModel</a></td>
+                <td><p>Information about questions that the local jurisdictions require for each location</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="LocationSettingModel">LocationSettingModel</a></td>
+                <td><p>Represents the answer to one local jurisdiction question for a location.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="LocationValidationModel">LocationValidationModel</a></td>
+                <td><p>Tells you whether this location object has been correctly set up to the local jurisdiction’s standards</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="LockTransactionModel">LockTransactionModel</a></td>
+                <td><p>Commit this transaction as permanent</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="LoginVerificationInputModel">LoginVerificationInputModel</a></td>
+                <td><p>Represents a verification request using Skyscraper for a company</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="LoginVerificationOutputModel">LoginVerificationOutputModel</a></td>
+                <td><p>This is the output model coming from skyscraper services</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="MultiCompanyLineItemModel">MultiCompanyLineItemModel</a></td>
+                <td><p>Represents one line item in a multi company transaction</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NewAccountModel">NewAccountModel</a></td>
+                <td><p>Represents information about a newly created account</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NewAccountRequestModel">NewAccountRequestModel</a></td>
+                <td><p>Represents a request for a new account with Avalara for a new subscriber.
+Contains information about the account requested and the rate plan selected.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NexusByTaxFormModel">NexusByTaxFormModel</a></td>
+                <td><p>Identifies all nexus that match a particular tax form</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NexusModel">NexusModel</a></td>
+                <td><p>Represents a declaration of nexus within a particular taxing jurisdiction.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NexusTaxTypeGroupModel">NexusTaxTypeGroupModel</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticeCommentModel">NoticeCommentModel</a></td>
+                <td><p>Represents communication between Avalara and the company regarding the processing of a tax notice.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticeCustomerFundingOptionModel">NoticeCustomerFundingOptionModel</a></td>
+                <td><p>Tax Authority Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticeCustomerTypeModel">NoticeCustomerTypeModel</a></td>
+                <td><p>Tax Authority Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticeFilingTypeModel">NoticeFilingTypeModel</a></td>
+                <td><p>Tax Notice FilingType Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticeFinanceModel">NoticeFinanceModel</a></td>
+                <td><p>Represents estimated financial results from responding to a tax notice.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticeModel">NoticeModel</a></td>
+                <td><p>Represents a letter received from a tax authority regarding tax filing.
+These letters often have the warning ‘Notice’ printed at the top, which is why
+they are called ‘Notices’.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticePriorityModel">NoticePriorityModel</a></td>
+                <td><p>Tax Notice Priority Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticeReasonModel">NoticeReasonModel</a></td>
+                <td><p>Tax Notice Reason Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticeResponsibilityDetailModel">NoticeResponsibilityDetailModel</a></td>
+                <td><p>NoticeResponsibility Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticeResponsibilityModel">NoticeResponsibilityModel</a></td>
+                <td><p>NoticeResponsibility Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticeRootCauseDetailModel">NoticeRootCauseDetailModel</a></td>
+                <td><p>NoticeRootCause Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticeRootCauseModel">NoticeRootCauseModel</a></td>
+                <td><p>NoticeRootCause Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticeStatusModel">NoticeStatusModel</a></td>
+                <td><p>Tax Notice Status Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NoticeTypeModel">NoticeTypeModel</a></td>
+                <td><p>Tax Notice Type Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="OriginalApiRequestResponseModel">OriginalApiRequestResponseModel</a></td>
+                <td><p>Represents the exact API request and response from the original transaction API call, if available</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ParameterModel">ParameterModel</a></td>
+                <td><p>An extra property that can change the behavior of tax transactions.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="PasswordChangeModel">PasswordChangeModel</a></td>
+                <td><p>Password Change Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="PingResultModel">PingResultModel</a></td>
+                <td><p>Ping Result Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="PointOfSaleDataRequestModel">PointOfSaleDataRequestModel</a></td>
+                <td><p>Point-of-Sale Data Request Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="RateModel">RateModel</a></td>
+                <td><p>Indicates one element of a sales tax rate.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="RateTypeModel">RateTypeModel</a></td>
+                <td><p>Rate type Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="RebuildFilingsModel">RebuildFilingsModel</a></td>
+                <td><p>Rebuild a set of filings.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ReconstructedApiRequestResponseModel">ReconstructedApiRequestResponseModel</a></td>
+                <td><p>This model contains a reconstructed CreateTransaction request object that could potentially be used
+to recreate this transaction.</p>
+
+<p>Note that the API changes over time, and this reconstructed model is likely different from the exact request
+that was originally used to create this transaction.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="RefundTransactionModel">RefundTransactionModel</a></td>
+                <td><p>Refund a committed transaction</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="RemoveTransactionLineModel">RemoveTransactionLineModel</a></td>
+                <td><p>Model to specify lines to be removed</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ResetLicenseKeyModel">ResetLicenseKeyModel</a></td>
+                <td><p>Represents a license key reset request.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ResourceFileTypeModel">ResourceFileTypeModel</a></td>
+                <td><p>Resource File Type Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ResourceFileUploadRequestModel">ResourceFileUploadRequestModel</a></td>
+                <td><p>A request to upload a file to Resource Files</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="SecurityRoleModel">SecurityRoleModel</a></td>
+                <td><p>Represents a single security role.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="SetPasswordModel">SetPasswordModel</a></td>
+                <td><p>Set Password Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="SettingModel">SettingModel</a></td>
+                <td><p>This object is used to keep track of custom information about a company.
+A setting can refer to any type of data you need to remember about this company object.
+When creating this object, you may define your own ‘set’, ‘name’, and ‘value’ parameters.
+To define your own values, please choose a ‘set’ name that begins with ‘X-‘ to indicate an extension.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="SettleTransactionModel">SettleTransactionModel</a></td>
+                <td><p>Settle this transaction with your ledger by executing one or many actions against that transaction.<br />
+You may use this endpoint to verify the transaction, change the transaction’s code, and commit the transaction for reporting purposes.
+This endpoint may be used to execute any or all of these actions at once.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="SkyscraperStatusModel">SkyscraperStatusModel</a></td>
+                <td><p>Represents a list of statuses of returns available in skyscraper</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="SubscriptionModel">SubscriptionModel</a></td>
+                <td><p>Represents a service that this account has subscribed to.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="SubscriptionTypeModel">SubscriptionTypeModel</a></td>
+                <td><p>Represents a service or a subscription type.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxAuthorityFormModel">TaxAuthorityFormModel</a></td>
+                <td><p>Represents a form that can be filed with a tax authority.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxAuthorityInfo">TaxAuthorityInfo</a></td>
+                <td><p>Information about a tax authority relevant for an address.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxAuthorityModel">TaxAuthorityModel</a></td>
+                <td><p>Tax Authority Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxAuthorityTypeModel">TaxAuthorityTypeModel</a></td>
+                <td><p>Tax Authority Type Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxCodeModel">TaxCodeModel</a></td>
+                <td><p>Represents a tax code that can be applied to items on a transaction.
+A tax code can have specific rules for specific jurisdictions that change the tax calculation behavior.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxCodeTypesModel">TaxCodeTypesModel</a></td>
+                <td><p>Information about Avalara-defined tax code types.
+This list is used when creating tax codes and tax rules.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxOverrideModel">TaxOverrideModel</a></td>
+                <td><p>Represents a tax override for a transaction</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxRateModel">TaxRateModel</a></td>
+                <td><p>Contains information about the general tangible personal property sales tax rates for this jurisdiction.</p>
+
+<p>This rate is calculated by making assumptions about the tax calculation process.  It does not account for:</p>
+
+<ul>
+  <li>Sourcing rules, such as origin-and-destination based transactions.</li>
+  <li>Product taxability rules, such as different tax rates for different product types.</li>
+  <li>Nexus declarations, where some customers are not obligated to collect tax in specific jurisdictions.</li>
+  <li>Tax thresholds and rate differences by amounts.</li>
+  <li>And many more custom use cases.</li>
+</ul>
+
+<p>To upgrade to a fully-featured and accurate tax process that handles these scenarios correctly, please
+contact Avalara to upgrade to AvaTax!</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxRuleModel">TaxRuleModel</a></td>
+                <td><p>Represents a tax rule that changes the behavior of Avalara’s tax engine for certain products in certain jurisdictions.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxSubTypeModel">TaxSubTypeModel</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxTypeGroupModel">TaxTypeGroupModel</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TransactionAddressModel">TransactionAddressModel</a></td>
+                <td><p>An address used within this transaction.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TransactionLineDetailModel">TransactionLineDetailModel</a></td>
+                <td><p>An individual tax detail element.  Represents the amount of tax calculated for a particular jurisdiction, for a particular line in an invoice.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TransactionLineLocationTypeModel">TransactionLineLocationTypeModel</a></td>
+                <td><p>Represents information about location types stored in a line</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TransactionLineModel">TransactionLineModel</a></td>
+                <td><p>One line item on this transaction.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TransactionLocationTypeModel">TransactionLocationTypeModel</a></td>
+                <td><p>Information about a location type</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TransactionModel">TransactionModel</a></td>
+                <td><p>This object represents a single transaction; for example, a sales invoice or purchase order.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TransactionSummary">TransactionSummary</a></td>
+                <td><p>Summary information about an overall transaction.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="UPCModel">UPCModel</a></td>
+                <td><p>One Universal Product Code object as defined for your company.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="UserEntitlementModel">UserEntitlementModel</a></td>
+                <td><p>User Entitlement Model</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="UserModel">UserModel</a></td>
+                <td><p>An account user who is permitted to use AvaTax.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ValidatedAddressInfo">ValidatedAddressInfo</a></td>
+                <td><p>Represents a validated address</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="VerifyTransactionModel">VerifyTransactionModel</a></td>
+                <td><p>Verify this transaction by matching it to values in your accounting system.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="VoidTransactionModel">VoidTransactionModel</a></td>
+                <td><p>A request to void a previously created transaction</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="requiredFilingCalendarDataFieldModel">requiredFilingCalendarDataFieldModel</a></td>
+                <td><p>Represents a verification request using Skyscraper for a company</p>
+</td>
+            </tr>
+    </tbody>
+</table>
+<br></main>
+        </section>
+          
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/dynamic/swagger/avatax/rest/v2.json"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

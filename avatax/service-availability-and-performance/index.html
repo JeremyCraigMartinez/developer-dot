@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Availability and Performance | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="Service Availability and Performance | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="API solutions for end-to-end tax compliance"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=avaTax>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/avatax">avaTax</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav apis ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Avatax" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid use_cases">
+        
+          
+
+
+<div class="breadcrumbs">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li><span class="text-uppercase">Tax Calculation API</span>s</li>
+            <li class="text-uppercase"><a href="/developer-dot/avatax">Avalara avaTax</a></li>
+            <li class="text-uppercase">use cases</li>
+        </ul>
+    </div>
+</div>
+  
+        <section class="row padding-sides half">
+            <nav class="col-md-3">
+                 <ul class="api-ref-side-nav nav nav-pills nav-stacked hidden-xs hidden-sm">
+    <li ><a href="/developer-dot/avatax/use-cases">Document Workflow</a></li>
+    <li ><a href="/developer-dot/avatax/calculating-tax">Calculating Tax</a></li>
+    <li ><a href="/developer-dot/avatax/address-validation">Address Validation</a></li>
+    <li ><a href="/developer-dot/avatax/reportable-transactions">Reportable Transactions</a></li>
+    <li ><a href="/developer-dot/avatax/handling-return-invoices">Product Returns</a></li>
+    <li ><a href="/developer-dot/avatax/handling-tax-exempt-customers">Exempt Transactions</a></li>
+    <li ><a href="/developer-dot/avatax/voiding-documents">Voiding Documents</a></li>
+    <li ><a href="/developer-dot/avatax/vat-transactions">VAT Transactions</a></li>
+    <li ><a href="/developer-dot/avatax/drop-shipping">Drop Shipping</a></li>
+    <li ><a href="/developer-dot/avatax/consumer-use-tax">Consumer Use Tax</a></li>
+    <li ><a href="/developer-dot/avatax/batch-file-reference">Batch File Reference</a></li>
+    <li ><a href="/developer-dot/avatax/automated-provisioning">Automated Provisioning</a></li>
+    <li ><a href="/developer-dot/avatax/soap-or-rest">SOAP or REST</a></li>
+    <li ><a href="/developer-dot/avatax/filtering-in-rest/">Filtering in REST</a></li>
+    <li ><a href="/developer-dot/avatax/authentication-in-rest/">Authentication in REST</a></li>
+    <li ><a href="/developer-dot/avatax/finding-your-companyid">Finding Your CompanyId</a></li>
+    <li ><a href="/developer-dot/avatax/proxy-server-settings">Proxy Server Settings</a></li>
+    <li ><a href="/developer-dot/avatax/ssl-certificates">SSL Certificates</a></li>
+    <li ><a href="/developer-dot/avatax/errors-and-outages">Errors and Outages</a></li>
+    <li ><a href="/developer-dot/avatax/errors">REST Error Codes</a></li>
+    <li ><a href="/developer-dot/avatax/common-errors">SOAP Error Codes</a></li>
+    <li class="active" ><a href="/developer-dot/avatax/service-availability-and-performance">Service Availability</a></li>
+    <li ><a href="/developer-dot/avatax/going-live">Going Live</a></li>
+    <li ><a href="/developer-dot/avatax/cloudconnect">Cloud Connect</a></li>
+
+</ul>
+<div class="sm-section-nav dropdown visible-xs-block visible-sm-block">
+    <button id="use-case-nav" type="button" data-toggle="dropdown">Use Cases</button>
+    <p>Tax Use Cases</p>
+    <ul class="dropdown-menu" aria-labelledby="use-case-nav">
+        <li><a href="/developer-dot/avatax/use-cases">Document Workflow</a></li>
+        <li><a href="/developer-dot/avatax/calculating-tax">Calculating Tax</a></li>
+        <li><a href="/developer-dot/avatax/address-validation">Address Validation</a></li>
+        <li><a href="/developer-dot/avatax/reportable-transactions">Reportable Transactions</a></li>
+        <li><a href="/developer-dot/avatax/handling-return-invoices">Product Returns</a></li>
+        <li><a href="/developer-dot/avatax/handling-tax-exempt-customers">Exempt Transactions</a></li>
+        <li><a href="/developer-dot/avatax/voiding-documents">Voiding Documents</a></li>
+        <li><a href="/developer-dot/avatax/vat-transactions">VAT Transactions</a></li>
+        <li><a href="/developer-dot/avatax/drop-shipping">Drop Shipping</a></li>
+        <li><a href="/developer-dot/avatax/consumer-use-tax">Consumer Use Tax</a></li>
+        <li><a href="/developer-dot/avatax/batch-file-reference/">Batch File Reference</a></li>
+        <li><a href="/developer-dot/avatax/automated-provisioning">Automated Provisioning</a></li>
+        <li><a href="/developer-dot/avatax/soap-or-rest">SOAP or REST</a></li>
+        <li><a href="/developer-dot/avatax/filtering-in-rest/">Filtering in REST</a></li>
+        <li><a href="/developer-dot/avatax/authentication-in-rest/">Authentication in REST</a></li>
+        <li><a href="/developer-dot/avatax/finding-your-companyid">Finding Your CompanyId</a></li>
+        <li><a href="/developer-dot/avatax/proxy-server-settings">Proxy Server Settings</a></li>
+        <li><a href="/developer-dot/avatax/ssl-certificates">SSL Certificates</a></li>
+        <li><a href="/developer-dot/avatax/errors-and-outages">Errors and Outages</a></li>
+        <li><a href="/developer-dot/avatax/errors">REST Error Codes</a></li>
+        <li><a href="/developer-dot/avatax/common-errors">SOAP Error Codes</a></li>
+        <li><a href="/developer-dot/avatax/service-availability-and-performance">Service Availability</a></li>
+        <li><a href="/developer-dot/avatax/going-live">Going Live</a></li>
+        <li><a href="/developer-dot/avatax/cloudconnect">Cloud Connect</a></li>
+    </ul>
+</div>
+ 
+            </nav>
+            <main class="col-md-9">
+
+    <h1>Service Availability and Performance
+        
+    </h1>
+<h2>Service Availability and Performance</h2>
+<p>Consuming sales tax related services can be considered mission-critical, especially when making calculation queries through the Avatax product. As a cloud-based Software-as-a-Service provider, Avalara understands the need to ensure that our services are available continuously and respond in a timely manner.</p>
+
+<p>Avalara’s Server Status can be viewed publicly at <a href="http://status.avalara.com">http://status.avalara.com</a>. This page outlines the availability of the service, current performance in terms of response time and a historical view of the availability for the past week.</p>
+
+<iframe src="http://status.avalara.com" width="100%" height="350"></iframe>
+<p><br /></p>
+
+<p>Avalara is committed to providing a minimum service uptime of 99.5%. Certain interested customers can purchase a higher Service Level Agreement if they need a higher commitment to ensuring service availability. You can contact your assigned Avalara Account Manager for further information.</p>
+<h3>Network Latency</h3>
+<p>While there are no Latency Service Level Agreements available, Avalara will strive for a minimum of 300ms service calculation time, not taking network or other latency issues into account. A typical round-trip API call will take anywhere from 400-1000ms depending on network topology, number of hops from source to destination, (de)serialization algorithms and other factors.</p>
+
+<p>All service calls are made using Secure Sockets Layer (SSL), which inherently will add more latency to each call due to certificate management and authentication processes.</p>
+
+<p>If you have issues with latency when reaching Avalara’s services, you can try using the following scripts to determine if it is a network connectivity, SSL negotiation or some other problem.</p>
+
+<p>Execute the following from the source machine:</p>
+
+<p>For UNIX based systems:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$ export URL=https://development.avalara.net/tax/taxsvc.asmx</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$ for i in `seq 1 5`; do curl -w "tcp: %{time_connect} ssl:%{time_appconnect}\n" -sk -o /dev/null $URL; done</code></pre></figure>
+
+<p>For Windows systems:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">C:&amp;gt;\for /l %x in (1,1,5) do @(curl -w "tcp: %{time_connect} ssl:%{time_appconnect}\n" -sk -o /dev/null https://development.avalara.net/tax/taxsvc.asmx)</code></pre></figure>
+
+<p>This is a sample of the result from the test script above:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">tcp: 0.049 ssl:0.220
+tcp: 0.048 ssl:0.219
+tcp: 0.047 ssl:0.220
+tcp: 0.048 ssl:0.221
+tcp: 0.047 ssl:0.220</code></pre></figure>
+
+<p>It illustrates the latency of the network from the source machine to Avalara’s servers. The first number is the response time it takes to make a quick ping using plain TCP and the second making a ping with SSL negotiation turned on.</p>
+
+<p>With the combination of the Avalara’s Server Status website and the script provided, you should be able to determine the source of any network latency problems and respond accordingly. If you are still experiencing latency issues, please feel free to contact Avalara’s Customer Service Department for further troubleshooting.</p>
+
+
+
+
+
+
+
+</main>
+        </section>
+          
+        <section class="row padding-sides">
+            <main class="col-md-12"><div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'developeravalaracom'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</main>
+        </section>
+        
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/avatax/service-availability-and-performance.md"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

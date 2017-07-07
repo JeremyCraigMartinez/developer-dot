@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AvaTax.NET client library available on NuGet | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="AvaTax.NET client library available on NuGet | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="API solutions for end-to-end tax compliance"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=blog>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/blog">blog</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav  ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Blog" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid blog">
+        
+        
+        <section class="row padding-sides">
+            <main class="col-md-12">
+<div class="breadcrumbs blog">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li class="text-uppercase">Resources</li>
+            <li class="text-uppercase"><a href="/developer-dot/blog">Developer Blog</a></li>
+            
+            <li class="text-uppercase">AvaTax.NET client library available on NuGet</li>
+            
+        </ul>
+    </div>
+</div>
+<br />
+
+
+
+<div class="half">
+    <h1>AvaTax.NET client library available on NuGet</h1>
+    <p class="byline">By Ted Spence | December 05, 2016</p>
+    <p class="blog-content"><p>For those Avalara customers using Microsoft’s DotNet languages, Avalara has published an official <a href="https://www.nuget.org/packages/Avalara.AvaTax/">AvaTax client library on NuGet</a>, the official repository for open source code in the DotNet world!  This client library is already configured with all the code and logic you need to get started incorporating tax calculation into your application, and it can greatly speed up your development cycle.</p>
+
+<p>For today’s article, I’ll walk you through the process of adding AvaTax to your DotNet project using this simple new library.</p>
+
+<h3>Create a New Project</h3>
+
+<p>To begin, let’s create a fresh new program.  I happen to be partial to Microsoft’s C# language since I’m an old Turbo Pascal guy from way back, so I’ll begin by creating a C# console application.  In Visual Studio, I begin by selecting <code class="highlight-rouge">New Project</code> and then select <code class="highlight-rouge">Console Application</code>, and click <code class="highlight-rouge">OK</code>.</p>
+
+<p><img src="/developer-dot/public/images/blog/nuget-create-new-project.png" alt="Create New Project in Visual Studio" width="477" height="330" /></p>
+
+<p>Now that Visual Studio has created a blank project, our next step is to add a reference to AvaTax using the NuGet package manager.  Use the <code class="highlight-rouge">Tools</code> menu, and select <code class="highlight-rouge">NuGet Package Manager</code> and the option <code class="highlight-rouge">Manage Packages for Solution</code>.  The NuGet package manager provides a wide variety of open source code libraries you can use - and AvaTax is now available among them!  Just type <code class="highlighter-rouge">AvaTax</code> into the search box and hit the enter key; you’ll see the library right away:</p>
+
+<p><img src="/developer-dot/public/images/blog/nuget-avatax-client-library.png" alt="AvaTax in NuGet Package Manager" width="512" height="170" /></p>
+
+<p>To add this library to your project, click on the library on the left hand side, then select the checkbox next to your project on the right hand side and click <code class="highlight-rouge">Install</code>.</p>
+
+<p><img src="/developer-dot/public/images/blog/nuget-add-library.png" alt="Adding AvaTax to your project" width="553" height="384" /></p>
+
+<p>When you click <code class="highlight-rouge">Install</code>, NuGet will begin to download this client library and its dependencies.  You’ll get a popup indicating what other libraries it has to download in order to parse JSON-formatted data, and it will provide information about the licenses for those libraries.  Since AvaTax uses the Newtonsoft JSON library, you will see a few licenses pop up on your screen.  AvaTax and the AvaTax client library are published using the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a>, which should make this code usable for most commercial and open source projects.</p>
+
+<p>Now that you’ve successfully linked to the AvaTax client library, you can begin writing code.  The first step is to add <code class="highlighter-rouge">using Avalara.AvaTax.RestClient;</code> to the top of your program to tell it that you want to begin using AvaTax.  Next, you’ll create a client like this:</p>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">Avalara.AvaTax.RestClient</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">ConsoleApplication3</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">AvaTaxClient</span><span class="p">(</span><span class="s">"MyApp"</span><span class="p">,</span> <span class="s">"1.0"</span><span class="p">,</span> <span class="n">Environment</span><span class="p">.</span><span class="n">MachineName</span><span class="p">,</span> <span class="n">AvaTaxEnvironment</span><span class="p">.</span><span class="n">Sandbox</span><span class="p">)</span>
+                <span class="p">.</span><span class="nf">WithSecurity</span><span class="p">(</span><span class="s">"MyUsername"</span><span class="p">,</span> <span class="s">"MyPassword"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Let’s walk through what these parameters mean.</p>
+
+<ul class="normal">
+    <li><code class="highlight-rouge">MyApp</code> and <code class="highlight-rouge">1.0</code> are the name and version number of the app we're developing.  You can provide whatever data you want here - but please provide something useful!  Avalara gets lots of calls from customers who are trying to debug problems with specific programs.  If you know that version 1.0.1 of your program has a specific problem, we can quickly look at the logs and notice that a customer is using a buggy version of the program and recommend a fix!</li>
+    <li><code class="highlight-rouge">Environment.MachineName</code> is also a debugging aid.  If you call Avalara support, and tell them that you're using a machine named <code class="highlight-rouge">W10-DE67A879</code>, they'll be able to find your API calls faster by searching on this value.</li>
+    <li><code class="highlight-rouge">AvaTaxEnvironment.Sandbox</code> is the name of the AvaTax server you wish to contact.  You can select between AvaTax Sandbox and Production services; Avalara will automatically contact the correct server based on the value you provide here.</li>
+    <li>The function <code class="highlight-rouge">WithSecurity</code> allows you to set up your credentials.  You can authenticate using any supported method - Username / Password, AccountId / LicenseKey, and even Bearer Token.  Since Bearer Token is currently available for custom integrations only, for today's example, I will demonstrate username / password authentication.</li>
+</ul>
+
+<p>Now that you’ve set up your client, it’s time to create a transaction!</p>
+
+<h2>TransactionBuilder</h2>
+
+<p>Tax transactions can be very simple or very complex.  A simple point-of-sale transaction might have only one or two values; whereas a large inventory purchase order may have hundreds of lines and a variety of different shipping addresses.  Let’s start with a very simple transaction that has a single address and a single line.</p>
+
+<p>In AvaTax, we use an object called a TransactionBuilder to generate a tax transaction.  This builder allows us to construct a transaction using a fluent, expressive language called a “Builder Pattern”.  The builder starts very simply, but it can grow as your needs become more complex.  Here’s what a very simple transaction looks like in the builder pattern:</p>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code>    <span class="kt">var</span> <span class="n">t1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TransactionBuilder</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="s">"DEFAULT"</span><span class="p">,</span> <span class="n">DocumentType</span><span class="p">.</span><span class="n">SalesInvoice</span><span class="p">,</span> <span class="s">"ABC"</span><span class="p">)</span>
+        <span class="p">.</span><span class="nf">WithAddress</span><span class="p">(</span><span class="n">TransactionAddressType</span><span class="p">.</span><span class="n">SingleLocation</span><span class="p">,</span> <span class="s">"123 Main Street"</span><span class="p">,</span> <span class="s">"Irvine"</span><span class="p">,</span> <span class="s">"CA"</span><span class="p">,</span> <span class="s">"92615"</span><span class="p">,</span> <span class="s">"US"</span><span class="p">)</span>
+        <span class="p">.</span><span class="nf">WithLine</span><span class="p">(</span><span class="m">100.0</span><span class="n">m</span><span class="p">)</span>
+        <span class="p">.</span><span class="nf">Create</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<p>How does this builder work?  Well, at its core, the AvaTax engine provides an API called <code class="highlighter-rouge">POST /api/v2/transactions/create</code>.  That functionality is available as an API called <code class="highlighter-rouge">client.CreateTransaction()</code>, and it takes as its parameter an object called a <code class="highlighter-rouge">CreateTransactionModel</code>.  However, since that model is a really big object, it can be daunting to fill out all the data in that model by yourself.  The builder pattern helps guide you to ensure that you fill out all the basic information required for your transaction.</p>
+
+<p>At the end of the builder, you call <code class="highlighter-rouge">.Create();</code>.  This function assembles the object into a <code class="highlighter-rouge">CreateTransactionModel</code> for you, calls the API, and returns a fully formed transaction.  The only magic you need to understand is in the constructor for the TransactionBuilder.  We ask for four things:</p>
+
+<ul class="normal">
+    <li>The <code class="highlight-rouge">AvaTaxClient</code> you created above.</li>
+    <li>The <code class="highlight-rouge">CompanyCode</code> of the company that created this transaction.</li>
+    <li>The <code class="highlight-rouge">DocumentType</code> of this transaction - for more information on document types, see <a href="http://developer.avalara.com/blog/2016/11/18/types-of-transactions/">my previous article on Types of Transactions.</a></li>
+    <li>The <code class="highlight-rouge">CustomerCode</code> of the customer who requested this transaction.  Customer codes are necessary to check for certain exemption cases; for example, when a customer has set up an exemption certificate for certain types of transactions.  As long as you make sure that each customer has their own unique customer code, any value will be fine here.</li>
+</ul>
+
+<p>Now, you can look at the results:</p>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code>    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Your calculated tax was {0}"</span><span class="p">,</span> <span class="n">t1</span><span class="p">.</span><span class="n">totalTax</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>That’s pretty easy!  But what happens if you want to build a much more complex transaction?  Here’s how it might look:</p>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code>    <span class="kt">var</span> <span class="n">t2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TransactionBuilder</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="s">"DEFAULT"</span><span class="p">,</span> <span class="n">DocumentType</span><span class="p">.</span><span class="n">SalesInvoice</span><span class="p">,</span> <span class="s">"ABC"</span><span class="p">)</span>
+        <span class="p">.</span><span class="nf">WithAddress</span><span class="p">(</span><span class="n">TransactionAddressType</span><span class="p">.</span><span class="n">ShipFrom</span><span class="p">,</span> <span class="s">"123 Main Street"</span><span class="p">,</span> <span class="s">"Irvine"</span><span class="p">,</span> <span class="s">"CA"</span><span class="p">,</span> <span class="s">"92615"</span><span class="p">,</span> <span class="s">"US"</span><span class="p">)</span>
+        <span class="p">.</span><span class="nf">WithAddress</span><span class="p">(</span><span class="n">TransactionAddressType</span><span class="p">.</span><span class="n">ShipTo</span><span class="p">,</span> <span class="s">"100 Ravine Lane NE"</span><span class="p">,</span> <span class="s">"Bainbridge Island"</span><span class="p">,</span> <span class="s">"WA"</span><span class="p">,</span> <span class="s">"98110"</span><span class="p">,</span> <span class="s">"US"</span><span class="p">)</span>
+        <span class="p">.</span><span class="nf">WithLine</span><span class="p">(</span><span class="m">100.0</span><span class="n">m</span><span class="p">)</span>
+        <span class="p">.</span><span class="nf">WithLine</span><span class="p">(</span><span class="m">1234.56</span><span class="n">m</span><span class="p">)</span> <span class="c1">// Each line is added as a separate item on the invoice!
+</span>        <span class="p">.</span><span class="nf">WithExemptLine</span><span class="p">(</span><span class="m">50.0</span><span class="n">m</span><span class="p">,</span> <span class="s">"NT"</span><span class="p">)</span> <span class="c1">// An exempt item!
+</span>        <span class="p">.</span><span class="nf">WithLine</span><span class="p">(</span><span class="m">2000.0</span><span class="n">m</span><span class="p">)</span> <span class="c1">// The two addresses below apply to this $2000 line item
+</span>        <span class="p">.</span><span class="nf">WithLineAddress</span><span class="p">(</span><span class="n">TransactionAddressType</span><span class="p">.</span><span class="n">ShipFrom</span><span class="p">,</span> <span class="s">"123 Main Street"</span><span class="p">,</span> <span class="s">"Irvine"</span><span class="p">,</span> <span class="s">"CA"</span><span class="p">,</span> <span class="s">"92615"</span><span class="p">,</span> <span class="s">"US"</span><span class="p">)</span>
+        <span class="p">.</span><span class="nf">WithLineAddress</span><span class="p">(</span><span class="n">TransactionAddressType</span><span class="p">.</span><span class="n">ShipTo</span><span class="p">,</span> <span class="s">"1500 Broadway"</span><span class="p">,</span> <span class="s">"New York"</span><span class="p">,</span> <span class="s">"NY"</span><span class="p">,</span> <span class="s">"10019"</span><span class="p">,</span> <span class="s">"US"</span><span class="p">)</span>
+        <span class="p">.</span><span class="nf">WithLine</span><span class="p">(</span><span class="m">50.0</span><span class="n">m</span><span class="p">,</span> <span class="s">"FR010000"</span><span class="p">)</span> <span class="c1">// shipping costs!
+</span>        <span class="p">.</span><span class="nf">Create</span><span class="p">();</span>
+
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Your calculated tax was {0}"</span><span class="p">,</span> <span class="n">t2</span><span class="p">.</span><span class="n">totalTax</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>I hope this has helped you see how the AvaTax client library can help simplify your tax processing work.  Each month, AvaTax will update the DotNet client library with our latest feature releases, and we’ll add more functionality to help solve your business problems.  Because you’ve added the AvaTax client via NuGet, you’ll immediately see an alert whenever we release an updated client, and you can easily upgrade to the latest code with a single click.</p>
+
+<p>For those programmers interested in participating, we invite you to view our <a href="https://github.com/avadev/AvaTaxClientLibrary">open source GitHub repository online</a>.  Please feel free to send us pull requests with any features or functionality you’d like to see!</p>
+
+<p>Happy Holidays!</p>
+
+<p>–Ted Spence, Director, AvaTax Core Engine</p>
+</p>
+    <p class="btn-callout"><a href="/developer-dot/blog" role="button">Back to posts</a></p>
+</div>
+</main>
+        </section>
+         
+        <section class="row padding-sides">
+            <main class="col-md-12"><div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'developeravalaracom'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</main>
+        </section>
+        
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/_posts/2016-12-05-csharp-nuget-library.md"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandedCost with REST v2 | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="LandedCost with REST v2 | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="API solutions for end-to-end tax compliance"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=blog>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/blog">blog</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav  ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Blog" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid blog">
+        
+        
+        <section class="row padding-sides">
+            <main class="col-md-12">
+<div class="breadcrumbs blog">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li class="text-uppercase">Resources</li>
+            <li class="text-uppercase"><a href="/developer-dot/blog">Developer Blog</a></li>
+            
+            <li class="text-uppercase">LandedCost with REST v2</li>
+            
+        </ul>
+    </div>
+</div>
+<br />
+
+
+
+<div class="half">
+    <h1>LandedCost with REST v2</h1>
+    <p class="byline">By Ted Spence | October 13, 2016</p>
+    <p class="blog-content"><h2>Selling Cross-Border</h2>
+
+<p>With the release of the LandedCost calculator functionality, AvaTax now provides features to help you sell across country borders.  LandedCost will help you identify customs duty for various types of harmonized tariff codes.</p>
+
+<p>Once you’ve begun using AvaTax REST v2, you’ll have to make a few minor changes to begin using the LandedCost calculator.  Here’s what you need to know.</p>
+
+<h2>Harmonized Tariff Schedule (HTS)</h2>
+
+<p>For every product in your taxable transaction, you need to identify the Harmonized Tariff Schedule code (HTS code) for that item.  These tariff codes are published by the customs authorities in each destination country and you’ll need to assign the appropriate code to your items.  You can search for a code online using Avalara’s HTS code lookup page: <a href="https://www.avalara.com/hs-codes/">https://www.avalara.com/hs-codes/</a></p>
+
+<p>To identify this code for your item, you will add a “Parameter” for each line in your transaction.  That parameter is called the <code class="highlighter-rouge">AvaTax.LandedCost.HTSCode</code>.  For today’s example, we’ll use the code <code class="highlighter-rouge">6403519030</code>, which refers to “Other Footwear With Outer Soles Of Leather”.  The exact details of these HTS codes are quite complex; but if you have a question you should certainly contact a customs office to verify that your code is correct!</p>
+
+<p>Interesting item of note: most countries have a “de minimis” threshold - this is each country’s threshold under which customs duty and tax does not apply.  This example shipment will ship from Canada to the United States.  In the United States, the value of a shipment must be greater than $800 USD for it to be subject to customs duty.  For this example, this shipment will have a value of $1000.00 USD, which surpasses the de minimis threshold amount and triggers a customs duty to apply.</p>
+
+<h2>Who Pays?</h2>
+
+<p>The next thing we need to know about your transaction is who is responsible for paying the your customs duty.  The LandedCost calculator supports two options:</p>
+
+<ul class="normal">
+<li>DAP = Stands for Delivered at Place. Means the Selling Party bears the risk &amp; responsibility of coordinating the export clearance and transportation from their ship-from facility &amp; country to the Buyer's door. The Buyer is responsible for declaring the shipment to the customs authorities in the destination country and remitting any/all customs duty &amp; import tax (including VAT).</li>
+<li>DDP = Stands for Delivered Duty Paid. Means the Selling Party (or their 3rd party) bears the risk &amp; responsibility of coordinating the export clearance, transportation and declaring the shipment to the customs authority in the destination country and remitting any/all customs duty &amp; import tax (including VAT).</li>
+</ul>
+
+<p>For this example, we’ll say that the customer, the Buyer, is responsible.  That means we’ll use the code “DAP”.  This parameter is attached to the main body of the transaction, and it’s called <code class="highlighter-rouge">AvaTax.LandedCost.Incoterms</code>.</p>
+
+<h2>Shipping and Insurance</h2>
+
+<p>Calculating the landed cost for cross-border transactions requires knowing how much is paid for shipping and insurance.  To provide these data elements, we’ll add a line item into our transaction for TaxCode <code class="highlighter-rouge">FR010000</code>, which is the tax code for freight charges, and a line item for TaxCode <code class="highlighter-rouge">FR070100</code>, which is insurance.  If you forget what tax codes you want to use, you can always call the API at <code class="highlighter-rouge">/api/v2/definitions/taxcodes</code> - this will give a full list of all Avalara defined tax codes you can use for your transactions.</p>
+
+<h2>What does our transaction look like now?</h2>
+
+<p>Let’s plan to ship these shoes from Prince Edward Island in Canada to Bainbridge Island in WA.  Here’s what our request will look like:</p>
+
+<h3>Request</h3>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SalesInvoice"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"companyCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFAULT"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-13T00:00:00-07:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"customerCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"purchaseOrderNo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-13-001"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"ShipFrom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PE"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CA"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C1A 4P3"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"ShipTo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bainbridge Island"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WA"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"98110"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"lines"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Footwear"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"taxCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P0000000"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"AvaTax.LandedCost.HTSCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6403519030"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shipping"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"taxCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FR010000"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Insurance"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"taxCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FR070100"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"AvaTax.LandedCost.Incoterms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DAP"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"AvaTax.LandedCost.ShippingMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"air"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"taxDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-13T00:00:00-07:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currencyCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h3>Result</h3>
+
+<p>The result object is huge.  It has information about all the line items, all the jurisdictions, and all the tax codes applied.  For the moment, let’s focus on the real results:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">74898652</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c12fd57d-b01b-4785-b6ad-0f532f852e9d"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6669648</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-13T00:00:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buyer's estimated import obligation is: 102 USD"</span><span class="p">,</span><span class="w">
+</span><span class="err">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>As you can see, the import duty calculations made on this amount estimated that $102.00 USD would be the customs duty for importing this product in this manner.  That’s how it works!  There are lots of other options available; we’ll share more features and functionality here on the Avalara developer site each week.</p>
+
+<h2>How do I find what other parameters are available?</h2>
+
+<p>In the REST v2 API, you can find a list of all other parameters via the <code class="highlighter-rouge">/api/v2/definitions/parameters</code> endpoint.  When you call this API, it will list all the parameters that are available, and provide a quick description of each one.  For further reading on parameters, check out the developer website.</p>
+
+<p>May all of your shipments be speedy!</p>
+
+<p>–Ted Spence, Director, AvaTax Core Engine</p>
+</p>
+    <p class="btn-callout"><a href="/developer-dot/blog" role="button">Back to posts</a></p>
+</div>
+</main>
+        </section>
+         
+        <section class="row padding-sides">
+            <main class="col-md-12"><div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'developeravalaracom'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</main>
+        </section>
+        
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/_posts/2016-10-13-landedcost-with-rest-v2.md"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

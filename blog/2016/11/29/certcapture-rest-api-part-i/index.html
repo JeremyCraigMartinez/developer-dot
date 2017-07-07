@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CertCapture REST API Part I | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="CertCapture REST API Part I | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="API solutions for end-to-end tax compliance"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=blog>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/blog">blog</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav  ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Blog" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid blog">
+        
+        
+        <section class="row padding-sides">
+            <main class="col-md-12">
+<div class="breadcrumbs blog">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li class="text-uppercase">Resources</li>
+            <li class="text-uppercase"><a href="/developer-dot/blog">Developer Blog</a></li>
+            
+            <li class="text-uppercase">CertCapture REST API Part I</li>
+            
+        </ul>
+    </div>
+</div>
+<br />
+
+
+
+<div class="half">
+    <h1>CertCapture REST API Part I</h1>
+    <p class="byline">By Bob Maidens | November 29, 2016</p>
+    <p class="blog-content"><h1 id="relationships-and-filtering">Relationships and Filtering</h1>
+
+<p>Today I wanted to discuss two pieces of the CertCapture v2 REST API that are important to any customers of CertCapture who wish to consume our API and critical to any developers who wish to build anything fancy with our available functionality.</p>
+
+<h3 id="managing-relationships-and-saving-related-data">Managing Relationships and Saving Related Data</h3>
+
+<p>The CertCapture API can save or attach related data whenever you do a POST or PUT request. The way the save is handled is based off what type of relationship occurs between the data.</p>
+
+<h4 id="associating-related-data">Associating Related Data</h4>
+
+<p>If you wish to save or associate some related data via an update request, just supply the information via the request.</p>
+
+<p><code class="highlighter-rouge">PUT URL: /v2/exposure-zones/1</code></p>
+
+<p><strong>DATA:</strong></p>
+<pre><code class="language-JSON">{
+    "country":{
+        "id": 1
+        "name": "United States"
+        "initials": "US"
+    }
+}
+</code></pre>
+<p>The above PUT request to /v2/exposure-zones/1/ would update Exposure Zone 1 to have the country United States. If the below criteria are met:</p>
+<ol>
+  <li>The country relationship is a valid for the current model and it’s not a read-only relationship.</li>
+  <li>The country data provided is valid and exists. (United States exists with id of 1 and initials of US.)</li>
+</ol>
+
+<p>The below requests are also valid when associating a country with an exposure zone:</p>
+
+<p><code class="highlighter-rouge">PUT URL: /v2/exposure-zones/1</code></p>
+
+<p><strong>DATA:</strong></p>
+<pre><code class="language-JSON">{
+    "country":{
+        "id": 1
+    }
+}
+</code></pre>
+<p><strong>And:</strong></p>
+
+<p><code class="highlighter-rouge">PUT URL: /v2/exposure-zones/1</code></p>
+
+<p><strong>DATA:</strong></p>
+<pre><code class="language-JSON">{
+    "country":{
+        "name": "United States"
+        "initials": "US"
+    }
+}
+</code></pre>
+<p>CertCapture will look at ALL the data provided for country and see if it can find a single matching result, before assigning it to an Exposure Zone.</p>
+
+<h4 id="unassociating-related-data">Unassociating Related Data</h4>
+
+<p>To remove an existing data relationship, simply pass that relationship with null
+<code class="highlighter-rouge">PUT URL: /v2/exposure-zones/1</code></p>
+
+<p><strong>DATA:</strong></p>
+
+<pre><code class="language-Json">{
+    "country":null
+}
+</code></pre>
+<p><strong>Or:</strong></p>
+
+<p><code class="highlighter-rouge">PUT URL: /v2/exposure-zones/1</code></p>
+
+<p><strong>DATA:</strong></p>
+
+<pre><code class="language-Json">{
+    "country":
+}
+</code></pre>
+
+<p><code class="highlighter-rouge">NOTE:</code> Removing an association will NOT remove the related entity.</p>
+
+<h4 id="associating-non-existent-data">Associating Non-Existent Data</h4>
+
+<p>If you wish to associate a relationship with something that doesn’t exist yet, the API call will fail. You will need to create it manually via the API endpoint, then do the association.</p>
+
+<p><code class="highlighter-rouge">NOTE:</code> This is not the case for One to Many relationships. One to Many relationships will ALWAYS create a new entity before associating it.</p>
+
+<h4 id="associated-many-relationships">Associated Many Relationships</h4>
+<p>Some relationships are not able to be modified via a POST or PUT request on a normal resource. These are usually for relationships that are One to Many or Many to Many and there are specific API endpoints to handle them.</p>
+
+<p><strong>One to Many</strong></p>
+
+<p>Associating an entity with a one to many relationship:</p>
+
+<p><code class="highlighter-rouge">PUT URL: /v2/customers/1/log</code></p>
+
+<p><strong>DATA:</strong></p>
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"logs"</span><span class="p">:[{</span><span class="w">
+        </span><span class="nt">"account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Account Name"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"entry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Updated customer Information"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>The above request would CREATE a log for Customer 1, if the below criteria is met:</p>
+<ul>
+  <li>Each log data provided is valid.</li>
+</ul>
+
+<p>Removing a many to many entity association:</p>
+
+<p><code class="highlighter-rouge">DELETE URL: /v2/customers/1/log/</code></p>
+
+<p><strong>DATA:</strong></p>
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"logs"</span><span class="p">:[{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+<p>The above request would DELETE the Log, if the below criteria is met:</p>
+<ul>
+  <li>The log data provided is valid and the relationship exists.</li>
+</ul>
+
+<p><strong>Many to Many</strong></p>
+
+<p>Associating an entity with a many to many relationship:</p>
+
+<p><code class="highlighter-rouge">PUT URL: /v2/certificates/1/customers</code></p>
+
+<p><strong>DATA:</strong></p>
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"customers"</span><span class="p">:[{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">},{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+<p>The above request would associate Customer 10 and Customer 20 with Certificate 1, if the below criteria is met:</p>
+<ul>
+  <li>Each customer data provided is valid and exists.</li>
+</ul>
+
+<p>Removing a many to many entity association:</p>
+
+<p><code class="highlighter-rouge">DELETE URL: /v2/certificates/1/customers/</code></p>
+
+<p><strong>DATA:</strong></p>
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"customers"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+<p>The above request would remove the associate of Customer 10 with Certificate 1, if the below criteria is met:</p>
+<ul>
+  <li>The customer data provided is valid and the relationship exists.</li>
+</ul>
+
+<p><code class="highlighter-rouge">NOTE:</code> Removing an association will NOT remove the related entity.</p>
+
+<p><strong>Many to Many Pivot Data</strong></p>
+
+<p>Some Many to Many relationships have pivot data, E.G. Customer 1has a Custom Field 10 with a value of custom field value
+If you wish to update the value of that, simply do the same action as you would if you were assigning a Many to Many relationship, and pass in the updated value field.</p>
+
+<p><code class="highlighter-rouge">PUT URL: /v2/customers/1/custom-fields/</code></p>
+
+<p><strong>DATA:</strong></p>
+<pre><code class="language-JSON">{
+    "custom_fields": {"id": 10, "value":"update my customer custom field value!"}
+}
+</code></pre>
+
+<h3 id="collection-filtering">Collection Filtering</h3>
+
+<p>When getting a list of a resource ( GET /v2/exposure-zones for example) the CertCapture REST API provides a robust way to filter down your results, on top of the standard ordering and pagination.</p>
+
+<h4 id="format">Format</h4>
+<p>When accessing a collection, you can filter on any field that is shown in the results using this format: <code class="highlighter-rouge">[[FIELD, OPERATOR, VALUE], [FIELD, OPERATOR, VALUE]]</code></p>
+
+<p>Example:</p>
+
+<p><code class="highlighter-rouge">/v2/customers?filter=[["id","=",5],["name","=","my name"],["customer_number","in","abc123,cc00005"]]
+</code></p>
+
+<h4 id="operators">Operators</h4>
+<p>The following operators are also available, but limited to the field type you are searching on. For example, you cannot use <code class="highlighter-rouge">&lt;</code> with a boolean field.
+<code class="highlighter-rouge">"=", "&lt;", "&gt;","=&lt;", "=&gt;", "like", "ilike", "&lt;&gt;", "in"</code></p>
+
+<h4 id="booleans">Booleans</h4>
+<p>Filtering by booleans is available with the following case insensitive values:
+<code class="highlighter-rouge">"yes", "y", "1", "true", 1, true, "false", "no", "n", "0", 0, false
+</code></p>
+<h4 id="multiple-values-in">Multiple Values (in)</h4>
+<p>Filtering can be done on multiple values by using the “in” operator and splitting the value by commas.
+<code class="highlighter-rouge">?filter=[["id","in","1,2,3,4,5"]]
+</code>
+<code class="highlighter-rouge">?filter=[["customer_number","in","abc123,123abc,cc0000005"]]
+</code>
+<code class="highlighter-rouge">?filter=[["exposure_zone.name","in","Washington,Arizona"]]
+</code></p>
+
+<p><code class="highlighter-rouge">NOTE:</code> Ids and numeric values need to be encapsulated in a string, <code class="highlighter-rouge">["id","in","1,2,3,4,5"]</code> not <code class="highlighter-rouge">["id","in",1,2,3,4,5]</code></p>
+
+<h4 id="url-encoding">URL Encoding</h4>
+<p>In some cases URL encoding may be required to make sure the filter JSON is valid:</p>
+
+<p><code class="highlighter-rouge">?filter=[["name","=","Bob &amp; Nicks Emporium"]]
+</code>
+Will cause an ‘Invalid JSON’ error so url encode the &amp; symbol:</p>
+
+<p><code class="highlighter-rouge">?filter=[["name","=","Bob %26 Nicks Emporium"]]
+</code></p>
+<h4 id="filtering-on-null">Filtering on Null</h4>
+<p>Filtering by null is also available, but it must be raw null value (not in quotes).</p>
+
+<p><code class="highlighter-rouge">?filter=[["customer_number","=",null]]
+</code></p>
+<h4 id="filtering-on-empty">Filtering on Empty</h4>
+<p>Filtering by “” can sometimes cause an error:</p>
+
+<p><code class="highlighter-rouge">?filter=[["calc_id","=",""]]
+</code>
+The solution is to change from an empty string to null:</p>
+
+<p><code class="highlighter-rouge">?filter=[["calc_id","=",null]]
+</code></p>
+
+<h4 id="filtering-on-relationships">Filtering on Relationships</h4>
+<p>Filtering based on expanded relationships is also available:</p>
+
+<p><code class="highlighter-rouge">?filter=[["relationship.name", "=", "value"]]
+</code></p>
+
+<p><code class="highlighter-rouge">NOTE:</code> All of the expanded relationship filters are custom set white listed filters, if you feel you should be able to filter on something but can’t, let us know at support@certcapture.com.</p>
+</p>
+    <p class="btn-callout"><a href="/developer-dot/blog" role="button">Back to posts</a></p>
+</div>
+</main>
+        </section>
+         
+        <section class="row padding-sides">
+            <main class="col-md-12"><div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'developeravalaracom'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</main>
+        </section>
+        
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/_posts/2016-11-29-certcapture-rest-api-part-i.md"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

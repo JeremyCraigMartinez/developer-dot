@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Exemption Handling | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="Customer Exemption Handling | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="API solutions for end-to-end tax compliance"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <link rel="stylesheet" href="https://d30qslfa084pac.cloudfront.net/common/avaform/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=blog>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/blog">blog</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav  ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Blog" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid blog">
+        
+        
+        <section class="row padding-sides">
+            <main class="col-md-12">
+<div class="breadcrumbs blog">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li class="text-uppercase">Resources</li>
+            <li class="text-uppercase"><a href="/developer-dot/blog">Developer Blog</a></li>
+            
+            <li class="text-uppercase">Customer Exemption Handling</li>
+            
+        </ul>
+    </div>
+</div>
+<br />
+
+
+
+<div class="half">
+    <h1>Customer Exemption Handling</h1>
+    <p class="byline">By Aaron Robles | March 07, 2017</p>
+    <p class="blog-content"><p>You’re all set to build an integration into AvaTax for your client when they bring up another facet of their business with you not previously mentioned: They need to properly calculate for the tax exempt clients as well.</p>
+
+<p>As luck would have it, there are various ways AvaTax on its own can handle exemptions, so look no further!</p>
+
+<h2>Exempt vs. Non-taxable</h2>
+
+<p>So, can you just mark certain transactions or line items non-taxable?</p>
+
+<p>Many of you may have already noticed that we have a way to consider the various line items of a transaction either taxable or non-taxable via our <a href="https://help.avalara.com/000_Avalara_AvaTax/Manage_Product_Taxability/Tax_Codes_-_Frequently_Asked_Questions">TaxCodes</a>. If you have, you’re probably wondering, “Why bother figuring this out if I can just mark things as non-taxable and be done with this?”</p>
+
+<p>Oddly enough there’s actually a very big difference between non-taxable and exempt:</p>
+
+<ul class="normal">
+    <li><strong>Exemption</strong> applies to people (or businesses)</li>
+    <li><strong>Taxability</strong> applies to stuff (or services)</li>
+</ul>
+
+<p>There’s also that pesky little bit where the tax authorities explicitly need these different amounts of sales broken out for tax returns in many states.  If your business tax returns are audited, you may be asked to prove that a specific customer is in fact exempt; and you may be asked to prove that a particular product classified as nontaxable is correctly classified.  Avalara’s AvaTax and CertCapture products are designed to help you navigate these challenges.</p>
+
+<p>Let’s look at a few different ways you can mark a product exempt or non-taxable.</p>
+
+<h2>Customer is Exempt because of an Exemption Certificate</h2>
+
+<p>If you’ve received a copy of your customer’s exemption certificate, let’s record that correctly in AvaTax.  We begin by attaching the customer’s exemption certificate number into the transaction, in the <code class="highlighter-rouge">exemptionNo</code> field.</p>
+
+<p>Here’s what it looks like:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+	</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"companyCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ALRTC"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-05"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INV0001"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"customerCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACME"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"exemptionno"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GTX1080"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+		</span><span class="nt">"ShipFrom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+			</span><span class="nt">"line1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100 Ravine Lane"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bainbridge Island"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WA"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"98110"</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="nt">"ShipTo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+			</span><span class="nt">"line1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100 Ravine Lane"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bainbridge Island"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WA"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"98110"</span><span class="w">
+		</span><span class="p">}</span><span class="w">
+	</span><span class="p">},</span><span class="w">
+	</span><span class="nt">"lines"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+		</span><span class="nt">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"taxCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P0000000"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"itemCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Y0001"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yarn"</span><span class="w">
+	</span><span class="p">},</span><span class="w">
+	</span><span class="p">{</span><span class="w">
+		</span><span class="nt">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"taxCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YRN"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"itemCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yarn"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yarn"</span><span class="w">
+	</span><span class="p">}],</span><span class="w">
+	</span><span class="nt">"commit"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>Here’s what the response looks like.  Notice that the <code class="highlighter-rouge">totalExempt</code> amount is populated:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2260407167</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INV0001"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="mi">53110</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-05"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"paymentDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1900-01-01"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saved"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SalesInvoice"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"batchCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currencyCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"customerUsageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"customerVendorCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACME"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"exemptNo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GTX1080"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"reconciled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"purchaseOrderNo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"salespersonCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"taxOverrideType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"None"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"taxOverrideAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"taxOverrideReason"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalExempt"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalTax"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalTaxable"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalTaxCalculated"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"adjustmentReason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NotAdjusted"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"adjustmentDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WA"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"softwareVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16.12.0.10"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"originAddressId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6680805774</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"destinationAddressId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6680805775</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"exchangeRateEffectiveDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-05"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"exchangeRate"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"isSellerImporterOfRecord"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"modifiedDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-06T00:49:40.693"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"modifiedUserId"</span><span class="p">:</span><span class="w"> </span><span class="mi">270</span><span class="p">,</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>And here’s what it looks like once it reaches our admin console:</p>
+
+<p><img src="/developer-dot/public/images/blog/exemption-admin-console.png" alt="Exemption detail in admin consoleDocument Result for Certificate" height="296" width="600" /></p>
+
+<p>One caveat to note:  The use of the ExemptionNo field works by designating the EntityUseCode <code class="highlighter-rouge">L-Other</code> on the engine’s back end.  You may notice that, in some states like Hawaii, a sale with an <code class="highlighter-rouge">exemptionNo</code> attached still has some tax; this occurs because some states don’t allow certain types of exemptions, or they may tax exempt transactions at a different rate.</p>
+
+<h2>Customer is Exempt because of Usage</h2>
+
+<p>The second way that we’ll go over making a transaction exempt is to use the <code class="highlighter-rouge">customerUsageType</code> field.  This field contains a code that can be used to designate the reason for a particular sale being exempt.  Each entity use code stands for a different exemption reason, the logic of which can be found in our <a href="https://help.avalara.com/000_Avalara_AvaTax/Exempt_Customers_from_Sales_Tax/Exemption_Reason_Matrices_for_US_and_Canada">exemption reason documentation</a>.</p>
+
+<p>You can browse through the full list of entity usage codes by calling the <a href="https://developer.avalara.com/api-reference/avatax/rest/v2/methods/Definitions/ListEntityUseCodes/">ListEntityUseCode API</a>, <code class="highlighter-rouge">GET /api/v2/definitions/entityusecodes</code>.  This API produces a list of codes indicating codes your customer can select; it’s designed to help you populate a dropdown box so your users can choose whether they are requesting a specific exemption.  Here’s an example of the values that you can choose from:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"@recordsetCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FEDERAL GOV"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"validCountries"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"US"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"E"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CHARITABLE/EXEMPT ORG"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"validCountries"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"*"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>So for the moment let’s imagine that we have chosen to use the code <code class="highlighter-rouge">G</code>, meaning <code class="highlighter-rouge">Resale</code>, for our example.  Here’s what our transaction would look like:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+	</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"companyCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ALRTC"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-05"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INV0001"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"customerCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACME"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"exemptionno"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"customerusagetype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"G"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+		</span><span class="nt">"ShipFrom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+			</span><span class="nt">"line1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100 Ravine Lane"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bainbridge Island"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WA"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"98110"</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="nt">"ShipTo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+			</span><span class="nt">"line1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100 Ravine Lane"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bainbridge Island"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WA"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"98110"</span><span class="w">
+		</span><span class="p">}</span><span class="w">
+	</span><span class="p">},</span><span class="w">
+	</span><span class="nt">"lines"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+		</span><span class="nt">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"taxCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P0000000"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"itemCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Y0001"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yarn"</span><span class="w">
+	</span><span class="p">},</span><span class="w">
+	</span><span class="p">{</span><span class="w">
+		</span><span class="nt">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"taxCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YRN"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"itemCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yarn"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yarn"</span><span class="w">
+	</span><span class="p">}],</span><span class="w">
+	</span><span class="nt">"commit"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>Here’s what that looks like in our admin console:</p>
+
+<p><img src="/developer-dot/public/images/blog/exemption-detail-admin-console.png" alt="Exemption detail in admin consoleDocument Result for Certificate" height="344" width="600" /></p>
+
+<p>And here’s the response.  Notice how the <code class="highlighter-rouge">exemptNo</code> field is blank, <code class="highlighter-rouge">customerUsageType</code> is <code class="highlighter-rouge">G</code> and still the <code class="highlighter-rouge">totalExempt</code> is populated with an amount:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2260407167</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INV0001"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="mi">53110</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-05"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"paymentDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1900-01-01"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saved"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SalesInvoice"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"batchCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currencyCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"customerUsageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"G"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"customerVendorCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACME"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"exemptNo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"reconciled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"purchaseOrderNo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"salespersonCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"taxOverrideType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"None"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"taxOverrideAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"taxOverrideReason"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalExempt"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalTax"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalTaxable"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalTaxCalculated"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"adjustmentReason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NotAdjusted"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"adjustmentDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WA"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"softwareVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16.12.0.10"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"originAddressId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6681140178</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"destinationAddressId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6681140179</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"exchangeRateEffectiveDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-05"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"exchangeRate"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"isSellerImporterOfRecord"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"modifiedDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-06T02:25:31.92"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"modifiedUserId"</span><span class="p">:</span><span class="w"> </span><span class="mi">270</span><span class="p">,</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>There’s one last thing to note on these methods.  Regardless of either manner that you choose, the account will need to be set to “Optional” within the <a href="https://help.avalara.com/000_Avalara_AvaTax/Exempt_Customers_from_Sales_Tax/Enable_ECMS">exemption settings screen in admin console</a>.</p>
+
+<h2>Are these my only options for managing exemptions?</h2>
+
+<p>No, you can actually create an <a href="https://help.avalara.com/000_Avalara_AvaTax/Exempt_Customers_from_Sales_Tax/ECMS_-_Frequently_Asked_Questions">ECMS record</a> and use that specific CustomerCode attributed to the customer in the ECMS record on your invoice as well to automatically have the service consider them exempt. This record can be created manually, or even through our same <a href="http://developer.avalara.com/api-reference/avatax/rest/v2/Batches/#ApiV2CompaniesByCompanyIdBatchesPost">REST v2 API</a> via <a href="https://help.avalara.com/000_Avalara_AvaTax/Exempt_Customers_from_Sales_Tax/Add_or_Import_ECMS_Exemption_Certificate_Entries">ECMS Batch upload</a>!</p>
+
+<p>We also offer a completely separate service called <a href="https://certcapture.avalara.com/">Avalara CertCapture</a> with very robust controls and features that can automate many aspects of the otherwise manual process of creating exemption certificate records.</p>
+
+<p>For example see the below request where neither of the aforementioned exemption methods of EntityUseCode nor ExemptionNo are used:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+	</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"companyCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ALRTC"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-05"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INV0001"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"customerCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACME"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"exemptionno"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"exemptionreasoncode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+		</span><span class="nt">"ShipFrom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+			</span><span class="nt">"line1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100 Ravine Lane"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bainbridge Island"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WA"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"98110"</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="nt">"ShipTo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+			</span><span class="nt">"line1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100 Ravine Lane"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bainbridge Island"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WA"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"98110"</span><span class="w">
+		</span><span class="p">}</span><span class="w">
+	</span><span class="p">},</span><span class="w">
+	</span><span class="nt">"lines"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+		</span><span class="nt">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"taxCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P0000000"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"itemCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Y0001"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yarn"</span><span class="w">
+	</span><span class="p">},</span><span class="w">
+	</span><span class="p">{</span><span class="w">
+		</span><span class="nt">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"taxCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YRN"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"itemCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yarn"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yarn"</span><span class="w">
+	</span><span class="p">}],</span><span class="w">
+	</span><span class="nt">"commit"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>And yet despite this the response indicates that the total amount is exempt:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2260407167</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INV0001"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="mi">53110</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-05"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"paymentDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1900-01-01"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saved"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SalesInvoice"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"batchCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currencyCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"customerUsageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"customerVendorCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACME"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"exemptNo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"reconciled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"purchaseOrderNo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"salespersonCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"taxOverrideType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"None"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"taxOverrideAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"taxOverrideReason"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalExempt"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalTax"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalTaxable"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"totalTaxCalculated"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"adjustmentReason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NotAdjusted"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"adjustmentDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WA"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"softwareVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16.12.0.10"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"originAddressId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6681370894</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"destinationAddressId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6681370895</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"exchangeRateEffectiveDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-05"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"exchangeRate"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"isSellerImporterOfRecord"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"modifiedDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-06T03:34:38.643"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"modifiedUserId"</span><span class="p">:</span><span class="w"> </span><span class="mi">270</span><span class="p">,</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2>So which should I use?</h2>
+
+<p>It’s actually a deceptively complicated answer, which is why the best practice is to allow your prospective client to use any of these methods through your integration.</p>
+
+<p>There can be some clients whose business needs as far as exemption go are fairly simple, thus only the <code class="highlighter-rouge">exemptionNo</code> field is required. However there can be others with more complicated scenarios and a diverse customer base whose reasons for exemption span the gamut. Due to the complicated nature of tax, and in the interest of giving your integration a fighting chance to meet the needs of all kinds of business, it’s best practice to take into account all the methods we can handle an exempt sale when building your integration.</p>
+
+<p>– Aaron Robles, Partner Launch Team</p>
+</p>
+    <p class="btn-callout"><a href="/developer-dot/blog" role="button">Back to posts</a></p>
+</div>
+</main>
+        </section>
+         
+        <section class="row padding-sides">
+            <main class="col-md-12"><div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'developeravalaracom'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</main>
+        </section>
+        
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/_posts/2017-03-07-customer-exemption-handling.md"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+    
+    <script src="/developer-dot/public/js/new-ava-form.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definitions - Avatax REST API v2 | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="Definitions - Avatax REST API v2 | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="API solutions for end-to-end tax compliance"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=avaTax>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/avatax">avaTax</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav apis ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Avatax" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid api_references">
+        
+          
+
+
+<div class="breadcrumbs">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li><span class="text-uppercase">Tax Calculation API</span>s</li>
+            <li class="text-uppercase"><a href="/developer-dot/avatax">Avalara avaTax</a></li>
+            <li class="text-uppercase">api reference</li>
+        </ul>
+    </div>
+</div>
+  
+        <section class="row padding-sides">
+            <nav class="col-md-3 api-ref">
+                 <div id='the-nav' class='nav-wrapper hidden-xs hidden-sm api-ref-nav' style='height: 100%; overflow-y: auto;'>
+    <ul class='api-ref-side-nav nav nav-pills nav-stacked'>
+        
+        
+
+        
+        
+
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/soap">Avatax SOAP API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/rest/v2">Avatax REST API v2</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                            
+                                <div style="padding-left:10px;">
+    <ul class='api-ref-side-nav-active nav nav-pills nav-stacked sub-nav'>
+        
+            
+            
+            
+
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Accounts">Accounts</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Addresses">Addresses</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Batches">Batches</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Companies">Companies</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Contacts">Contacts</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Definitions">Definitions</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/FilingCalendars">FilingCalendars</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Filings">Filings</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Free">Free</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/FundingRequests">FundingRequests</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Items">Items</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/JurisdictionOverrides">JurisdictionOverrides</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Locations">Locations</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Nexus">Nexus</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Notices">Notices</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Onboarding">Onboarding</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Registrar">Registrar</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Settings">Settings</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Subscriptions">Subscriptions</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/TaxCodes">TaxCodes</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/TaxContent">TaxContent</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/TaxRules">TaxRules</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Transactions">Transactions</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Upcs">Upcs</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Users">Users</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Utilities">Utilities</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+            <li><a style="color:#ff6600; overflow: hidden;" href="/developer-dot/api-reference/avatax/rest/v2/models">Models</a></li>
+            
+        
+    </ul>
+</div>
+
+                            
+                        
+                    </li>
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+
+        
+        <li class="older-api">
+            Older APIs
+            <div style="padding-left:10px;">
+    <ul class='api-ref-side-nav-active nav nav-pills nav-stacked sub-nav'>
+            
+            
+
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/onboarding">Onboarding API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/batch/soap">Avatax BatchSvc SOAP API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+                
+                
+
+                
+                
+                
+            
+                
+                
+
+                
+                
+                
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/account/soap">Avatax AccountSvc SOAP API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/rest/v1">Avatax REST API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+    </ul>
+</div>
+        </li>
+        
+    </ul>
+</div>
+ 
+            </nav>
+            <main class="col-md-9 small-no-padding"><h1>Avatax REST API v2 - Definitions</h1>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Purpose</th>
+            <th>Summary</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FGetLoginVerifierByForm">GetLoginVerifierByForm</a></td>
+    <td>Test whether a form supports online login verification</td>
+    <td class='markdown-description'><p>This API is intended to be useful to identify whether the user should be allowed
+to automatically verify their login and password.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListAvaFileForms">ListAvaFileForms</a></td>
+    <td>Retrieve the full list of the AvaFile Forms available</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported AvaFile Forms
+This API is intended to be useful to identify all the different AvaFile Forms</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListCommunicationsServiceTypes">ListCommunicationsServiceTypes</a></td>
+    <td>Retrieve the full list of communications transactiontypes</td>
+    <td class='markdown-description'><p>Returns full list of communications transaction types which
+are accepted in communication tax calculation requests.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListCommunicationsTransactionTypes">ListCommunicationsTransactionTypes</a></td>
+    <td>Retrieve the full list of communications transactiontypes</td>
+    <td class='markdown-description'><p>Returns full list of communications transaction types which
+are accepted in communication tax calculation requests.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListCommunicationsTSPairs">ListCommunicationsTSPairs</a></td>
+    <td>Retrieve the full list of communications transaction/service type pairs</td>
+    <td class='markdown-description'><p>Returns full list of communications transaction/service type pairs which
+are accepted in communication tax calculation requests.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListCountries">ListCountries</a></td>
+    <td>List all ISO 3166 countries</td>
+    <td class='markdown-description'><p>Returns a list of all ISO 3166 country codes, and their US English friendly names.
+This API is intended to be useful when presenting a dropdown box in your website to allow customers to select a country for 
+a shipping address.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListEntityUseCodes">ListEntityUseCodes</a></td>
+    <td>Retrieve the full list of Avalara-supported entity use codes</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported entity use codes.
+Entity/Use Codes are definitions of the entity who is purchasing something, or the purpose for which the transaction
+is occurring.  This information is generally used to determine taxability of the product.
+In order to facilitate correct reporting of your taxes, you are encouraged to select the proper entity use codes for
+all transactions that are exempt.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListFilingFrequencies">ListFilingFrequencies</a></td>
+    <td>Retrieve the full list of Avalara-supported filing frequencies.</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported filing frequencies.
+This API is intended to be useful to identify all the different filing frequencies that can be used in notices.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListJurisdictionsByAddress">ListJurisdictionsByAddress</a></td>
+    <td>List jurisdictions near a specific address</td>
+    <td class='markdown-description'><p>Returns a list of all Avalara-supported taxing jurisdictions that apply to this address.</p>
+
+<p>This API allows you to identify which jurisdictions are nearby a specific address according to the best available geocoding information.
+It is intended to allow you to create a ‘Jurisdiction Override’, which allows an address to be configured as belonging to a nearby 
+jurisdiction in AvaTax.</p>
+
+<p>The results of this API call can be passed to the <code class="highlighter-rouge">CreateJurisdictionOverride</code> API call.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListLocationQuestionsByAddress">ListLocationQuestionsByAddress</a></td>
+    <td>Retrieve the list of questions that are required for a tax location</td>
+    <td class='markdown-description'><p>Returns the list of additional questions you must answer when declaring a location in certain taxing jurisdictions.
+Some tax jurisdictions require that you register or provide additional information to configure each physical place where
+your company does business.
+This information is not usually required in order to calculate tax correctly, but is almost always required to file your tax correctly.
+You can call this API call for any address and obtain information about what questions must be answered in order to properly
+file tax in that location.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListLoginVerifiers">ListLoginVerifiers</a></td>
+    <td>List all forms where logins can be verified automatically</td>
+    <td class='markdown-description'><p>List all forms where logins can be verified automatically.
+This API is intended to be useful to identify whether the user should be allowed
+to automatically verify their login and password.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNexus">ListNexus</a></td>
+    <td>Retrieve the full list of Avalara-supported nexus for all countries and regions.</td>
+    <td class='markdown-description'><p>Returns the full list of all Avalara-supported nexus for all countries and regions.<br />
+This API is intended to be useful if your user interface needs to display a selectable list of nexus.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNexusByAddress">ListNexusByAddress</a></td>
+    <td>List all nexus that apply to a specific address.</td>
+    <td class='markdown-description'><p>Returns a list of all Avalara-supported taxing jurisdictions that apply to this address.
+This API allows you to identify which tax authorities apply to a physical location, salesperson address, or point of sale.
+In general, it is usually expected that a company will declare nexus in all the jurisdictions that apply to each physical address
+where the company does business.
+The results of this API call can be passed to the ‘Create Nexus’ API call to declare nexus for this address.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNexusByCountry">ListNexusByCountry</a></td>
+    <td>Retrieve the full list of Avalara-supported nexus for a country.</td>
+    <td class='markdown-description'><p>Returns all Avalara-supported nexus for the specified country.
+This API is intended to be useful if your user interface needs to display a selectable list of nexus filtered by country.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNexusByCountryAndRegion">ListNexusByCountryAndRegion</a></td>
+    <td>Retrieve the full list of Avalara-supported nexus for a country and region.</td>
+    <td class='markdown-description'><p>Returns all Avalara-supported nexus for the specified country and region.
+This API is intended to be useful if your user interface needs to display a selectable list of nexus filtered by country and region.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNexusByFormCode">ListNexusByFormCode</a></td>
+    <td>List nexus related to a tax form</td>
+    <td class='markdown-description'><p>Retrieves a list of nexus related to a tax form.</p>
+
+<p>The concept of <code class="highlighter-rouge">Nexus</code> indicates a place where your company has sufficient physical presence and is obligated
+to collect and remit transaction-based taxes.</p>
+
+<p>When defining companies in AvaTax, you must declare nexus for your company in order to correctly calculate tax
+in all jurisdictions affected by your transactions.</p>
+
+<p>This API is intended to provide useful information when examining a tax form.  If you are about to begin filing
+a tax form, you may want to know whether you have declared nexus in all the jurisdictions related to that tax 
+form in order to better understand how the form will be filled out.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNexusTaxTypeGroups">ListNexusTaxTypeGroups</a></td>
+    <td>Retrieve the full list of nexus tax type groups</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported nexus tax type groups
+This API is intended to be useful to identify all the different tax sub-types.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNoticeCustomerFundingOptions">ListNoticeCustomerFundingOptions</a></td>
+    <td>Retrieve the full list of Avalara-supported tax notice customer funding options.</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported tax notice customer funding options.
+This API is intended to be useful to identify all the different notice customer funding options that can be used in notices.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNoticeCustomerTypes">ListNoticeCustomerTypes</a></td>
+    <td>Retrieve the full list of Avalara-supported tax notice customer types.</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported tax notice customer types.
+This API is intended to be useful to identify all the different notice customer types.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNoticeFilingtypes">ListNoticeFilingtypes</a></td>
+    <td>Retrieve the full list of Avalara-supported tax notice filing types.</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported tax notice filing types.
+This API is intended to be useful to identify all the different notice filing types that can be used in notices.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNoticePriorities">ListNoticePriorities</a></td>
+    <td>Retrieve the full list of Avalara-supported tax notice priorities.</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported tax notice priorities.
+This API is intended to be useful to identify all the different notice priorities that can be used in notices.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNoticeReasons">ListNoticeReasons</a></td>
+    <td>Retrieve the full list of Avalara-supported tax notice reasons.</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported tax notice reasons.
+This API is intended to be useful to identify all the different tax notice reasons.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNoticeResponsibilities">ListNoticeResponsibilities</a></td>
+    <td>Retrieve the full list of Avalara-supported tax notice responsibility ids</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported tax notice responsibility ids
+This API is intended to be useful to identify all the different tax notice responsibilities.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNoticeRootCauses">ListNoticeRootCauses</a></td>
+    <td>Retrieve the full list of Avalara-supported tax notice root causes</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported tax notice root causes
+This API is intended to be useful to identify all the different tax notice root causes.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNoticeStatuses">ListNoticeStatuses</a></td>
+    <td>Retrieve the full list of Avalara-supported tax notice statuses.</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported tax notice statuses.
+This API is intended to be useful to identify all the different tax notice statuses.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListNoticeTypes">ListNoticeTypes</a></td>
+    <td>Retrieve the full list of Avalara-supported tax notice types.</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported tax notice types.
+This API is intended to be useful to identify all the different notice types that can be used in notices.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListParameters">ListParameters</a></td>
+    <td>Retrieve the full list of Avalara-supported extra parameters for creating transactions.</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported extra parameters for the ‘Create Transaction’ API call.
+This list of parameters is available for use when configuring your transaction.
+Some parameters are only available for use if you have subscribed to certain features of AvaTax.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListPermissions">ListPermissions</a></td>
+    <td>Retrieve the full list of Avalara-supported permissions</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported permission types.
+This API is intended to be useful to identify the capabilities of a particular user logon.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListRateTypesByCountry">ListRateTypesByCountry</a></td>
+    <td>Retrieve the full list of rate types for each country</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported rate type file types
+This API is intended to be useful to identify all the different rate types.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListRegions">ListRegions</a></td>
+    <td>List all ISO 3166 regions</td>
+    <td class='markdown-description'><p>Returns a list of all ISO 3166 region codes and their US English friendly names.
+This API is intended to be useful when presenting a dropdown box in your website to allow customers to select a region 
+within the country for a shipping addresses.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListRegionsByCountry">ListRegionsByCountry</a></td>
+    <td>List all ISO 3166 regions for a country</td>
+    <td class='markdown-description'><p>Returns a list of all ISO 3166 region codes for a specific country code, and their US English friendly names.
+This API is intended to be useful when presenting a dropdown box in your website to allow customers to select a region 
+within the country for a shipping addresses.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListResourceFileTypes">ListResourceFileTypes</a></td>
+    <td>Retrieve the full list of Avalara-supported resource file types</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported resource file types
+This API is intended to be useful to identify all the different resource file types.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListSecurityRoles">ListSecurityRoles</a></td>
+    <td>Retrieve the full list of Avalara-supported permissions</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported permission types.
+This API is intended to be useful when designing a user interface for selecting the security role of a user account.
+Some security roles are restricted for Avalara internal use.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListSubscriptionTypes">ListSubscriptionTypes</a></td>
+    <td>Retrieve the full list of Avalara-supported subscription types</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported subscription types.
+This API is intended to be useful for identifying which features you have added to your account.
+You may always contact Avalara’s sales department for information on available products or services.
+You cannot change your subscriptions directly through the API.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListTaxAuthorities">ListTaxAuthorities</a></td>
+    <td>Retrieve the full list of Avalara-supported tax authorities.</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported tax authorities.
+This API is intended to be useful to identify all the different authorities that receive tax.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListTaxAuthorityForms">ListTaxAuthorityForms</a></td>
+    <td>Retrieve the full list of Avalara-supported forms for each tax authority.</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported forms for each tax authority.
+This list represents tax forms that Avalara recognizes.
+Customers who subscribe to Avalara Managed Returns Service can request these forms to be filed automatically 
+based on the customer’s AvaTax data.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListTaxAuthorityTypes">ListTaxAuthorityTypes</a></td>
+    <td>Retrieve the full list of Avalara-supported tax authority types.</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported tax authority types.
+This API is intended to be useful to identify all the different authority types.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListTaxCodes">ListTaxCodes</a></td>
+    <td>Retrieve the full list of Avalara-supported tax codes.</td>
+    <td class='markdown-description'><p>Retrieves the list of Avalara-supported system tax codes.
+A ‘TaxCode’ represents a uniquely identified type of product, good, or service.
+Avalara supports correct tax rates and taxability rules for all TaxCodes in all supported jurisdictions.
+If you identify your products by tax code in your ‘Create Transacion’ API calls, Avalara will correctly calculate tax rates and
+taxability rules for this product in all supported jurisdictions.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListTaxCodeTypes">ListTaxCodeTypes</a></td>
+    <td>Retrieve the full list of Avalara-supported tax code types.</td>
+    <td class='markdown-description'><p>Returns the full list of recognized tax code types.
+A ‘Tax Code Type’ represents a broad category of tax codes, and is less detailed than a single TaxCode.
+This API is intended to be useful for broadly searching for tax codes by tax code type.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListTaxSubTypes">ListTaxSubTypes</a></td>
+    <td>Retrieve the full list of tax sub types</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported tax sub-types
+This API is intended to be useful to identify all the different tax sub-types.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FDefinitions%2FListTaxTypeGroups">ListTaxTypeGroups</a></td>
+    <td>Retrieve the full list of tax type groups</td>
+    <td class='markdown-description'><p>Returns the full list of Avalara-supported tax type groups
+This API is intended to be useful to identify all the different tax type groups.</p>
+</td>
+</tr>
+    </tbody>
+</table>
+<br>
+</main>
+        </section>
+          
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/dynamic/swagger/avatax/rest/v2.json"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalara CloudConnect | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="Avalara CloudConnect | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="API solutions for end-to-end tax compliance"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=CloudConnect>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/cloudconnect">CloudConnect</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav apis ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Cloudconnect" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid use_cases">
+        
+          
+
+
+<div class="breadcrumbs">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li><span class="text-uppercase">Tax Calculation API</span>s</li>
+            <li class="text-uppercase"><a href="/developer-dot/cloudconnect">Avalara CloudConnect</a></li>
+            <li class="text-uppercase">use cases</li>
+        </ul>
+    </div>
+</div>
+  
+        <section class="row padding-sides half">
+            <nav class="col-md-3">
+                 <ul class="api-ref-side-nav nav nav-pills nav-stacked hidden-xs hidden-sm">
+    <li ><a href="/developer-dot/avatax/use-cases">Document Workflow</a></li>
+    <li ><a href="/developer-dot/avatax/calculating-tax">Calculating Tax</a></li>
+    <li ><a href="/developer-dot/avatax/address-validation">Address Validation</a></li>
+    <li ><a href="/developer-dot/avatax/reportable-transactions">Reportable Transactions</a></li>
+    <li ><a href="/developer-dot/avatax/handling-return-invoices">Product Returns</a></li>
+    <li ><a href="/developer-dot/avatax/handling-tax-exempt-customers">Exempt Transactions</a></li>
+    <li ><a href="/developer-dot/avatax/voiding-documents">Voiding Documents</a></li>
+    <li ><a href="/developer-dot/avatax/vat-transactions">VAT Transactions</a></li>
+    <li ><a href="/developer-dot/avatax/drop-shipping">Drop Shipping</a></li>
+    <li ><a href="/developer-dot/avatax/consumer-use-tax">Consumer Use Tax</a></li>
+    <li ><a href="/developer-dot/avatax/batch-file-reference">Batch File Reference</a></li>
+    <li ><a href="/developer-dot/avatax/automated-provisioning">Automated Provisioning</a></li>
+    <li ><a href="/developer-dot/avatax/soap-or-rest">SOAP or REST</a></li>
+    <li ><a href="/developer-dot/avatax/filtering-in-rest/">Filtering in REST</a></li>
+    <li ><a href="/developer-dot/avatax/authentication-in-rest/">Authentication in REST</a></li>
+    <li ><a href="/developer-dot/avatax/finding-your-companyid">Finding Your CompanyId</a></li>
+    <li ><a href="/developer-dot/avatax/proxy-server-settings">Proxy Server Settings</a></li>
+    <li ><a href="/developer-dot/avatax/ssl-certificates">SSL Certificates</a></li>
+    <li ><a href="/developer-dot/avatax/errors-and-outages">Errors and Outages</a></li>
+    <li ><a href="/developer-dot/avatax/errors">REST Error Codes</a></li>
+    <li ><a href="/developer-dot/avatax/common-errors">SOAP Error Codes</a></li>
+    <li ><a href="/developer-dot/avatax/service-availability-and-performance">Service Availability</a></li>
+    <li ><a href="/developer-dot/avatax/going-live">Going Live</a></li>
+    <li class="active" ><a href="/developer-dot/avatax/cloudconnect">Cloud Connect</a></li>
+
+</ul>
+<div class="sm-section-nav dropdown visible-xs-block visible-sm-block">
+    <button id="use-case-nav" type="button" data-toggle="dropdown">Use Cases</button>
+    <p>Tax Use Cases</p>
+    <ul class="dropdown-menu" aria-labelledby="use-case-nav">
+        <li><a href="/developer-dot/avatax/use-cases">Document Workflow</a></li>
+        <li><a href="/developer-dot/avatax/calculating-tax">Calculating Tax</a></li>
+        <li><a href="/developer-dot/avatax/address-validation">Address Validation</a></li>
+        <li><a href="/developer-dot/avatax/reportable-transactions">Reportable Transactions</a></li>
+        <li><a href="/developer-dot/avatax/handling-return-invoices">Product Returns</a></li>
+        <li><a href="/developer-dot/avatax/handling-tax-exempt-customers">Exempt Transactions</a></li>
+        <li><a href="/developer-dot/avatax/voiding-documents">Voiding Documents</a></li>
+        <li><a href="/developer-dot/avatax/vat-transactions">VAT Transactions</a></li>
+        <li><a href="/developer-dot/avatax/drop-shipping">Drop Shipping</a></li>
+        <li><a href="/developer-dot/avatax/consumer-use-tax">Consumer Use Tax</a></li>
+        <li><a href="/developer-dot/avatax/batch-file-reference/">Batch File Reference</a></li>
+        <li><a href="/developer-dot/avatax/automated-provisioning">Automated Provisioning</a></li>
+        <li><a href="/developer-dot/avatax/soap-or-rest">SOAP or REST</a></li>
+        <li><a href="/developer-dot/avatax/filtering-in-rest/">Filtering in REST</a></li>
+        <li><a href="/developer-dot/avatax/authentication-in-rest/">Authentication in REST</a></li>
+        <li><a href="/developer-dot/avatax/finding-your-companyid">Finding Your CompanyId</a></li>
+        <li><a href="/developer-dot/avatax/proxy-server-settings">Proxy Server Settings</a></li>
+        <li><a href="/developer-dot/avatax/ssl-certificates">SSL Certificates</a></li>
+        <li><a href="/developer-dot/avatax/errors-and-outages">Errors and Outages</a></li>
+        <li><a href="/developer-dot/avatax/errors">REST Error Codes</a></li>
+        <li><a href="/developer-dot/avatax/common-errors">SOAP Error Codes</a></li>
+        <li><a href="/developer-dot/avatax/service-availability-and-performance">Service Availability</a></li>
+        <li><a href="/developer-dot/avatax/going-live">Going Live</a></li>
+        <li><a href="/developer-dot/avatax/cloudconnect">Cloud Connect</a></li>
+    </ul>
+</div>
+ 
+            </nav>
+            <main class="col-md-9"><h2>Avalara CloudConnect</h2>
+<h3>CloudConnect Setup Guide</h3>
+<h4>Installation Recommendations</h4>
+<ol>
+  <li>The preferred implementation is at least two (2) CloudConnect systems for redundancy. Each unit should require only 1U of rack space. Each unit requires two (2) power outlets, each in separate PDU’s, and one (1) Ethernet port. Either Ethernet port may be used. The fifth port is for IPMI.</li>
+  <li>If you need it to configure a VLAN the MAC address sticker is in the back on the underside of the Avalara CloudConnect appliance. It is also located on the shipping box.</li>
+  <li>The preferred implementation is to place all CloudConnect systems in a Private DMZ. This DZ should allow inbound only from the customer’s network and outbound to the Internet. The systems are fully firewalled and only expose the AvaTax API and only communicate out to Avalara to get content, customer data and security updates. Avalara’s preference is that the system be on a private IP address.</li>
+</ol>
+
+<h4>Initial Setup</h4>
+<p>Once powered on, the LCD will display a booting message and then begin scrolling after approximately one minute. At this point the system is ready to be configured.
+The system defaults to DHCP. The address it acquires will be displayed on the LCD. To change to static IP address:</p>
+<ol>
+  <li>Use the LCD up/down buttons to select “CHANGE IP” and confirm the selection by using the green checkmark button.</li>
+  <li>The following information needs to be confirmed in order: STATIC/DHCP, IP ADDRESS, SUBNET, GATEWAY, DNS 1, DNS 2. Use the up/down buttons to change values and the left/right buttons to change the position. Use the green checkmark button to confirm selections and the red X button to cancel tasks.</li>
+  <li>The system will set the IP address and should be available after a minute.</li>
+  <li>Confirm the setup by pinging the system.</li>
+  <li>If the system does not respond as expected, please select “RESET FIREWALL” on the LCD.</li>
+</ol>
+
+<p>Note that each system will automatically have a unique DNS name in the form of <em>CustomerNameUnitNumber</em>.cloudconnect.avalara.net. This DNS entry is dynamic and updates any time the system IP changes. The unique name of your system can be found on the documentation included with the system.</p>
+
+<h4>Firewall Configuration</h4>
+<p>After confirming that all of the systems are online, please configure your firewall to allow the following communication with the system. This information is current as of 12/27/2016, and is subject to change.</p>
+
+<div class="mobile-table">
+	<table class="styled-table">
+		<thead>
+			<tr>
+				<th>Direction</th>
+				<th>Port (Protocol)</th>
+				<th>Source</th>
+				<th>Destination Host/IP</th>
+				<th>Purpose</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Inbound</td>
+				<td>8080 (HTTP)</td>
+				<td>Any</td>
+				<td>System IP</td>
+				<td>AvaTax API</td>
+			</tr>
+			<tr>
+				<td>Inbound</td>
+				<td>8084, 443 (HTTPS)</td>
+				<td>Any</td>
+				<td>System IP</td>
+				<td>AvaTax API</td>
+			</tr>
+			<tr>
+				<td>Outbound</td>
+				<td>7(ICMP)</td>
+				<td>System IP</td>
+				<td>8.8.8.8</td>
+				<td>Ping</td>
+			</tr>
+			<tr>
+				<td>Outbound</td>
+				<td>53 (DNS)</td>
+				<td>System IP</td>
+				<td>8.8.8.8, 8.8.4.4</td>
+				<td>DNS lookup</td>
+		</tr>
+		<tr>
+				<td>Outbound</td>
+				<td>123 (NTP)</td>
+				<td>System IP</td>
+				<td>ntp.ubuntu.com</td>
+				<td>Network time protocol</td>
+		</tr>
+			<tr>
+				<td>Inbound</td>
+				<td>30001 (SSH)</td>
+				<td>Any</td>
+				<td>System IP</td>
+				<td>Customer SSH access</td>
+		</tr>
+			<tr>
+				<td>Inbound</td>
+				<td>30009 (HTTP)</td>
+				<td>Any</td>
+				<td>System IP</td>
+				<td>AvaTax engine health</td>
+		</tr>
+			<tr>
+				<td>Outbound</td>
+				<td>443 (HTTPS)</td>
+				<td>System IP</td>
+				<td>avatax.avalara.net</td>
+				<td>Synchronization of content and customer data</td>
+		</tr>
+			<tr>
+				<td>Outbound</td>
+				<td>443 (HTTPS)</td>
+				<td>System IP</td>
+				<td>api.logentries.com
+					data.logentries.com
+				</td>
+				<td>Metrics collection</td>
+		</tr>
+			<tr>
+				<td>Outbound</td>
+				<td>443 (HTTPS)</td>
+				<td>System IP</td>
+				<td>center.cloudconnect.avalara.net</td>
+				<td>System health reporting</td>
+		</tr>
+			<tr>
+				<td>Outbound</td>
+				<td>5671 (HTTPS)</td>
+				<td>System IP</td>
+				<td>c4.cloudconnect.avalara.net</td>
+				<td>Messaging service bus</td>
+		</tr>
+				<tr>
+				<td>Outbound</td>
+				<td>443 (HTTPS)</td>
+				<td>System IP</td>
+				<td>package.cloudconnect.avalara.net</td>
+				<td>Linux package updates</td>
+		</tr>
+				<tr>
+				<td>Outbound</td>
+				<td>443 (HTTPS)</td>
+				<td>System IP</td>
+				<td>s3-us-west-2.amazonaws.com
+					s3.amazonaws.com 
+					avalara-cc-packages.s3-us-west-2.amazonaws.com
+					avalara-cc-packages.s3.amazonaws.com
+				</td>
+				<td>Amazon S3</td>
+		</tr>
+				<tr>
+				<td>Outbound</td>
+				<td>80 (HTTP), 443 (HTTPS)</td>
+				<td>System IP</td>
+				<td>*.download.windowsupdate.com 
+					*.update.microsoft.com 
+					*.windowsupdate.com 
+					*.windowsupdate.microsoft.com 
+					download.microsoft.com 
+					ntservicepack.microsoft.com 
+					stats.microsoft.com 
+					windowsupdate.microsoft.com 
+					wustat.windows.com
+				</td>
+				<td>Windows Update service</td>
+		</tr>
+				<tr>
+				<td>Outbound</td>
+				<td>443 (HTTPS)</td>
+				<td>System IP</td>
+				<td>edelivery.oracle.com 
+					download.oracle.com
+				</td>
+				<td>JRE Updates</td>
+		</tr>
+				<tr>
+				<td>Outbound</td>
+				<td>30001 (SSH)</td>
+				<td>System IP</td>
+				<td>ccarchive.avalara.net</td>
+				<td>Virtual machine (VM) updates</td>
+		</tr>
+		</tbody>
+	</table>  
+</div>
+
+<h4>Load Balance Configuration</h4>
+<p>The recommended implementation is to setup a VIP with a load balancer in a round robin configuration and use the following health checks to verify availability of each unit on port 8084. Moreover, avatax.avalara.net should be configured as a lower priority endpoint such that traffic only fails over to the Avalara cloud if all CloudConnect systems are unavailable.</p>
+
+<div class="mobile-table">
+	<table class="styled-table">
+		<thead>
+			<tr>
+				<th>Service</th>
+				<th>URL</th>
+				<th>Type</th>
+				<th>Return</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>AvaTax engine health</td>
+				<td>http://<i>SystemUrl</i>:30009/calc</td>
+				<td>GET</td>
+				<td>{ "Status": "OK" }</td>
+			</tr>
+		</tbody>
+	</table>  
+</div>
+
+<h4>System Monitoring</h4>
+
+<p>Useful system information can be obtained through the health service API.</p>
+
+<div class="mobile-table">
+	<table class="styled-table">
+		<thead>
+			<tr>
+				<th>Service</th>
+				<th>URL</th>
+				<th>Type</th>
+				<th>Return (Example Values)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Version information</td>
+				<td>http://<i>SystemUrl</i>:30009/version</td>
+				<td>GET</td>
+				<td>{ "CalcVersion": "16.12.0.10","LinuxVersion": "3.19.0-80- generic", "HostVersion": "6.10.6198.18605", "VMVersions": "OS: 6.3.9600; VM: CalcVM- 17.2.3; AvaTax: 16.12.0.10; PL: 2016-12-06 09:27:08Z; MD: 4.0.1.2777; MP: 1.2; GM: 1.10", "HardwareSerial": "12345" }</td>
+			</tr>
+			<tr>
+				<td>System analytics</td>
+				<td>http://<i>SystemUrl</i>:30009/system </td>
+				<td>GET</td>
+				<td>{ "CPULoad": "0.15", "IOLoad": "{Writes=3000,ServiceTime=0.54, ReadBytes=5000, WriteBytes=2000, Queue=0.06, Reads=1000}", "Swap": "0.0" }</td>
+			</tr>
+		</tbody>
+	</table>  
+</div>
+
+<h4>Synchronization Window Configuration</h4>
+<p>By default, accounts are synchronized with the production AvaTax cloud every hour. This can be configured by issuing a POST to the /syncWindow endpoint with the window (in milliseconds). Similarly, the sync window can be retrieved by issuing a GET to the /syncWindow endpoint.</p>
+
+<div class="mobile-table">
+	<table class="styled-table">
+		<thead>
+			<tr>
+				<th>Service</th>
+				<th>URL</th>
+				<th>Type</th>
+				<th>Data</th>
+				<th>Response</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Sync Window Setting</td>
+				<td>http://<i>SystemUrl</i>:30009/syncWindow</td>
+				<td>POST</td>
+				<td>3600000</td>
+				<td>3600000</td>
+			</tr>
+			<tr>
+				<td>Sync Window Retrieval</td>
+				<td>http://<i>SystemUrl</i>:30009/syncWindow</td>
+				<td>GET</td>
+				<td></td>
+				<td>3600000</td>
+			</tr>
+		</tbody>
+	</table>  
+</div>
+</main>
+        </section>
+          
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/avatax/cloudconnect.md"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

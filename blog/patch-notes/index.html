@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patch notes | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="patch notes | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="API solutions for end-to-end tax compliance"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=blog>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/blog">blog</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav  resources">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Blog" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid ">
+        
+        
+        <section class="row padding-sides">
+            <main class="col-md-12"><div class="breadcrumbs blog">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li class="text-uppercase">Resources</li>
+            <li class="text-uppercase"><a href="/developer-dot/blog">Developer Blog</a></li>
+            
+        </ul>
+    </div>
+</div>
+<br />
+
+<section class="row padding-sides half">
+    <nav class="col-md-3">
+       <ul class = "api-ref-side-nav nav nav-pills nav-stacked hidden-xs hidden-sm">
+    <h4>Categories</h4>
+    <h5>
+        <li >
+            <a class="capitalize" href="/developer-dot/blog/">All</a>
+        </li>
+        
+         
+                    
+         
+             
+                 
+                
+                <li >
+                 
+                
+                    <a class="capitalize" href="/developer-dot/blog/avatax/">avatax</a> 
+                
+                </li>
+                    
+         
+             
+                 
+                
+                <li >
+                 
+                
+                    <a class="capitalize" href="/developer-dot/blog/certcapture/">certcapture</a> 
+                
+                </li>
+                    
+         
+                    
+         
+                    
+         
+                    
+         
+             
+                 
+                
+                <li >
+                 
+                
+                    <a class="capitalize" href="/developer-dot/blog/howto/">howto</a> 
+                
+                </li>
+                    
+         
+             
+                 
+                
+                <li >
+                 
+                
+                    <a class="capitalize" href="/developer-dot/blog/landed-cost/">landed cost</a> 
+                
+                </li>
+                    
+         
+             
+                 
+                
+                <li >
+                 
+                
+                </li>
+                    
+         
+             
+                 
+                
+                <li class="active" >
+                 
+                
+                    <a class="capitalize" href="/developer-dot/blog/patch-notes/">patch notes</a> 
+                
+                </li>
+                    
+         
+                    
+         
+                    
+         
+                    
+         
+             
+                 
+                
+                <li >
+                 
+                
+                    <a class="capitalize" href="/developer-dot/blog/troubleshooting/">troubleshooting</a> 
+                
+                </li>
+                    
+        
+
+        <li >
+            <a class="capitalize" href="/developer-dot/blog/older">Older</a>
+        </li>
+    </h5>
+</ul>
+<div class="sm-section-nav dropdown visible-xs-block visible-sm-block">
+    <button id="use-case-nav" type="button" data-toggle="dropdown">Categories</button>
+    <ul class="dropdown-menu" aria-labelledby="use-case-nav">
+            <li ><a class="capitalize" href="/developer-dot/blog/">All</a></li>
+                
+                    
+                        
+                        
+                        <li  >
+                            
+                            
+                                <a class="capitalize" href="/developer-dot/blog/older/">older</a>
+                            
+
+                        </li>
+                    
+                
+                    
+                        
+                        
+                        <li  >
+                            
+                            
+                                <a class="capitalize" href="/developer-dot/blog/avatax/">avatax</a>
+                            
+
+                        </li>
+                    
+                
+                    
+                        
+                        
+                        <li  >
+                            
+                            
+                                <a class="capitalize" href="/developer-dot/blog/howto/">howto</a>
+                            
+
+                        </li>
+                    
+                
+                    
+                
+                    
+                        
+                        
+                        <li  >
+                            
+                            
+                                <a class="capitalize" href="/developer-dot/blog/landed-cost/">landed cost</a>
+                            
+
+                        </li>
+                    
+                
+                    
+                        
+                        
+                        <li class="active" >
+                            
+                            
+                                <a class="capitalize" href="/developer-dot/blog/patch-notes/">patch notes</a>
+                            
+
+                        </li>
+                    
+                
+                    
+                
+                    
+                        
+                        
+                        <li  >
+                            
+                            
+                                <a class="capitalize" href="/developer-dot/blog/certcapture/">certcapture</a>
+                            
+
+                        </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                        
+                        <li  >
+                            
+                            
+                                <a class="capitalize" href="/developer-dot/blog/troubleshooting/">troubleshooting</a>
+                            
+
+                        </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+    </ul>
+</div>
+
+    </nav>
+    <main class="col-md-9 small-no-padding">
+        
+            <h4><span class="capitalize">patch notes </span>Posts</h4>
+        
+        <div class="container">
+            <div class="row">
+              
+                <div class="col-md-5">
+                    <div class="blog-preview">
+                        <div class="gradient"></div>
+                        <h4><a href="/developer-dot/blog/2017/06/14/AvaTax-17-6-patch-notes/">AvaTax API 17.6 Patch Notes</a></h4>
+                        <h5></h5>
+                        <p class="byline">By Ted Spence | June 14, 2017</p>
+                        
+                        <p class="blog-excerpt">This article is about the June 2017 monthly update to the AvaTax REST v2 API. Environment URL Release Date Sandbox https://sandbox-rest.avatax.com 2017-06-22 Production https://rest.avatax.com 2017-06-27 New Tax Type Supported: Telecommunications Taxes Avalara is proud to announce the preview release of integrated telecommunications tax calculation for customers using AvaTax. The telecommunications tax domain handles a wide variety of taxes and fees for customers selling phones, conference calling services, internet access, and many other product and service types. Customers interested in developing communications tax connectors or working with Avalara for communications tax calculation should contact their customer account manager for more details....</p>
+                        <div class="readMore">
+                            <a href="/developer-dot/blog/2017/06/14/AvaTax-17-6-patch-notes/" class="btn btn-blog">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-5">
+                    <div class="blog-preview">
+                        <div class="gradient"></div>
+                        <h4><a href="/developer-dot/blog/2017/04/25/AvaTax-17-5-patch-notes/">AvaTax API 17.5 Patch Notes</a></h4>
+                        <h5></h5>
+                        <p class="byline">By Ted Spence | April 25, 2017</p>
+                        
+                        <p class="blog-excerpt">This article is about the May 2017 monthly update to the AvaTax REST v2 API. Environment URL Release Date Sandbox https://sandbox-rest.avatax.com 2017-05-02 Production https://rest.avatax.com 2017-05-08 API Updates: New Tax Types As part of our ongoing expansion, we are proud to announce the introduction of Tax Type Groups. This new feature allows the AvaTax API to support new tax types and to correctly distinguish between different tax domains that have different rules. Our first expansion includes information about a variety of tax domains including VAT input and output, excise, lodging, and bottle tax. During the rollout period, Avalara will be working...</p>
+                        <div class="readMore">
+                            <a href="/developer-dot/blog/2017/04/25/AvaTax-17-5-patch-notes/" class="btn btn-blog">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-5">
+                    <div class="blog-preview">
+                        <div class="gradient"></div>
+                        <h4><a href="/developer-dot/blog/2017/03/30/rest-v2-17-4-patch-notes/">REST v2.17.4 Patch Notes</a></h4>
+                        <h5></h5>
+                        <p class="byline">By Ted Spence | March 30, 2017</p>
+                        
+                        <p class="blog-excerpt">This article is about the April 2017 monthly update to the AvaTax REST v2 API. Environment URL Release Date Sandbox https://sandbox-rest.avatax.com 2017-04-03 Production https://rest.avatax.com 2017-04-06 Returns Features Improvements to the Returns functionality of REST v2 in this release: Updated field names for improved consistency New data field for summed remit amount per region Trigger calculate amounts anytime an adjustment or augmentation is saved Fixed bug when rebuilding worksheets on FQA due to data mismatches Fixed skyscraper error when calling with an unknown form or when calling a form with a null expected response time Cycle Safe APIs use the FilingFrequencyId...</p>
+                        <div class="readMore">
+                            <a href="/developer-dot/blog/2017/03/30/rest-v2-17-4-patch-notes/" class="btn btn-blog">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-5">
+                    <div class="blog-preview">
+                        <div class="gradient"></div>
+                        <h4><a href="/developer-dot/blog/2017/03/08/rest-v2-17-3-patch-notes/">REST v2.17.3 Patch Notes</a></h4>
+                        <h5></h5>
+                        <p class="byline">By Ted Spence | March 08, 2017</p>
+                        
+                        <p class="blog-excerpt">This article is about the March 2017 monthly update to the AvaTax REST v2 API. UPDATE 2017-03-13: Due to some requests for urgent updates, the release date for this patch has been accelerated to March 14th Sandbox and March 16th Production. The old dates were March 16th Sandbox and March 21st Production. Environment URL Release Date Sandbox https://sandbox-rest.avatax.com 2017-03-14 (UPDATED) Production https://rest.avatax.com 2017-03-16 (UPDATED) Refund Transaction API A new API, POST /api/v2/companies/ABC/transactions/DEF/refund, allows you to create refunds for transactions quickly and easily. The Refund API allows you to quickly and easily reverse a SalesInvoice. You have the option of specifying...</p>
+                        <div class="readMore">
+                            <a href="/developer-dot/blog/2017/03/08/rest-v2-17-3-patch-notes/" class="btn btn-blog">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-5">
+                    <div class="blog-preview">
+                        <div class="gradient"></div>
+                        <h4><a href="/developer-dot/blog/2017/02/16/rest-v2-17-2-patch-notes/">REST v2.17.2 Patch Notes</a></h4>
+                        <h5></h5>
+                        <p class="byline">By Ted Spence | February 16, 2017</p>
+                        
+                        <p class="blog-excerpt">This article is about the February 2017 monthly update to the AvaTax REST v2 API. Environment URL Release Date Sandbox https://sandbox-rest.avatax.com 2017-02-23 Production https://rest.avatax.com 2017-02-27 Free Tax Rates! Avalara is pleased to announce the freely available REST v2 TaxRates API! The TaxRates API provides basic tax functionality for no cost. You also now have available an API that creates a free 30-day trial of AvaTax Professional. This free trial account comes with no obligations and allows you to experiment with a fully featured version of Avalara AvaTax. After 30 days, you may continue to use the free TaxRates API or...</p>
+                        <div class="readMore">
+                            <a href="/developer-dot/blog/2017/02/16/rest-v2-17-2-patch-notes/" class="btn btn-blog">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-5">
+                    <div class="blog-preview">
+                        <div class="gradient"></div>
+                        <h4><a href="/developer-dot/blog/2016/12/30/rest-v2-17-1-patch-notes/">REST v2.17.1 Patch Notes</a></h4>
+                        <h5></h5>
+                        <p class="byline">By Ted Spence | December 30, 2016</p>
+                        
+                        <p class="blog-excerpt">This article is about the January 2017 monthly update to the AvaTax REST v2 API. UPDATE 2017-01-18 - Due to testing on the Recordset Count issue for pagination described below, we have elected to remove the $include=count option and restore the previous recordset count behavior. All queries will receive correct recordset counts except for queries on the /api/v2/transactions endpoint. We have delayed the correct implementation of recordset count for the transactions table to the 2.17.2 release. As a result of this change, the release to Sandbox has been rescheduled for Jan 24th. Environment URL Release Date Sandbox https://sandbox-rest.avatax.com 2017-01-24 Production...</p>
+                        <div class="readMore">
+                            <a href="/developer-dot/blog/2016/12/30/rest-v2-17-1-patch-notes/" class="btn btn-blog">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-5">
+                    <div class="blog-preview">
+                        <div class="gradient"></div>
+                        <h4><a href="/developer-dot/blog/2016/11/22/rest-v2-16-12-patch-notes/">REST v2.16.12 Patch Notes</a></h4>
+                        <h5></h5>
+                        <p class="byline">By Ted Spence | November 22, 2016</p>
+                        
+                        <p class="blog-excerpt">This article is about the December 2016 monthly update to the AvaTax REST v2 API. UPDATED 2016-12-07 - The team added the definition of “Mixed” sourcing to the client library to address California sourcing scenarios prior to launch. Launch has been rescheduled for Tuesday, December 13th. Environment URL Release Date Sandbox https://sandbox-rest.avatax.com 2016-12-01 Production https://rest.avatax.com 2016-12-13 POST /api/v2/transactions/create The sourcing field on TransactionLineModel had a mismatch between its documentation and its return value. In release 2.16.11, the field was documented as a string, but its value was being returned as an integer. Many libraries would still successfully parse this value...</p>
+                        <div class="readMore">
+                            <a href="/developer-dot/blog/2016/11/22/rest-v2-16-12-patch-notes/" class="btn btn-blog">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-5">
+                    <div class="blog-preview">
+                        <div class="gradient"></div>
+                        <h4><a href="/developer-dot/blog/2016/10/31/rest-v2-16-11-patch-notes/">REST v2.16.11 Patch Notes</a></h4>
+                        <h5></h5>
+                        <p class="byline">By Ted Spence | October 31, 2016</p>
+                        
+                        <p class="blog-excerpt">REST v2.16.11 Patch Notes AvaTax REST v2.16.11 has now adopted the naming system used by AvaTax SOAP (API version/year/month). Environment URL Release Date Sandbox https://sandbox-rest.avatax.com 2016-11-02 Production https://rest.avatax.com 2016-11-09 POST /api/v2/taxrates Corrected a bug that caused the TaxRates API to show duplicate rates. POST /api/v2/transactions/create New fields have been added to the API. These fields are optional and do not require changes to your existing code. Added new fields on the create transaction model: debugLevel (string, optional): If the user wishes to request additional debug information from this transaction, specify a level higher than 'normal'. Enum, possible values = ['Normal',...</p>
+                        <div class="readMore">
+                            <a href="/developer-dot/blog/2016/10/31/rest-v2-16-11-patch-notes/" class="btn btn-blog">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-5">
+                    <div class="blog-preview">
+                        <div class="gradient"></div>
+                        <h4><a href="/developer-dot/blog/2016/10/20/rest-v2-3-1-patch-notes/">REST v2.3.1 Patch Notes</a></h4>
+                        <h5></h5>
+                        <p class="byline">By Ted Spence | October 20, 2016</p>
+                        
+                        <p class="blog-excerpt">REST v2.3.1 Patch Notes For those of you who participated in the AvaTax REST v2 Preview program, I’d like to take this opportunity to thank you for your time and effort helping us debug a huge software release. We’ve now implemented a clean, modern, consistent REST API that covers tax functionality from top to bottom - and we’ve established a great platform for continuing improvements. Now that the program is winding down, please take note of a few differences between the final release of REST v2 and the preview program you tested in August/September: New URL for REST v2 The...</p>
+                        <div class="readMore">
+                            <a href="/developer-dot/blog/2016/10/20/rest-v2-3-1-patch-notes/" class="btn btn-blog">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </main>
+</section>
+</main>
+        </section>
+         
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/blog/patch-notes/index.html"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions - Avatax REST API v2 | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="Transactions - Avatax REST API v2 | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="API solutions for end-to-end tax compliance"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=avaTax>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/avatax">avaTax</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav apis ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Avatax" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid api_references">
+        
+          
+
+
+<div class="breadcrumbs">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li><span class="text-uppercase">Tax Calculation API</span>s</li>
+            <li class="text-uppercase"><a href="/developer-dot/avatax">Avalara avaTax</a></li>
+            <li class="text-uppercase">api reference</li>
+        </ul>
+    </div>
+</div>
+  
+        <section class="row padding-sides">
+            <nav class="col-md-3 api-ref">
+                 <div id='the-nav' class='nav-wrapper hidden-xs hidden-sm api-ref-nav' style='height: 100%; overflow-y: auto;'>
+    <ul class='api-ref-side-nav nav nav-pills nav-stacked'>
+        
+        
+
+        
+        
+
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/soap">Avatax SOAP API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/rest/v2">Avatax REST API v2</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                            
+                                <div style="padding-left:10px;">
+    <ul class='api-ref-side-nav-active nav nav-pills nav-stacked sub-nav'>
+        
+            
+            
+            
+
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Accounts">Accounts</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Addresses">Addresses</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Batches">Batches</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Companies">Companies</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Contacts">Contacts</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Definitions">Definitions</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/FilingCalendars">FilingCalendars</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Filings">Filings</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Free">Free</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/FundingRequests">FundingRequests</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Items">Items</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/JurisdictionOverrides">JurisdictionOverrides</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Locations">Locations</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Nexus">Nexus</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Notices">Notices</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Onboarding">Onboarding</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Registrar">Registrar</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Settings">Settings</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Subscriptions">Subscriptions</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/TaxCodes">TaxCodes</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/TaxContent">TaxContent</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/TaxRules">TaxRules</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Transactions">Transactions</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Upcs">Upcs</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Users">Users</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/rest/v2/methods/Utilities">Utilities</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+            <li><a style="color:#ff6600; overflow: hidden;" href="/developer-dot/api-reference/avatax/rest/v2/models">Models</a></li>
+            
+        
+    </ul>
+</div>
+
+                            
+                        
+                    </li>
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+
+        
+        <li class="older-api">
+            Older APIs
+            <div style="padding-left:10px;">
+    <ul class='api-ref-side-nav-active nav nav-pills nav-stacked sub-nav'>
+            
+            
+
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/onboarding">Onboarding API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/batch/soap">Avatax BatchSvc SOAP API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+                
+                
+
+                
+                
+                
+            
+                
+                
+
+                
+                
+                
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/account/soap">Avatax AccountSvc SOAP API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/rest/v1">Avatax REST API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+    </ul>
+</div>
+        </li>
+        
+    </ul>
+</div>
+ 
+            </nav>
+            <main class="col-md-9 small-no-padding"><h1>Avatax REST API v2 - Transactions</h1>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Purpose</th>
+            <th>Summary</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FAddLines">AddLines</a></td>
+    <td>Add lines to an existing unlocked transaction</td>
+    <td class='markdown-description'><p>Add lines to an existing unlocked transaction.</p>
+
+<p>The <code class="highlighter-rouge">AddLines</code> API allows you to add additional transaction lines to existing transaction, so that customer will
+be able to append multiple calls together and form an extremely large transaction. If customer does not specify line number
+in the lines to be added, a new random Guid string will be generated for line number. If customer are not satisfied with
+the line number for the transaction lines, they can turn on the renumber switch to have REST v2 automatically renumber all 
+transaction lines for them, in this case, the line number becomes: ‘1’, ‘2’, ‘3’, …</p>
+
+<p>A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).
+You may specify one or more of the following values in the ‘$include’ parameter to fetch additional nested data, using commas to separate multiple values:</p>
+
+<ul>
+  <li>Lines</li>
+  <li>Details (implies lines)</li>
+  <li>Summary (implies details)</li>
+  <li>Addresses</li>
+</ul>
+
+<p>If you don’t specify ‘$include’ parameter, it will include both details and addresses.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FAdjustTransaction">AdjustTransaction</a></td>
+    <td>Correct a previously created transaction</td>
+    <td class='markdown-description'><p>Replaces the current transaction uniquely identified by this URL with a new transaction.</p>
+
+<p>A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).</p>
+
+<p>When you adjust a committed transaction, the original transaction will be updated with the status code <code class="highlighter-rouge">Adjusted</code>, and
+both revisions will be available for retrieval based on their code and ID numbers.
+Only transactions in <code class="highlighter-rouge">Committed</code> status are reported by Avalara Managed Returns.</p>
+
+<p>Transactions that have been previously reported to a tax authority by Avalara Managed Returns are considered <code class="highlighter-rouge">locked</code> and are 
+no longer available for adjustments.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FAuditTransaction">AuditTransaction</a></td>
+    <td>Get audit information about a transaction</td>
+    <td class='markdown-description'><p>Retrieve audit information about a transaction stored in AvaTax.</p>
+
+<p>The ‘AuditTransaction’ endpoint retrieves audit information related to a specific transaction.  This audit 
+information includes the following:</p>
+
+<ul>
+  <li>The <code class="highlighter-rouge">CompanyId</code> of the company that created the transaction</li>
+  <li>The server timestamp representing the exact server time when the transaction was created</li>
+  <li>The server duration - how long it took to process this transaction</li>
+  <li>Whether exact API call details were logged</li>
+  <li>A reconstructed API call showing what the original CreateTransaction call looked like</li>
+</ul>
+
+<p>This API can be used to examine information about a previously created transaction.</p>
+
+<p>A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FAuditTransactionWithType">AuditTransactionWithType</a></td>
+    <td>Get audit information about a transaction</td>
+    <td class='markdown-description'><p>Retrieve audit information about a transaction stored in AvaTax.</p>
+
+<p>The ‘AuditTransaction’ endpoint retrieves audit information related to a specific transaction.  This audit 
+information includes the following:</p>
+
+<ul>
+  <li>The <code class="highlighter-rouge">CompanyId</code> of the company that created the transaction</li>
+  <li>The server timestamp representing the exact server time when the transaction was created</li>
+  <li>The server duration - how long it took to process this transaction</li>
+  <li>Whether exact API call details were logged</li>
+  <li>A reconstructed API call showing what the original CreateTransaction call looked like</li>
+</ul>
+
+<p>This API can be used to examine information about a previously created transaction.</p>
+
+<p>A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FBulkLockTransaction">BulkLockTransaction</a></td>
+    <td>Lock a set of documents</td>
+    <td class='markdown-description'><p>This API is available by invitation only.</p>
+
+<p>Lock a set of transactions uniquely identified by DocumentIds provided. This API allows locking multiple documents at once.
+After this API call succeeds, documents will be locked and can’t be voided.</p>
+
+<p>A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FChangeTransactionCode">ChangeTransactionCode</a></td>
+    <td>Change a transaction's code</td>
+    <td class='markdown-description'><p>Renames a transaction uniquely identified by this URL by changing its code to a new code.
+After this API call succeeds, the transaction will have a new URL matching its new code.
+A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FCommitTransaction">CommitTransaction</a></td>
+    <td>Commit a transaction for reporting</td>
+    <td class='markdown-description'><p>Marks a transaction by changing its status to ‘Committed’.
+Transactions that are committed are available to be reported to a tax authority by Avalara Managed Returns.
+A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).
+Any changes made to a committed transaction will generate a transaction history.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FCreateOrAdjustTransaction">CreateOrAdjustTransaction</a></td>
+    <td>Create a new transaction</td>
+    <td class='markdown-description'><p>Records a new transaction or adjust an existing in AvaTax.</p>
+
+<p>The <code class="highlighter-rouge">CreateOrAdjustTransaction</code> endpoint is used to create a new transaction if the input transaction does not exist
+or if there exists a transaction identified by code, the original transaction will be adjusted by using the meta data 
+in the input transaction</p>
+
+<p>If you don’t specify type in the provided data, a new transaction with type of SalesOrder will be recorded by default.</p>
+
+<p>A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).
+You may specify one or more of the following values in the ‘$include’ parameter to fetch additional nested data, using commas to separate multiple values:</p>
+
+<ul>
+  <li>Lines</li>
+  <li>Details (implies lines)</li>
+  <li>Summary (implies details)</li>
+  <li>Addresses</li>
+</ul>
+
+<p>If you don’t specify ‘$include’ parameter, it will include both details and addresses.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FCreateTransaction">CreateTransaction</a></td>
+    <td>Create a new transaction</td>
+    <td class='markdown-description'><p>Records a new transaction in AvaTax.</p>
+
+<p>The <code class="highlighter-rouge">CreateTransaction</code> endpoint uses the configuration values specified by your company to identify the correct tax rules
+and rates to apply to all line items in this transaction, and reports the total tax calculated by AvaTax based on your
+company’s configuration and the data provided in this API call.</p>
+
+<p>If you don’t specify type in the provided data, a new transaction with type of SalesOrder will be recorded by default.</p>
+
+<p>A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).
+You may specify one or more of the following values in the ‘$include’ parameter to fetch additional nested data, using commas to separate multiple values:</p>
+
+<ul>
+  <li>Lines</li>
+  <li>Details (implies lines)</li>
+  <li>Summary (implies details)</li>
+  <li>Addresses</li>
+</ul>
+
+<p>If you don’t specify ‘$include’ parameter, it will include both details and addresses.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FDeleteLines">DeleteLines</a></td>
+    <td>Remove lines from an existing unlocked transaction</td>
+    <td class='markdown-description'><p>Remove lines to an existing unlocked transaction.</p>
+
+<p>The <code class="highlighter-rouge">DeleteLines</code> API allows you to remove transaction lines from existing unlocked transaction, so that customer will
+be able to delete transaction lines and adjust original transaction the way they like</p>
+
+<p>A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).
+You may specify one or more of the following values in the ‘$include’ parameter to fetch additional nested data, using commas to separate multiple values:</p>
+
+<ul>
+  <li>Lines</li>
+  <li>Details (implies lines)</li>
+  <li>Summary (implies details)</li>
+  <li>Addresses</li>
+</ul>
+
+<p>If you don’t specify ‘$include’ parameter, it will include both details and addresses.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FGetTransactionByCode">GetTransactionByCode</a></td>
+    <td>Retrieve a single transaction by code</td>
+    <td class='markdown-description'><p>Get the current transaction identified by this URL.
+If this transaction was adjusted, the return value of this API will be the current transaction with this code, and previous revisions of
+the transaction will be attached to the ‘history’ data field.
+You may specify one or more of the following values in the ‘$include’ parameter to fetch additional nested data, using commas to separate multiple values:</p>
+
+<ul>
+  <li>Lines</li>
+  <li>Details (implies lines)</li>
+  <li>Summary (implies details)</li>
+  <li>Addresses</li>
+</ul>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FGetTransactionByCodeAndType">GetTransactionByCodeAndType</a></td>
+    <td>Retrieve a single transaction by code</td>
+    <td class='markdown-description'><p>Get the current transaction identified by this URL.
+If this transaction was adjusted, the return value of this API will be the current transaction with this code, and previous revisions of
+the transaction will be attached to the ‘history’ data field.
+You may specify one or more of the following values in the ‘$include’ parameter to fetch additional nested data, using commas to separate multiple values:</p>
+
+<ul>
+  <li>Lines</li>
+  <li>Details (implies lines)</li>
+  <li>Summary (implies details)</li>
+  <li>Addresses</li>
+</ul>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FGetTransactionById">GetTransactionById</a></td>
+    <td>Retrieve a single transaction by ID</td>
+    <td class='markdown-description'><p>Get the unique transaction identified by this URL.
+This endpoint retrieves the exact transaction identified by this ID number even if that transaction was later adjusted
+by using the ‘Adjust Transaction’ endpoint.
+A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).
+You may specify one or more of the following values in the ‘$include’ parameter to fetch additional nested data, using commas to separate multiple values:</p>
+
+<ul>
+  <li>Lines</li>
+  <li>Details (implies lines)</li>
+  <li>Summary (implies details)</li>
+  <li>Addresses</li>
+</ul>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FListTransactionsByCompany">ListTransactionsByCompany</a></td>
+    <td>Retrieve all transactions</td>
+    <td class='markdown-description'><p>List all transactions attached to this company.
+This endpoint is limited to returning 1,000 transactions at a time maximum.
+A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).</p>
+
+<p>Search for specific objects using the criteria in the <code class="highlighter-rouge">$filter</code> parameter; full documentation is available on <a href="http://developer.avalara.com/avatax/filtering-in-rest/">Filtering in REST</a> .
+Paginate your results using the <code class="highlighter-rouge">$top</code>, <code class="highlighter-rouge">$skip</code>, and <code class="highlighter-rouge">$orderby</code> parameters.
+You may specify one or more of the following values in the <code class="highlighter-rouge">$include</code> parameter to fetch additional nested data, using commas to separate multiple values:</p>
+
+<ul>
+  <li>Lines</li>
+  <li>Details (implies lines)</li>
+  <li>Summary (implies details)</li>
+  <li>Addresses</li>
+</ul>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FLockTransaction">LockTransaction</a></td>
+    <td>Lock a single transaction</td>
+    <td class='markdown-description'><p>Lock a transaction uniquely identified by this URL.</p>
+
+<p>This API is mainly used for connector developer to simulate what happens when Returns product locks a document.
+After this API call succeeds, the document will be locked and can’t be voided or adjusted.</p>
+
+<p>This API is only available to customers in Sandbox with AvaTaxPro subscription.  On production servers, this API is available by invitation only.</p>
+
+<p>A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FRefundTransaction">RefundTransaction</a></td>
+    <td>Create a refund for a transaction</td>
+    <td class='markdown-description'><p>Create a refund for a transaction.</p>
+
+<p>The <code class="highlighter-rouge">RefundTransaction</code> API allows you to quickly and easily create a <code class="highlighter-rouge">ReturnInvoice</code> representing a refund
+for a previously created <code class="highlighter-rouge">SalesInvoice</code> transaction.  You can choose to create a full or partial refund, and
+specify individual line items from the original sale for refund.</p>
+
+<p>A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).
+You may specify one or more of the following values in the ‘$include’ parameter to fetch additional nested data, using commas to separate multiple values:</p>
+
+<ul>
+  <li>Lines</li>
+  <li>Details (implies lines)</li>
+  <li>Summary (implies details)</li>
+  <li>Addresses</li>
+</ul>
+
+<p>If you don’t specify ‘$include’ parameter, it will include both details and addresses.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FSettleTransaction">SettleTransaction</a></td>
+    <td>Perform multiple actions on a transaction</td>
+    <td class='markdown-description'><p>Performs the same functions as /verify, /changecode, and /commit.  You may specify one or many actions in each call to this endpoint.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FVerifyTransaction">VerifyTransaction</a></td>
+    <td>Verify a transaction</td>
+    <td class='markdown-description'><p>Verifies that the transaction uniquely identified by this URL matches certain expected values.
+If the transaction does not match these expected values, this API will return an error code indicating which value did not match.
+A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Favatax%2Frest%2Fv2%2Fmethods%2FTransactions%2FVoidTransaction">VoidTransaction</a></td>
+    <td>Void a transaction</td>
+    <td class='markdown-description'><p>Voids the current transaction uniquely identified by this URL.
+A transaction represents a unique potentially taxable action that your company has recorded, and transactions include actions like
+sales, purchases, inventory transfer, and returns (also called refunds).
+When you void a transaction, that transaction’s status is recorded as ‘DocVoided’.
+Transactions that have been previously reported to a tax authority by Avalara Managed Returns are no longer available to be voided.</p>
+</td>
+</tr>
+    </tbody>
+</table>
+<br>
+</main>
+        </section>
+          
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/dynamic/swagger/avatax/rest/v2.json"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

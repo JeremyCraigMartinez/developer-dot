@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApiV1CustModeCalcTaxesInCustModePost | Communications REST API | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="ApiV1CustModeCalcTaxesInCustModePost | Communications REST API | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="Process transactions and adjustments in customer mode"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=communications>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/communications">communications</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav apis ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Communications" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid api_references">
+        
+          
+
+
+<div class="breadcrumbs">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li><span class="text-uppercase">Tax Calculation API</span>s</li>
+            <li class="text-uppercase"><a href="/developer-dot/communications">Avalara communications</a></li>
+            <li class="text-uppercase">api reference</li>
+        </ul>
+    </div>
+</div>
+  
+        <section class="row padding-sides">
+            <nav class="col-md-3 api-ref">
+                 <div id='the-nav' class='nav-wrapper hidden-xs hidden-sm api-ref-nav' style='height: 100%; overflow-y: auto;'>
+    <ul class='api-ref-side-nav nav nav-pills nav-stacked'>
+        
+        
+
+        
+        
+
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/communications/afc-rest">Communications REST API</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                        
+                            <div style="padding-left:10px;">
+    <ul class='api-ref-side-nav-active nav nav-pills nav-stacked sub-nav'>
+        
+            
+            
+            
+
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1ApplicationAFCDatabaseEngineVersionGet">ApiV1ApplicationAFCDatabaseEngineVersionGet</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1ApplicationAFCEngineVersionGet">ApiV1ApplicationAFCEngineVersionGet</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1ApplicationRESTVersionGet">ApiV1ApplicationRESTVersionGet</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1ApplicationServerTimeGet">ApiV1ApplicationServerTimeGet</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1BridgeConferenceAdjustmentsPost">ApiV1BridgeConferenceAdjustmentsPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1BridgeConferenceTaxesPost">ApiV1BridgeConferenceTaxesPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CalculateAdjustmentsPost">ApiV1CalculateAdjustmentsPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CalculateJurisdictionPost">ApiV1CalculateJurisdictionPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CalculateProRatedAdjustmentsPost">ApiV1CalculateProRatedAdjustmentsPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CalculateProRatedTaxesPost">ApiV1CalculateProRatedTaxesPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CalculateReversalAdjustmentsPost">ApiV1CalculateReversalAdjustmentsPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CalculateReversalTaxesPost">ApiV1CalculateReversalTaxesPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CalculateTaxesPost">ApiV1CalculateTaxesPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CalculateWithOverridesAdjustmentsPost">ApiV1CalculateWithOverridesAdjustmentsPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CalculateWithOverridesTaxesPost">ApiV1CalculateWithOverridesTaxesPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CommitTransactionsPost">ApiV1CommitTransactionsPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CustModeBeginBatchGet">ApiV1CustModeBeginBatchGet</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CustModeCalcAdjustmentsPost">ApiV1CustModeCalcAdjustmentsPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CustModeCalcTaxesInCustModePost">ApiV1CustModeCalcTaxesInCustModePost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CustModeCalcTaxesPost">ApiV1CustModeCalcTaxesPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1CustModeProcessBatchPost">ApiV1CustModeProcessBatchPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1LocationAddressByPCodeGet">ApiV1LocationAddressByPCodeGet</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1LocationPCodePost">ApiV1LocationPCodePost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1LocationPCodeToFipsByPCodeGet">ApiV1LocationPCodeToFipsByPCodeGet</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1LocationZipAddressLookupPost">ApiV1LocationZipAddressLookupPost</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1TaxLookupCategoryByTaxTypeGet">ApiV1TaxLookupCategoryByTaxTypeGet</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1TaxLookupDescriptionByTaxTypeGet">ApiV1TaxLookupDescriptionByTaxTypeGet</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc-rest/methods/ApiV1TaxLookupTaxRatesByPCodeGet">ApiV1TaxLookupTaxRatesByPCodeGet</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+            <li><a style="color:#ff6600; overflow: hidden;" href="/developer-dot/api-reference/communications/afc-rest/models">Models</a></li>
+            
+        
+    </ul>
+</div>
+
+                        
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/communications/afc">Communications SOAP</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/communications/afc-geo">Communications SOAP Geocoding</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+
+        
+    </ul>
+</div>
+ 
+            </nav>
+            <main class="col-md-9 small-no-padding"><div id="api-console"></div>
+<script>
+    window.modelsPath = 'api-reference/communications/afc-rest/models';
+    window.__INITIAL_STATE__ = {"tagMap":null,"apiName":"Saas Pro","apiDescription":"The AFC REST service provides APIs to calculate taxes on communiations transactions and lookup tax rate and jurisdiction information.","apiType":"SOAP","sampleAuthHeader":"Basic aHR0cHdhdGNoOmY=","sampleContentType":["text/json"],"auth":{"formula":"`Basic ${btoa(`<username>:<password>`)}`","params":{"username":"","password":""}},"apiEndpoints":[{"operationId":"ApiV1CustModeCalcTaxesInCustModePost","name":"Process transactions and adjustments in customer mode","description":"Processes a batch of transactions and adjustments in customer mode.","path":"https://communicationsua.avalara.net/api/v1/CustMode/CalcTaxesInCustMode","action":"post","sampleAuthHeader":"Basic aHR0cHdhdGNoOmY=","showExcludedPostBodyFields":false,"apiConsoleLoading":false,"productionPath":"https://communications.avalara.net/api/v1/CustMode/CalcTaxesInCustMode","requestSchema":{"required":false,"isExcluded":false,"Transactions":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"OriginationAddress":{"required":false,"isExcluded":false,"CountryISO":{"fieldType":"string","required":true,"isExcluded":false,"description":"Three-character country ISO code."},"County":{"fieldType":"string","required":false,"isExcluded":false,"description":"County name."},"Locality":{"fieldType":"string","required":false,"isExcluded":false,"description":"Locality name."},"State":{"fieldType":"string","required":false,"isExcluded":false,"description":"Two-character state abbreviation."},"ZipCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Zip code for location."},"ZipP4":{"fieldType":"string","required":false,"isExcluded":false,"description":"Zip + 4 for location."}},"OriginationFipsCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Origination FIPS code."},"OriginationPCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Origination PCode.","format":"int32"},"OriginationNpaNxx":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Origination NPANXX.","format":"int32"},"TerminationAddress":{"required":false,"isExcluded":false,"CountryISO":{"fieldType":"string","required":true,"isExcluded":false,"description":"Three-character country ISO code."},"County":{"fieldType":"string","required":false,"isExcluded":false,"description":"County name."},"Locality":{"fieldType":"string","required":false,"isExcluded":false,"description":"Locality name."},"State":{"fieldType":"string","required":false,"isExcluded":false,"description":"Two-character state abbreviation."},"ZipCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Zip code for location."},"ZipP4":{"fieldType":"string","required":false,"isExcluded":false,"description":"Zip + 4 for location."}},"TerminationFipsCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Termination FIPS code."},"TerminationPCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Termination PCode.","format":"int32"},"TerminationNpaNxx":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Termination NPANXX.","format":"int32"},"BillToAddress":{"required":false,"isExcluded":false,"CountryISO":{"fieldType":"string","required":true,"isExcluded":false,"description":"Three-character country ISO code."},"County":{"fieldType":"string","required":false,"isExcluded":false,"description":"County name."},"Locality":{"fieldType":"string","required":false,"isExcluded":false,"description":"Locality name."},"State":{"fieldType":"string","required":false,"isExcluded":false,"description":"Two-character state abbreviation."},"ZipCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Zip code for location."},"ZipP4":{"fieldType":"string","required":false,"isExcluded":false,"description":"Zip + 4 for location."}},"BillToFipsCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Bill-to FIPS code."},"BillToPCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Bill-to PCode.","format":"int32"},"BillToNpaNxx":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Bill-to NPANXX","format":"int32"},"IsPrivateLine":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if the transaction is a private line transaction."},"PrivateLineSplit":{"fieldType":"number","required":false,"isExcluded":false,"description":"For private line transactions, this is the split between the ending points of a private line. The value indicates how much the portion of the charge belongs to the origin user.","format":"double"},"CustomerType":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Customer type. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid customer types.","format":"int32"},"BusinessClass":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Business class. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid business classes.","format":"int32"},"Sale":{"fieldType":"boolean","required":true,"isExcluded":false,"description":"Indicates if this is a retail sale. Use false for resale/wholesale transactions."},"TransactionType":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Transaction type.","format":"int32"},"ServiceType":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Service type.","format":"int32"},"ServiceClass":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Service class. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid Service Classes.","format":"int32"},"Date":{"fieldType":"string","required":true,"isExcluded":false,"description":"Transaction date.  Field is provided to allow rating and taxing to occur on a date other than the billing date.","format":"date-time"},"Charge":{"fieldType":"number","required":true,"isExcluded":false,"description":"Charge amount to customer for transaction","format":"double"},"Incorporated":{"fieldType":"boolean","required":true,"isExcluded":false,"description":"True if this transaction is within an incorporated area of the local jurisdiction, otherwise False."},"FederalExempt":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"True if transaction is exempt from Federal Tax, otherwise false."},"StateExempt":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"True if transaction is exempt from State Tax, otherwise false."},"CountyExempt":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"True if transaction is exempt from County Tax, otherwise false."},"LocalExempt":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"True if transaction is exempt from Local Tax, otherwise false."},"FederalPCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Jurisdiction for Federal exemption.","format":"int32"},"StatePCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Jurisdiction for state exemption.","format":"int32"},"CountyPCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Jurisdiction for county exemption.","format":"int32"},"LocalPCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Jurisdiction for local exemption.","format":"int32"},"Exemptions":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"PCode":{"fieldType":"integer","required":true,"isExcluded":false,"description":"PCode for jurisdiction to exempt.","format":"int32"},"TaxLevel":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Tax level. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid tax levels.","format":"int32"},"TaxType":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Tax type. See the Telecom Mapping guidelines (\"TM_00505_AFC Telecom Mapping Guidelines.pdf\") for a list of valid tax types.","format":"int32"}}},"ExemptionType":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Exemtion type. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid exemption types.","format":"int32"},"InvoiceNumber":{"fieldType":"integer","required":false,"isExcluded":false,"description":"User-defined invoice number.","format":"int32"},"Optional":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"CustomerNumber":{"fieldType":"string","required":false,"isExcluded":false,"description":"User-defined customer number."},"CompanyIdentifier":{"fieldType":"string","required":false,"isExcluded":false,"description":"Company identifier. Use the 3-character company identifier provided by Avalara to your organization in order to include this transaction in the monthly compliance reports. Otherwise, leave empty."},"OptionalAlpha1":{"fieldType":"string","required":false,"isExcluded":false,"description":"Optional user-defined string value. 20-characters max."},"Optional4":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional5":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional6":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional7":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional8":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional9":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional10":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"AdjustmentMethod":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Adjustment method. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid adjustment methods.","format":"int32"},"Lines":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Number of lines sold to customer when applicable.","format":"int32"},"Locations":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Number of customer locations.","format":"int32"},"Minutes":{"fieldType":"double float","required":false,"isExcluded":false,"description":"Number of minutes for call when appropriate.","format":"double"},"Debit":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Determines if this is a prepaid debit card transaction."},"AdjustmentDiscount":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Adjustment discount type. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid discount types.","format":"int32"},"FacilitiesBased":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Specifies if the carrier delivering the service has company owned facilities to provide the service."},"Franchise":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if the company provides services sold pursuant to a franchise agreement between the carrier and jurisdiction."},"Lifeline":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if customer is a Lifeline participant."},"Regulated":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"True if regulated, otherwise false."},"ServiceLevelNumber":{"fieldType":"integer","required":false,"isExcluded":false,"description":"User-defined service level number.","format":"int32"},"Exclusions":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"CountryISO":{"fieldType":"string","required":false,"isExcluded":false,"description":"Three-character country ISO code. Required if State not specified."},"State":{"fieldType":"string","required":false,"isExcluded":false,"description":"Two-character state abbreviation. Required if CountryISO not specified."},"ExclusionOn":{"fieldType":"boolean","required":true,"isExcluded":false,"description":"True if entity exclusion applies in the state, otherwise false."}}},"CategoryExemptions":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"CountryISO":{"fieldType":"string","required":false,"isExcluded":false,"description":"Three-character country ISO code. Required if State is not specified."},"State":{"fieldType":"string","required":false,"isExcluded":false,"description":"Two-character state abbreviation. Required if CountryISO is not specified."},"TaxCategory":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Tax Category. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for valid tax categories.","format":"int32"}}},"OptionalFields":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"OptionalKeyNo":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Key number (1 to 10) for optional field.","format":"int32"},"OptionalValue":{"fieldType":"string","required":true,"isExcluded":false,"description":"Optional field value."}}},"TaxInclusive":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if the charge of this transaction is tax-inclusive (reverse tax calculation)."},"SafeHarborOverrides":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"SafeHarborType":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Safe harbor type (1 = Cellular, 2 = VoIP, 4 = Paging).","format":"int32"},"OriginalFederalTam":{"fieldType":"number","required":false,"isExcluded":false,"description":"Original Federal TAM value to override.","format":"double"},"NewFederalTam":{"fieldType":"number","required":false,"isExcluded":false,"description":"New TAM value that will replace the original TAM value.","format":"double"}}},"DocumentCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Document code."},"Commit":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if the transaction should be committed as soon at it is processed."}}},"Adjustments":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"OriginationAddress":{"required":false,"isExcluded":false,"CountryISO":{"fieldType":"string","required":true,"isExcluded":false,"description":"Three-character country ISO code."},"County":{"fieldType":"string","required":false,"isExcluded":false,"description":"County name."},"Locality":{"fieldType":"string","required":false,"isExcluded":false,"description":"Locality name."},"State":{"fieldType":"string","required":false,"isExcluded":false,"description":"Two-character state abbreviation."},"ZipCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Zip code for location."},"ZipP4":{"fieldType":"string","required":false,"isExcluded":false,"description":"Zip + 4 for location."}},"OriginationFipsCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Origination FIPS code."},"OriginationPCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Origination PCode.","format":"int32"},"OriginationNpaNxx":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Origination NPANXX.","format":"int32"},"TerminationAddress":{"required":false,"isExcluded":false,"CountryISO":{"fieldType":"string","required":true,"isExcluded":false,"description":"Three-character country ISO code."},"County":{"fieldType":"string","required":false,"isExcluded":false,"description":"County name."},"Locality":{"fieldType":"string","required":false,"isExcluded":false,"description":"Locality name."},"State":{"fieldType":"string","required":false,"isExcluded":false,"description":"Two-character state abbreviation."},"ZipCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Zip code for location."},"ZipP4":{"fieldType":"string","required":false,"isExcluded":false,"description":"Zip + 4 for location."}},"TerminationFipsCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Termination FIPS code."},"TerminationPCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Termination PCode.","format":"int32"},"TerminationNpaNxx":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Termination NPANXX.","format":"int32"},"BillToAddress":{"required":false,"isExcluded":false,"CountryISO":{"fieldType":"string","required":true,"isExcluded":false,"description":"Three-character country ISO code."},"County":{"fieldType":"string","required":false,"isExcluded":false,"description":"County name."},"Locality":{"fieldType":"string","required":false,"isExcluded":false,"description":"Locality name."},"State":{"fieldType":"string","required":false,"isExcluded":false,"description":"Two-character state abbreviation."},"ZipCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Zip code for location."},"ZipP4":{"fieldType":"string","required":false,"isExcluded":false,"description":"Zip + 4 for location."}},"BillToFipsCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Bill-to FIPS code."},"BillToPCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Bill-to PCode.","format":"int32"},"BillToNpaNxx":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Bill-to NPANXX","format":"int32"},"IsPrivateLine":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if the transaction is a private line transaction."},"PrivateLineSplit":{"fieldType":"number","required":false,"isExcluded":false,"description":"For private line transactions, this is the split between the ending points of a private line. The value indicates how much the portion of the charge belongs to the origin user.","format":"double"},"CustomerType":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Customer type. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid customer types.","format":"int32"},"BusinessClass":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Business class. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid business classes.","format":"int32"},"Sale":{"fieldType":"boolean","required":true,"isExcluded":false,"description":"Indicates if this is a retail sale. Use false for resale/wholesale transactions."},"TransactionType":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Transaction type.","format":"int32"},"ServiceType":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Service type.","format":"int32"},"ServiceClass":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Service class. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid Service Classes.","format":"int32"},"Date":{"fieldType":"string","required":true,"isExcluded":false,"description":"Transaction date.  Field is provided to allow rating and taxing to occur on a date other than the billing date.","format":"date-time"},"Charge":{"fieldType":"number","required":true,"isExcluded":false,"description":"Charge amount to customer for transaction","format":"double"},"Incorporated":{"fieldType":"boolean","required":true,"isExcluded":false,"description":"True if this transaction is within an incorporated area of the local jurisdiction, otherwise False."},"FederalExempt":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"True if transaction is exempt from Federal Tax, otherwise false."},"StateExempt":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"True if transaction is exempt from State Tax, otherwise false."},"CountyExempt":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"True if transaction is exempt from County Tax, otherwise false."},"LocalExempt":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"True if transaction is exempt from Local Tax, otherwise false."},"FederalPCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Jurisdiction for Federal exemption.","format":"int32"},"StatePCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Jurisdiction for state exemption.","format":"int32"},"CountyPCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Jurisdiction for county exemption.","format":"int32"},"LocalPCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Jurisdiction for local exemption.","format":"int32"},"Exemptions":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"PCode":{"fieldType":"integer","required":true,"isExcluded":false,"description":"PCode for jurisdiction to exempt.","format":"int32"},"TaxLevel":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Tax level. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid tax levels.","format":"int32"},"TaxType":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Tax type. See the Telecom Mapping guidelines (\"TM_00505_AFC Telecom Mapping Guidelines.pdf\") for a list of valid tax types.","format":"int32"}}},"ExemptionType":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Exemtion type. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid exemption types.","format":"int32"},"InvoiceNumber":{"fieldType":"integer","required":false,"isExcluded":false,"description":"User-defined invoice number.","format":"int32"},"Optional":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"CustomerNumber":{"fieldType":"string","required":false,"isExcluded":false,"description":"User-defined customer number."},"CompanyIdentifier":{"fieldType":"string","required":false,"isExcluded":false,"description":"Company identifier. Use the 3-character company identifier provided by Avalara to your organization in order to include this transaction in the monthly compliance reports. Otherwise, leave empty."},"OptionalAlpha1":{"fieldType":"string","required":false,"isExcluded":false,"description":"Optional user-defined string value. 20-characters max."},"Optional4":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional5":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional6":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional7":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional8":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional9":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional10":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"AdjustmentMethod":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Adjustment method. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid adjustment methods.","format":"int32"},"Lines":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Number of lines sold to customer when applicable.","format":"int32"},"Locations":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Number of customer locations.","format":"int32"},"Minutes":{"fieldType":"double float","required":false,"isExcluded":false,"description":"Number of minutes for call when appropriate.","format":"double"},"Debit":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Determines if this is a prepaid debit card transaction."},"AdjustmentDiscount":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Adjustment discount type. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid discount types.","format":"int32"},"FacilitiesBased":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Specifies if the carrier delivering the service has company owned facilities to provide the service."},"Franchise":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if the company provides services sold pursuant to a franchise agreement between the carrier and jurisdiction."},"Lifeline":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if customer is a Lifeline participant."},"Regulated":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"True if regulated, otherwise false."},"ServiceLevelNumber":{"fieldType":"integer","required":false,"isExcluded":false,"description":"User-defined service level number.","format":"int32"},"Exclusions":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"CountryISO":{"fieldType":"string","required":false,"isExcluded":false,"description":"Three-character country ISO code. Required if State not specified."},"State":{"fieldType":"string","required":false,"isExcluded":false,"description":"Two-character state abbreviation. Required if CountryISO not specified."},"ExclusionOn":{"fieldType":"boolean","required":true,"isExcluded":false,"description":"True if entity exclusion applies in the state, otherwise false."}}},"CategoryExemptions":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"CountryISO":{"fieldType":"string","required":false,"isExcluded":false,"description":"Three-character country ISO code. Required if State is not specified."},"State":{"fieldType":"string","required":false,"isExcluded":false,"description":"Two-character state abbreviation. Required if CountryISO is not specified."},"TaxCategory":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Tax Category. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for valid tax categories.","format":"int32"}}},"OptionalFields":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"OptionalKeyNo":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Key number (1 to 10) for optional field.","format":"int32"},"OptionalValue":{"fieldType":"string","required":true,"isExcluded":false,"description":"Optional field value."}}},"TaxInclusive":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if the charge of this transaction is tax-inclusive (reverse tax calculation)."},"SafeHarborOverrides":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"SafeHarborType":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Safe harbor type (1 = Cellular, 2 = VoIP, 4 = Paging).","format":"int32"},"OriginalFederalTam":{"fieldType":"number","required":false,"isExcluded":false,"description":"Original Federal TAM value to override.","format":"double"},"NewFederalTam":{"fieldType":"number","required":false,"isExcluded":false,"description":"New TAM value that will replace the original TAM value.","format":"double"}}},"DocumentCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Document code."},"Commit":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if the transaction should be committed as soon at it is processed."}}},"Exclusions":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"CountryISO":{"fieldType":"string","required":false,"isExcluded":false,"description":"Three-character country ISO code. Required if State not specified."},"State":{"fieldType":"string","required":false,"isExcluded":false,"description":"Two-character state abbreviation. Required if CountryISO not specified."},"ExclusionOn":{"fieldType":"boolean","required":true,"isExcluded":false,"description":"True if entity exclusion applies in the state, otherwise false."}}},"ReturnDetail":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if the individual transaction taxes should be returned in the response."},"DocumentCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Document code."},"Commit":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if the transaction should be committed as soon at it is processed."}},"requestSchemaWithRefs":{"name":"request","in":"body","description":"Object containing batch of transactions and adjustments to be processed along with nexus and exclusion information.","required":false,"schema":{"$ref":"#/definitions/CalcTaxesInCustModeRequest"}},"postBody":{"Transactions":[{"OriginationAddress":{},"TerminationAddress":{},"BillToAddress":{},"Exemptions":[{}],"Exclusions":[{}],"CategoryExemptions":[{}],"OptionalFields":[{}],"SafeHarborOverrides":[{}]}],"Adjustments":[{"OriginationAddress":{},"TerminationAddress":{},"BillToAddress":{},"Exemptions":[{}],"Exclusions":[{}],"CategoryExemptions":[{}],"OptionalFields":[{}],"SafeHarborOverrides":[{}]}],"Exclusions":[{}]},"curl":"curl\n    -X POST\n    -H 'Accept: application/json'\n    -H 'Authorization: Basic aHR0cHdhdGNoOmY='\n    -H 'Content-Type: application/json'\n    --data '{\n  \"Transactions\": [\n    {\n      \"OriginationAddress\": {},\n      \"TerminationAddress\": {},\n      \"BillToAddress\": {},\n      \"Exemptions\": [\n        {}\n      ],\n      \"Exclusions\": [\n        {}\n      ],\n      \"CategoryExemptions\": [\n        {}\n      ],\n      \"OptionalFields\": [\n        {}\n      ],\n      \"SafeHarborOverrides\": [\n        {}\n      ]\n    }\n  ],\n  \"Adjustments\": [\n    {\n      \"OriginationAddress\": {},\n      \"TerminationAddress\": {},\n      \"BillToAddress\": {},\n      \"Exemptions\": [\n        {}\n      ],\n      \"Exclusions\": [\n        {}\n      ],\n      \"CategoryExemptions\": [\n        {}\n      ],\n      \"OptionalFields\": [\n        {}\n      ],\n      \"SafeHarborOverrides\": [\n        {}\n      ]\n    }\n  ],\n  \"Exclusions\": [\n    {}\n  ]\n}'\n    https://communicationsua.avalara.net/api/v1/CustMode/CalcTaxesInCustMode","responseSchema":{"required":false,"isExcluded":false,"Taxes":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"AdjustmentType":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Adjustmnet type. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid adjustment types.","format":"int32"},"Billable":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if the tax is billable to the customer."},"CalculationType":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Calculation type. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid calculation types.","format":"int32"},"CategoryDescription":{"fieldType":"string","required":false,"isExcluded":false,"description":"Tax Category Description."},"CategoryID":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Tax category ID.","format":"int32"},"CompanyIdentifier":{"fieldType":"string","required":false,"isExcluded":false,"description":"Customer identifier from transaction input."},"Compliance":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if the tax is reportable to the jurisdiction."},"CustomerNumber":{"fieldType":"string","required":false,"isExcluded":false,"description":"User-defined customer number."},"Description":{"fieldType":"string","required":false,"isExcluded":false,"description":"Tax description."},"ExemptionType":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Exemption type from transaction input.","format":"int32"},"ExemptSaleAmount":{"fieldType":"number","required":false,"isExcluded":false,"description":"Amount of the charge exempt from taxes.","format":"double"},"InvoiceNumber":{"fieldType":"integer","required":false,"isExcluded":false,"description":"User-defined invoice number.","format":"int32"},"Optional":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"OptionalAlpha1":{"fieldType":"string","required":false,"isExcluded":false,"description":"Optional user-defined string value."},"Optional4":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional5":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional6":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional7":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional8":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional9":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"Optional10":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Optional user-defined value.","format":"int32"},"PCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"PCode for the reporting jurisdiction.","format":"int32"},"Rate":{"fieldType":"number","required":false,"isExcluded":false,"description":"Tax rate.","format":"double"},"RefundUncollect":{"fieldType":"number","required":false,"isExcluded":false,"description":"Taxable measure if tax is smaller than 0 (tax adjustments).","format":"double"},"ServiceLevelNumber":{"fieldType":"integer","required":false,"isExcluded":false,"description":"User-defined service level number.","format":"int32"},"Surcharge":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Indicates if tax is considered a surcharge."},"TaxableMeasure":{"fieldType":"number","required":false,"isExcluded":false,"description":"Amount of sale subject to tax plus any taxed taxes.","format":"double"},"TaxAmount":{"fieldType":"number","required":false,"isExcluded":false,"description":"Calculated tax amount.","format":"double"},"TaxLevel":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Tax level. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid tax levels.","format":"int32"},"TaxType":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Tax type. See the Telecom Mapping guidelines (\"TM_00505_AFC Telecom Mapping Guidelines.pdf\") for a list of valid tax types.","format":"int32"},"Lines":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Number of lines used to calculate the tax (for per-line tax calculations).","format":"int32"},"Minutes":{"fieldType":"double float","required":false,"isExcluded":false,"description":"Number of minutes used to calculate the tax (for per-minute tax calculations).","format":"double"},"OptionalFields":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"OptionalKeyNo":{"fieldType":"integer","required":true,"isExcluded":false,"description":"Key number (1 to 10) for optional field.","format":"int32"},"OptionalValue":{"fieldType":"string","required":true,"isExcluded":false,"description":"Optional field value."}}},"TransCharge":{"fieldType":"number","required":false,"isExcluded":false,"description":"Transaction charge amount.","format":"double"}}},"SummarizedTaxes":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"PCode":{"fieldType":"integer","required":false,"isExcluded":false,"description":"PCode for the reporting jurisdiction.","format":"int32"},"TaxType":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Tax type. See the Telecom Mapping guidelines (\"TM_00505_AFC Telecom Mapping Guidelines.pdf\") for a list of valid tax types.","format":"int32"},"TaxLevel":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Tax level. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid tax levels.","format":"int32"},"CalculationType":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Calculation type. See the \"TM_00116_AFC SaaS pro Telecom Developer Manual.pdf\" for a list of valid calculation types.","format":"int32"},"Rate":{"fieldType":"number","required":false,"isExcluded":false,"description":"Tax rate.","format":"double"},"TaxAmount":{"fieldType":"number","required":false,"isExcluded":false,"description":"Tax amount.","format":"double"},"ExemptSaleAmount":{"fieldType":"number","required":false,"isExcluded":false,"description":"Amount of the charge exempt from taxes.","format":"double"},"Description":{"fieldType":"string","required":false,"isExcluded":false,"description":"Tax description."},"Surcharge":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Indicates if tax is considered a surcharge.","format":"int32"},"MaxBase":{"fieldType":"number","required":false,"isExcluded":false,"description":"Max amount to which tax is applied.","format":"double"},"MinBase":{"fieldType":"number","required":false,"isExcluded":false,"description":"Min amount to which tax is applied.","format":"double"},"ExcessTax":{"fieldType":"number","required":false,"isExcluded":false,"description":"Rate for amount above max base.","format":"double"},"TotalCharge":{"fieldType":"number","required":false,"isExcluded":false,"description":"Sum of charges for this customer.","format":"double"},"CategoryID":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Tax category ID.","format":"int32"},"CategoryDescription":{"fieldType":"string","required":false,"isExcluded":false,"description":"Tax category description."},"Lines":{"fieldType":"integer","required":false,"isExcluded":false,"description":"Number of lines used to calculate the tax (for per-line tax calculations).","format":"int32"},"Minutes":{"fieldType":"double float","required":false,"isExcluded":false,"description":"Number of minutes used to calculate the tax (for per-minute tax calculations).","format":"double"}}}},"responseSchemaWithRefs":{"description":"OK","schema":{"$ref":"#/definitions/CustomerResults"}},"produces":["text/plain","application/json","text/json"],"id":24}],"postmanCollection":{"info":{"name":"Saas Pro","_postman_id":"1234","description":"The AFC REST service provides APIs to calculate taxes on communiations transactions and lookup tax rate and jurisdiction information.","schema":"https://schema.getpostman.com/json/collection/v2.0.0/collection.json"},"item":[{"name":"Calculate taxes on a transaction","request":{"url":"https://communicationsua.avalara.net/api/v1/CalculateTaxes","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"This method accepts transaction data and performs appropriate tax calculations.","body":{"mode":"raw","raw":"{\"OriginationAddress\":{},\"TerminationAddress\":{},\"BillToAddress\":{},\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}],\"SafeHarborOverrides\":[{}]}"}},"response":[]},{"name":"Calculate tax adjustments on transaction","request":{"url":"https://communicationsua.avalara.net/api/v1/CalculateAdjustments","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"This method accepts transaction data and performs appropriate tax adjustment calculations.","body":{"mode":"raw","raw":"{\"OriginationAddress\":{},\"TerminationAddress\":{},\"BillToAddress\":{},\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}],\"SafeHarborOverrides\":[{}]}"}},"response":[]},{"name":"Determine PCode for a location","request":{"url":"https://communicationsua.avalara.net/api/v1/Location/PCode","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Converts the given request data to a PCode. Only one of the fields should be used for the conversion: ZipAddress, FipsCode or NPANXX.","body":{"mode":"raw","raw":"{\"ZipAddress\":{}}"}},"response":[]},{"name":"Perform a tax-inclusive tax calculation","request":{"url":"https://communicationsua.avalara.net/api/v1/CalculateReversal/Taxes","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"This method accepts transaction data and performs a reverse tax calculation in order to arrive at the base sale amount and taxes for the desired total charge.","body":{"mode":"raw","raw":"{\"OriginationAddress\":{},\"TerminationAddress\":{},\"BillToAddress\":{},\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}],\"SafeHarborOverrides\":[{}]}"}},"response":[]},{"name":"Perform a tax-inclusive tax adjustment","request":{"url":"https://communicationsua.avalara.net/api/v1/CalculateReversal/Adjustments","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"This method accepts transaction data and performs a reverse tax adjustment in order to arrive at the base sale amount and taxes for the desired total charge.","body":{"mode":"raw","raw":"{\"OriginationAddress\":{},\"TerminationAddress\":{},\"BillToAddress\":{},\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}],\"SafeHarborOverrides\":[{}]}"}},"response":[]},{"name":"Convert a PCode to FIPS code","request":{"url":"https://communicationsua.avalara.net/api/v1/Location/PCodeToFips/{pCode}","method":"get","header":[],"description":"This method returns the FIPS code for the specified PCode.","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"Get address information for a jurisdiction","request":{"url":"https://communicationsua.avalara.net/api/v1/Location/Address/{pCode}","method":"get","header":[],"description":"This method returns a list of addresses for the specified jurisdiction.","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"Lookup jurisdictions by location name and/or postal code","request":{"url":"https://communicationsua.avalara.net/api/v1/Location/ZipAddressLookup","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Searches jurisdiction matches for the address provided. The results may be an exact match or potential matches as specified by the BestMatch attribute in the input parameter object.","body":{"mode":"raw","raw":"{}"}},"response":[]},{"name":"Get tax category for a tax type","request":{"url":"https://communicationsua.avalara.net/api/v1/TaxLookup/Category/{taxType}","method":"get","header":[],"description":"This method returns the tax category for the specified tax type.","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"Get the tax description for a tax type","request":{"url":"https://communicationsua.avalara.net/api/v1/TaxLookup/Description/{taxType}","method":"get","header":[],"description":"This method returns the description for the specified tax type ID.","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"Get tax rates for a jurisdiction","request":{"url":"https://communicationsua.avalara.net/api/v1/TaxLookup/TaxRates/{pCode}","method":"get","header":[],"description":"Returns the tax rate information for a jurisdiction identified by the specified PCode.","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"Get the version of the Rest APIs","request":{"url":"https://communicationsua.avalara.net/api/v1/Application/RESTVersion","method":"get","header":[],"description":"Returns the version of the REST APIs.","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"Get the version of the AFC tax engine","request":{"url":"https://communicationsua.avalara.net/api/v1/Application/AFCEngineVersion","method":"get","header":[],"description":"Returns the version of the AFC tax engine.","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"Get the AFC tax engine database version","request":{"url":"https://communicationsua.avalara.net/api/v1/Application/AFCDatabaseEngineVersion","method":"get","header":[],"description":"Returns the AFC tax engine database version.","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"Get server time","request":{"url":"https://communicationsua.avalara.net/api/v1/Application/ServerTime","method":"get","header":[],"description":"Returns the server time in UTC.","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"Calculate taxes for a pro-rated transaction","request":{"url":"https://communicationsua.avalara.net/api/v1/CalculateProRated/Taxes","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Accepts a pro-rated percentage that is used to calculate the taxable amount on the transaction and perform tax calculations.","body":{"mode":"raw","raw":"{\"Transaction\":{\"OriginationAddress\":{},\"TerminationAddress\":{},\"BillToAddress\":{},\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}],\"SafeHarborOverrides\":[{}]}}"}},"response":[]},{"name":"Calculate tax adjustments for a pro-rated transaction","request":{"url":"https://communicationsua.avalara.net/api/v1/CalculateProRated/Adjustments","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Accepts a pro-rated percentage that is used to calculate the taxable amount on the transaction and perform tax adjustments.","body":{"mode":"raw","raw":"{\"Transaction\":{\"OriginationAddress\":{},\"TerminationAddress\":{},\"BillToAddress\":{},\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}],\"SafeHarborOverrides\":[{}]}}"}},"response":[]},{"name":"Calculate taxes using overrides","request":{"url":"https://communicationsua.avalara.net/api/v1/CalculateWithOverrides/Taxes","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Accepts transaction and tax rate override data to perform tax calculations with the provided override information.","body":{"mode":"raw","raw":"{\"Transaction\":{\"OriginationAddress\":{},\"TerminationAddress\":{},\"BillToAddress\":{},\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}],\"SafeHarborOverrides\":[{}]},\"Overrides\":[{\"BracketInfo\":[{}]}]}"}},"response":[]},{"name":"Calculate tax adjustments using overrides","request":{"url":"https://communicationsua.avalara.net/api/v1/CalculateWithOverrides/Adjustments","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Accepts transaction and tax rate override data to perform tax adjustments with the provided override information.","body":{"mode":"raw","raw":"{\"Transaction\":{\"OriginationAddress\":{},\"TerminationAddress\":{},\"BillToAddress\":{},\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}],\"SafeHarborOverrides\":[{}]},\"Overrides\":[{\"BracketInfo\":[{}]}]}"}},"response":[]},{"name":"Calculate taxes on a transaction","request":{"url":"https://communicationsua.avalara.net/api/v1/CommitTransactions","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"This method accepts transaction data and performs appropriate tax calculations.","body":{"mode":"raw","raw":"{\"OptionalFields\":[{}]}"}},"response":[]},{"name":"Initiate a new customer batch","request":{"url":"https://communicationsua.avalara.net/api/v1/CustMode/BeginBatch","method":"get","header":[],"description":"Flags the beginning of a customer transaction batch and returns a customer batch ID that can be used to submit each transaction and process the entire batch.","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"Submit a transaction for a customer batch","request":{"url":"https://communicationsua.avalara.net/api/v1/CustMode/CalcTaxes","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Submits a single transaction to be processed for a customer batch. The transaction will be processed when the ProcessBatch API is invoked for the customer batch ID.","body":{"mode":"raw","raw":"{\"Transaction\":{\"OriginationAddress\":{},\"TerminationAddress\":{},\"BillToAddress\":{},\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}],\"SafeHarborOverrides\":[{}]}}"}},"response":[]},{"name":"Submit an adjustment for a customer batch","request":{"url":"https://communicationsua.avalara.net/api/v1/CustMode/CalcAdjustments","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Submits a single adjustment to be processed for a customer batch. The adjustment will be processed when the ProcessBatch API is invoked for the customer batch ID.","body":{"mode":"raw","raw":"{\"Transaction\":{\"OriginationAddress\":{},\"TerminationAddress\":{},\"BillToAddress\":{},\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}],\"SafeHarborOverrides\":[{}]}}"}},"response":[]},{"name":"Process a customer batch","request":{"url":"https://communicationsua.avalara.net/api/v1/CustMode/ProcessBatch","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Processes a customer batch and returns the tax calculation results.","body":{"mode":"raw","raw":"{\"Exclusions\":[{}]}"}},"response":[]},{"name":"Process transactions and adjustments in customer mode","request":{"url":"https://communicationsua.avalara.net/api/v1/CustMode/CalcTaxesInCustMode","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Processes a batch of transactions and adjustments in customer mode.","body":{"mode":"raw","raw":"{\"Transactions\":[{\"OriginationAddress\":{},\"TerminationAddress\":{},\"BillToAddress\":{},\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}],\"SafeHarborOverrides\":[{}]}],\"Adjustments\":[{\"OriginationAddress\":{},\"TerminationAddress\":{},\"BillToAddress\":{},\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}],\"SafeHarborOverrides\":[{}]}],\"Exclusions\":[{}]}"}},"response":[]},{"name":"Calculate taxes on a bridge conference transaction","request":{"url":"https://communicationsua.avalara.net/api/v1/BridgeConference/Taxes","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"This method will take a Billing address, Bridge Address, Host Address (optional) and list of participants. The system will determine which taxes apply for each participant and return the summarized taxes for the bridge conference transaction. The individual participant results are returned if ReturnParticipantResults is true.","body":{"mode":"raw","raw":"{\"BillingAddress\":{},\"BridgeAddress\":{},\"HostAddress\":{},\"Participants\":[{\"ParticipantAddress\":{}}],\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}]}"}},"response":[]},{"name":"Calculate tax adjustments on a bridge conference transaction","request":{"url":"https://communicationsua.avalara.net/api/v1/BridgeConference/Adjustments","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"This method will take a Billing address, Bridge Address, Host Address (optional) and list of participants. The system will determine which taxes apply for each participant and return the summarized tax adjustments for the bridge conference transaction. The individual participant results are returned if ReturnParticipantResults is true.","body":{"mode":"raw","raw":"{\"BillingAddress\":{},\"BridgeAddress\":{},\"HostAddress\":{},\"Participants\":[{\"ParticipantAddress\":{}}],\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}]}"}},"response":[]},{"name":"Determine jurisdiction for transaction","request":{"url":"https://communicationsua.avalara.net/api/v1/CalculateJurisdiction","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Determines the taxing jurisdiction for a transaction and returns the PCode at the lowest jurisdiction level.","body":{"mode":"raw","raw":"{\"OriginationAddress\":{},\"TerminationAddress\":{},\"BillToAddress\":{},\"Exemptions\":[{}],\"Exclusions\":[{}],\"CategoryExemptions\":[{}],\"OptionalFields\":[{}],\"SafeHarborOverrides\":[{}]}"}},"response":[]}]},"tagName":null};
+</script>
+<script src="/developer-dot/public/js/api-bundle.js"></script>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'developeravalaracom'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</main>
+        </section>
+          
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/dynamic/swagger/communications/afc-rest.yaml"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

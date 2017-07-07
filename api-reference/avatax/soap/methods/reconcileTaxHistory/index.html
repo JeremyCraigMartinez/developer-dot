@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reconcileTaxHistory | Avatax SOAP API | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="reconcileTaxHistory | Avatax SOAP API | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="Mark Documents as Reconciled (deprecated)"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=avaTax>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/avatax">avaTax</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav apis ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Avatax" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid api_references">
+        
+          
+
+
+<div class="breadcrumbs">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li><span class="text-uppercase">Tax Calculation API</span>s</li>
+            <li class="text-uppercase"><a href="/developer-dot/avatax">Avalara avaTax</a></li>
+            <li class="text-uppercase">api reference</li>
+        </ul>
+    </div>
+</div>
+  
+        <section class="row padding-sides">
+            <nav class="col-md-3 api-ref">
+                 <div id='the-nav' class='nav-wrapper hidden-xs hidden-sm api-ref-nav' style='height: 100%; overflow-y: auto;'>
+    <ul class='api-ref-side-nav nav nav-pills nav-stacked'>
+        
+        
+
+        
+        
+
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/soap">Avatax SOAP API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                            
+                                <div style="padding-left:10px;">
+    <ul class='api-ref-side-nav-active nav nav-pills nav-stacked sub-nav'>
+        
+            
+            
+            
+
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/soap/methods/adjustTax">adjustTax</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/soap/methods/applyPayment">applyPayment</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/soap/methods/cancelTax">cancelTax</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/soap/methods/commitTax">commitTax</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/soap/methods/getTax">getTax</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/soap/methods/getTaxHistory">getTaxHistory</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/soap/methods/isAuthorized">isAuthorized</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/soap/methods/ping">ping</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/soap/methods/postTax">postTax</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/soap/methods/reconcileTaxHistory">reconcileTaxHistory</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avatax/soap/methods/validateAddress">validateAddress</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+            <li><a style="color:#ff6600; overflow: hidden;" href="/developer-dot/api-reference/avatax/soap/models">Models</a></li>
+            
+        
+    </ul>
+</div>
+
+                            
+                        
+                    </li>
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/rest/v2">Avatax REST API v2</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+            
+            
+
+            
+            
+            
+                
+            
+        
+
+        
+        <li class="older-api">
+            Older APIs
+            <div style="padding-left:10px;">
+    <ul class='api-ref-side-nav-active nav nav-pills nav-stacked sub-nav'>
+            
+            
+
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/onboarding">Onboarding API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/batch/soap">Avatax BatchSvc SOAP API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+                
+                
+
+                
+                
+                
+            
+                
+                
+
+                
+                
+                
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/account/soap">Avatax AccountSvc SOAP API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+                
+                
+
+                
+                
+                
+                    <li>
+                        <a href="/developer-dot/api-reference/avatax/rest/v1">Avatax REST API</a>
+                        <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                        
+                    </li>
+                
+            
+    </ul>
+</div>
+        </li>
+        
+    </ul>
+</div>
+ 
+            </nav>
+            <main class="col-md-9 small-no-padding"><div id="api-console"></div>
+<script>
+    window.modelsPath = 'api-reference/avatax/soap/models';
+    window.__INITIAL_STATE__ = {"tagMap":null,"apiName":"AvaTax SOAP API","apiDescription":"The AvaTax SOAP API exposes the most commonly used available for interacting with the AvaTax service, allowing calculation of tax, modification of documents, and validation of addresses. If you're unsure of which API to use, a full comparison of the differences between the functionality provided by our REST and SOAP interfaces is documented [here](http://developer.avalara.com/avatax/soap-or-rest/).\nThe [REST API reference](http://developer.avalara.com/api-reference/avatax/rest/v2/) is also available.</p>","apiType":"SOAP","sampleAuthHeader":null,"sampleContentType":["text/xml"],"auth":null,"apiEndpoints":[{"operationId":"reconcileTaxHistory","name":"Mark Documents as Reconciled (deprecated)","path":"https://development.avalara.net/Tax/TaxSvc.asmx?ReconcileTaxHistory","action":"post","sampleAuthHeader":null,"showExcludedPostBodyFields":false,"apiConsoleLoading":false,"headerParams":{"SOAPAction":{"description":"SOAPAction must be \"http://avatax.avalara.com/services/ReconcileTaxHistory\" for this operation: e.g. `--header \"SOAPAction: \\\"http://avatax.avalara.com/services/ReconcileTaxHistory\\\"\"`","required":true,"value":"","example":"http://avatax.avalara.com/services/ReconcileTaxHistory","fieldType":"string"}},"requestSchema":{"required":false,"isExcluded":false,"Header":{"required":true,"isExcluded":false,"Security":{"required":true,"isExcluded":false,"UsernameToken":{"required":true,"isExcluded":false,"Account":{"fieldType":"string","required":true,"isExcluded":false,"example":1234567890,"description":"The unique account number provided by Avalara for verification against the service. If you are on a free trial and don’t have a license key, use Username."},"LicenseKey":{"fieldType":"string","required":true,"isExcluded":false,"example":"A1B2C3D4E5F6G7H8","description":"The unique alpha-numeric key provided by Avalara for verification against the service. If you are on a free trial and don’t have a license key, use Password."},"Username":{"fieldType":"string","required":false,"isExcluded":false,"description":"Your AvaTax Admin Console username. Usually an email address."},"Password":{"fieldType":"string","required":false,"isExcluded":false,"description":"Your AvaTax Admin Console password."}},"SOAP-ENV:actor":{"fieldType":"string","required":false,"isExcluded":false,"example":"http://schemas.xmlsoap.org/soap/actor/next","description":"The WS-Security standard requires the `wsse:Security` element contains a `SOAP-ENV:actor` attribute."}},"Profile":{"required":true,"isExcluded":false,"Client":{"fieldType":"string","required":true,"isExcluded":false,"description":"Client application name and version. This should unique identify the software client that is calling the AvaTax service, and should be consistent across all deployments of that client version. e.g. “Drupal Commerce 5.7”"},"Adapter":{"fieldType":"string","required":true,"isExcluded":false,"description":"Name and version of the adapter. This is set automatically by the .NET, PHP, and Java adapters."},"Machine":{"fieldType":"string","required":true,"isExcluded":false,"description":"The NetBIOS name of the local computer. This is set automatically by the .NET, PHP, and Java adapters."},"Name":{"fieldType":"string","required":true,"isExcluded":false,"description":"Reference to a named profile."}}},"Body":{"required":true,"isExcluded":false,"ReconcileTaxHistory":{"required":true,"isExcluded":false,"ReconcileTaxHistoryRequest":{"required":false,"isExcluded":false,"CompanyCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Client application company reference code. Not required if the documents are identified by `DocId`."},"LastDocId":{"fieldType":"string","required":false,"isExcluded":false,"description":"Avatax-assigned unique document Id, can be used in place of `DocCode`, `DocType`, and `CompanyCode` to identify a range of documents."},"Reconciled":{"fieldType":"boolean","required":true,"isExcluded":false,"description":"Allows previously reconciled documents to be ignored. Please note that documents currently cannot be set to the `Reconciled` status."},"StartDate":{"fieldType":"string","required":true,"isExcluded":false,"description":"The starting document date for the range of documents desired. In the format YYYY-MM-DD."},"EndDate":{"fieldType":"string","required":true,"isExcluded":false,"description":"The ending document date for the range of documents desired. In the format YYYY-MM-DD."},"DocStatus":{"fieldType":"string","required":true,"isExcluded":false,"description":"Allows filtering of results by status. Possible statuses are: Saved, Posted, Comitted, Cancelled, Adjusted, Any."},"DocType":{"fieldType":"string","required":true,"isExcluded":false,"description":"Value describing what type of tax document is being requested. One of: SalesInvoice, ReturnInvoice, PurchaseInvoice. Not required if the documents are identified by `DocId`."},"LastDocCode":{"fieldType":"string","required":true,"isExcluded":false,"description":"Client application identifier describing this tax transaction (i.e. invoice number, sales order number, etc.) – specifies that this document and all more recent documents are desired. Not required if the documents are identified by `DocId`."},"PageSize":{"fieldType":"number","required":true,"isExcluded":false,"description":"Allows for pagination and limitation of the number of results returned.","format":"integer"}}}}},"requestSchemaWithRefs":{"in":"body","name":"Envelope","schema":{"$ref":"#/definitions/ReconcileTaxHistoryEnvelope"}},"postBody":{"Header":{"Security":{"UsernameToken":{}},"Profile":{}},"Body":{"ReconcileTaxHistory":{"ReconcileTaxHistoryRequest":{}}}},"curl":"curl\n    -X POST\n    -H 'Accept: application/json'\n    -H 'Content-Type: application/json'\n    --data '{\n  \"Header\": {\n    \"Security\": {\n      \"UsernameToken\": {}\n    },\n    \"Profile\": {}\n  },\n  \"Body\": {\n    \"ReconcileTaxHistory\": {\n      \"ReconcileTaxHistoryRequest\": {}\n    }\n  }\n}'\n    https://development.avalara.net/Tax/TaxSvc.asmx?ReconcileTaxHistory","responseSchema":{"required":false,"isExcluded":false,"ReconcileTaxHistoryResult":{"required":false,"isExcluded":false,"RecordCount":{"fieldType":"number","required":false,"isExcluded":false,"description":"The number of records found that fit the filter criteria specified in the request.","format":"integer"},"SearchTaxHistoryResult":{"required":false,"isExcluded":false,"GetTaxResults":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"DocCode":{"fieldType":"string","required":false,"isExcluded":false,"example":"INV001","description":"While this is an optional field, serious consideration should be given to using it. If no value is sent, AvaTax assigns a GUID value to keep the document unique, which can make reconciliation a challenge."},"DocDate":{"fieldType":"string","required":false,"isExcluded":false,"description":"Date of invoice, sales order, purchase order, etc."},"TimeStamp":{"fieldType":"string","required":false,"isExcluded":false,"description":"Server timestamp of request.","format":"date-time"},"TotalAmount":{"fieldType":"number","required":false,"isExcluded":false,"description":"Sum of all line `Amount` values."},"TotalDiscount":{"fieldType":"number","required":false,"isExcluded":false,"description":"Sum of all `TaxLine` discount amounts."},"TotalExemption":{"fieldType":"number","required":false,"isExcluded":false,"description":"Total exemption amount."},"TotalTaxable":{"fieldType":"number","required":false,"isExcluded":false,"description":"Total taxable amount."},"TotalTax":{"fieldType":"number","required":false,"isExcluded":false,"description":"Sum of all `TaxLine` tax amounts."},"TotalTaxCalculated":{"fieldType":"number","required":false,"isExcluded":false,"description":"Indicates the total tax calculated by AvaTax. This is usually the same as the `TotalTax`, except when a tax override amount is specified. This is for informational purposes. The `TotalTax` will still be used for reporting."},"TaxDate":{"fieldType":"string","required":false,"isExcluded":false,"description":"Date used to assess tax rates and jurisdictions.","format":"date"},"TaxLines":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"LineNo":{"fieldType":"string","required":false,"isExcluded":false,"description":"Line item identifier"},"TaxCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"The tax code used in calculating tax"},"Taxability":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Flag indicating item was taxable"},"Taxable":{"fieldType":"number","required":false,"isExcluded":false,"description":"The amount that is taxable"},"Rate":{"fieldType":"number","required":false,"isExcluded":false,"description":"Effective tax rate"},"Tax":{"fieldType":"number","required":false,"isExcluded":false,"description":"Tax amount"},"Discount":{"fieldType":"number","required":false,"isExcluded":false,"description":"Discount amount"},"TaxCalculated":{"fieldType":"number","required":false,"isExcluded":false,"description":"Amount of tax calculated"},"Exemption":{"fieldType":"number","required":false,"isExcluded":false,"description":"Exempt amount"},"BoundaryLevel":{"fieldType":"string","required":false,"isExcluded":false,"description":"The boundary level used to calculate tax: determined by the provided addresses"},"TaxDetails":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"Country":{"fieldType":"string","required":false,"isExcluded":false,"example":"US","description":"Two character ISO country code."},"JurisName":{"fieldType":"string","required":false,"isExcluded":false,"example":"BAINBRIDGE ISLAND","description":"Name of a tax jurisdiction"},"JurisCode":{"fieldType":"string","required":false,"isExcluded":false,"example":29,"description":"State assigned code identifying the jurisdiction. Note that this is not necessarily a unique identifier of the jurisdiction."},"JurisType":{"fieldType":"string","required":false,"isExcluded":false,"enum":["State","County","City","Country","Special Tax Jurisdiction"]},"Rate":{"fieldType":"number","required":false,"isExcluded":false,"example":0.022,"description":"Effective tax rate for tax jurisdiction","format":"decimal"},"Region":{"fieldType":"string","required":false,"isExcluded":false,"example":"WA","description":"Region of tax jurisdiction"},"Tax":{"fieldType":"number","required":false,"isExcluded":false,"example":2.22,"description":"Tax amount","format":"decimal"},"TaxName":{"fieldType":"string","required":false,"isExcluded":false,"example":"WA CITY TAX","description":"Tax name"}}}}},"TaxSummary":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"Country":{"fieldType":"string","required":false,"isExcluded":false,"example":"US","description":"Two character ISO country code."},"JurisName":{"fieldType":"string","required":false,"isExcluded":false,"example":"BAINBRIDGE ISLAND","description":"Name of a tax jurisdiction"},"JurisCode":{"fieldType":"string","required":false,"isExcluded":false,"example":29,"description":"State assigned code identifying the jurisdiction. Note that this is not necessarily a unique identifier of the jurisdiction."},"JurisType":{"fieldType":"string","required":false,"isExcluded":false,"enum":["State","County","City","Country","Special Tax Jurisdiction"]},"Rate":{"fieldType":"number","required":false,"isExcluded":false,"example":0.022,"description":"Effective tax rate for tax jurisdiction","format":"decimal"},"Region":{"fieldType":"string","required":false,"isExcluded":false,"example":"WA","description":"Region of tax jurisdiction"},"Tax":{"fieldType":"number","required":false,"isExcluded":false,"example":2.22,"description":"Tax amount","format":"decimal"},"TaxName":{"fieldType":"string","required":false,"isExcluded":false,"example":"WA CITY TAX","description":"Tax name"}}},"TaxAddresses":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"Address":{"fieldType":"string","required":false,"isExcluded":false,"description":"Canonical street address"},"AddressCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Reference code uniquely identifying this address instance. `AddressCode` will always correspond to an address code supplied to in the address collection provided in the request."},"City":{"fieldType":"string","required":false,"isExcluded":false,"description":"City name"},"Region":{"fieldType":"string","required":false,"isExcluded":false,"description":"State or region name"},"Country":{"fieldType":"string","required":false,"isExcluded":false,"description":"Country code, as ISO 3166-1 (Alpha-2) country code (e.g. \"US\")"},"PostalCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Postal code"},"Latitude":{"fieldType":"number","required":false,"isExcluded":false,"description":"Geographic latitude."},"Longitude":{"fieldType":"number","required":false,"isExcluded":false,"description":"Geographic longitude."},"TaxRegionId":{"fieldType":"number","required":false,"isExcluded":false,"description":"AvaTax tax region identifier"},"JurisCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Tax jurisdiction code"}}}}},"LastDocId":{"fieldType":"string","required":false,"isExcluded":false,"description":"Avatax-assigned unique document IDof the most recent document that was retrieved."},"LastDocCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Client application identifier describing the most recent document that was retrieved."},"TransactionId":{"fieldType":"string","required":false,"isExcluded":false,"description":"The unique transaction ID assigned by AvaTax to this request/response set. This value need only be retained for troubleshooting."},"ResultCode":{"fieldType":"string","required":false,"isExcluded":false,"example":"Success","description":"Classifies severity of message. One of: Success, Warning, Error, Exception"},"Messages":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"Summary":{"fieldType":"string","required":false,"isExcluded":false,"example":"Company not found.  Verify the CompanyCode.","description":"The message summary in short form."},"Details":{"fieldType":"string","required":false,"isExcluded":false,"example":"APITrialCompany","description":"Description of the error or warning."},"RefersTo":{"fieldType":"string","required":false,"isExcluded":false,"example":"CompanyCode","description":"The data used during the request that caused the message to be generated."},"Source":{"fieldType":"string","required":false,"isExcluded":false,"example":"Avalara.AvaTax.Services.Tax","description":"The internal location that generated the message."},"Severity":{"fieldType":"string","required":false,"isExcluded":false,"example":"Error","description":"Classifies the severity of the message. One of: Success, Warning, Error, Exception."}}}}}},"responseSchemaWithRefs":{"description":"The operation was completed. Refer to the response property `ResultCode` to determine operation success or error.","schema":{"$ref":"#/definitions/ReconcileTaxHistoryResponse"}},"produces":["text/xml"],"id":9}],"postmanCollection":{"info":{"name":"AvaTax SOAP API","_postman_id":"1234","description":"The AvaTax SOAP API exposes the most commonly used available for interacting with the AvaTax service, allowing calculation of tax, modification of documents, and validation of addresses. If you're unsure of which API to use, a full comparison of the differences between the functionality provided by our REST and SOAP interfaces is documented [here](http://developer.avalara.com/avatax/soap-or-rest/).\nThe [REST API reference](http://developer.avalara.com/api-reference/avatax/rest/v2/) is also available.</p>","schema":"https://schema.getpostman.com/json/collection/v2.0.0/collection.json"},"item":[{"name":"Calculate Tax and Record a Document","request":{"url":"https://development.avalara.net/Tax/TaxSvc.asmx?GetTax","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Calculates taxes on a document such as a sales order, sales invoice, purchase order, purchase invoice, or credit memo.","body":{"mode":"raw","raw":"{\"Header\":{\"Security\":{\"UsernameToken\":{\"Account\":1234567890,\"LicenseKey\":\"A1B2C3D4E5F6G7H8\"},\"SOAP-ENV:actor\":\"http://schemas.xmlsoap.org/soap/actor/next\"},\"Profile\":{}},\"Body\":{\"GetTax\":{\"GetTaxRequest\":{\"BusinessIdentificationNo\":\"234234\",\"Commit\":\"false\",\"CompanyCode\":\"APITrialCompany\",\"CustomerCode\":\"ABC4335\",\"CurrencyCode\":\"USD\",\"CustomerUsageType\":\"G\",\"DetailLevel\":\"Tax\",\"Discount\":\"50\",\"DocCode\":\"INV001\",\"DocType\":\"SalesOrder\",\"DocDate\":\"2014-01-01\",\"ExemptionNo\":\"EX-0001\",\"LocationCode\":\"01\",\"PosLaneCode\":\"09\",\"DestinationCode\":\"01\",\"OriginCode\":\"02\",\"ServiceMode\":\"Automatic\",\"PaymentDate\":\"1900-01-01\",\"ExchangeRate\":1,\"ExchangeRateEffDate\":\"1900-01-01\",\"TaxOverride\":{\"Reason\":\"Return\",\"TaxOverrideType\":\"None\",\"TaxDate\":\"2015-01-01\",\"TaxAmount\":\"14.26\"},\"Addresses\":[{\"AddressCode\":\"01\",\"Line1\":\"45 Fremont Street\",\"Line2\":\"Suite 100\",\"Line3\":\"ATTN Accounts Payable\",\"City\":\"Chicago\",\"Region\":\"IL\",\"Country\":\"US\",\"PostalCode\":\"60602\",\"Latitude\":\"47.627935\",\"Longitude\":\"-122.51702\",\"TaxRegionId\":1}],\"Lines\":[{\"LineNo\":\"1\",\"DestinationCode\":\"01\",\"OriginCode\":\"02\",\"ItemCode\":\"N543\",\"TaxCode\":\"NT\",\"CustomerUsageType\":\"L\",\"BusinessIdentificationNo\":\"234234\",\"Description\":\"Red Size 7 Widget\",\"Qty\":\"1\",\"Amount\":\"10\",\"Discounted\":\"false\",\"TaxIncluded\":\"false\",\"Ref1\":\"ref123\",\"Ref2\":\"ref456\",\"TaxOverride\":{\"Reason\":\"Return\",\"TaxOverrideType\":\"None\",\"TaxDate\":\"2015-01-01\",\"TaxAmount\":\"14.26\"}}]}}}}"}},"response":[]},{"name":"Post a Document","request":{"url":"https://development.avalara.net/Tax/TaxSvc.asmx?PostTax","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"Header\":{\"Security\":{\"UsernameToken\":{\"Account\":1234567890,\"LicenseKey\":\"A1B2C3D4E5F6G7H8\"},\"SOAP-ENV:actor\":\"http://schemas.xmlsoap.org/soap/actor/next\"},\"Profile\":{}},\"Body\":{\"PostTax\":{\"PostTaxRequest\":{}}}}"}},"response":[]},{"name":"Commit a Document","request":{"url":"https://development.avalara.net/Tax/TaxSvc.asmx?CommitTax","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"Header\":{\"Security\":{\"UsernameToken\":{\"Account\":1234567890,\"LicenseKey\":\"A1B2C3D4E5F6G7H8\"},\"SOAP-ENV:actor\":\"http://schemas.xmlsoap.org/soap/actor/next\"},\"Profile\":{}},\"Body\":{\"CommitTax\":{\"CommitTaxRequest\":{}}}}"}},"response":[]},{"name":"Void a Document","request":{"url":"https://development.avalara.net/Tax/TaxSvc.asmx?CancelTax","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Voids or deletes and existing transaction record from the AvaTax system.","body":{"mode":"raw","raw":"{\"Header\":{\"Security\":{\"UsernameToken\":{\"Account\":1234567890,\"LicenseKey\":\"A1B2C3D4E5F6G7H8\"},\"SOAP-ENV:actor\":\"http://schemas.xmlsoap.org/soap/actor/next\"},\"Profile\":{}},\"Body\":{\"CancelTax\":{\"CancelTaxRequest\":{}}}}"}},"response":[]},{"name":"Adjust a Document","request":{"url":"https://development.avalara.net/Tax/TaxSvc.asmx?AdjustTax","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"Header\":{\"Security\":{\"UsernameToken\":{\"Account\":1234567890,\"LicenseKey\":\"A1B2C3D4E5F6G7H8\"},\"SOAP-ENV:actor\":\"http://schemas.xmlsoap.org/soap/actor/next\"},\"Profile\":{}},\"Body\":{\"AdjustTax\":{\"AdjustTaxRequest\":{\"AdjustmentReason\":8,\"AdjustmentDescription\":\"Invoice Adjusted\",\"GetTaxRequest\":{\"BusinessIdentificationNo\":\"234234\",\"Commit\":\"false\",\"CompanyCode\":\"APITrialCompany\",\"CustomerCode\":\"ABC4335\",\"CurrencyCode\":\"USD\",\"CustomerUsageType\":\"G\",\"DetailLevel\":\"Tax\",\"Discount\":\"50\",\"DocCode\":\"INV001\",\"DocType\":\"SalesOrder\",\"DocDate\":\"2014-01-01\",\"ExemptionNo\":\"EX-0001\",\"LocationCode\":\"01\",\"PosLaneCode\":\"09\",\"DestinationCode\":\"01\",\"OriginCode\":\"02\",\"ServiceMode\":\"Automatic\",\"PaymentDate\":\"1900-01-01\",\"ExchangeRate\":1,\"ExchangeRateEffDate\":\"1900-01-01\",\"TaxOverride\":{\"Reason\":\"Return\",\"TaxOverrideType\":\"None\",\"TaxDate\":\"2015-01-01\",\"TaxAmount\":\"14.26\"},\"Addresses\":[{\"AddressCode\":\"01\",\"Line1\":\"45 Fremont Street\",\"Line2\":\"Suite 100\",\"Line3\":\"ATTN Accounts Payable\",\"City\":\"Chicago\",\"Region\":\"IL\",\"Country\":\"US\",\"PostalCode\":\"60602\",\"Latitude\":\"47.627935\",\"Longitude\":\"-122.51702\",\"TaxRegionId\":1}],\"Lines\":[{\"LineNo\":\"1\",\"DestinationCode\":\"01\",\"OriginCode\":\"02\",\"ItemCode\":\"N543\",\"TaxCode\":\"NT\",\"CustomerUsageType\":\"L\",\"BusinessIdentificationNo\":\"234234\",\"Description\":\"Red Size 7 Widget\",\"Qty\":\"1\",\"Amount\":\"10\",\"Discounted\":\"false\",\"TaxIncluded\":\"false\",\"Ref1\":\"ref123\",\"Ref2\":\"ref456\",\"TaxOverride\":{\"Reason\":\"Return\",\"TaxOverrideType\":\"None\",\"TaxDate\":\"2015-01-01\",\"TaxAmount\":\"14.26\"}}]}}}}}"}},"response":[]},{"name":"Retrieve a Document","request":{"url":"https://development.avalara.net/Tax/TaxSvc.asmx?GetTaxHistory","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"Header\":{\"Security\":{\"UsernameToken\":{\"Account\":1234567890,\"LicenseKey\":\"A1B2C3D4E5F6G7H8\"},\"SOAP-ENV:actor\":\"http://schemas.xmlsoap.org/soap/actor/next\"},\"Profile\":{}},\"Body\":{\"GetTaxHistory\":{\"GetTaxHistoryRequest\":{\"CompanyCode\":\"APITrialCompany\",\"DocCode\":\"INV001\",\"DocType\":\"SalesInvoice\",\"DetailLevel\":\"Summary\"}}}}"}},"response":[]},{"name":"Test Service Connectivity","request":{"url":"https://development.avalara.net/Tax/TaxSvc.asmx?Ping","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"Header\":{\"Security\":{\"UsernameToken\":{\"Account\":1234567890,\"LicenseKey\":\"A1B2C3D4E5F6G7H8\"},\"SOAP-ENV:actor\":\"http://schemas.xmlsoap.org/soap/actor/next\"},\"Profile\":{}},\"Body\":{\"Ping\":{}}}"}},"response":[]},{"name":"Test Authorized Operations","request":{"url":"https://development.avalara.net/Tax/TaxSvc.asmx?IsAuthorized","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"Header\":{\"Security\":{\"UsernameToken\":{\"Account\":1234567890,\"LicenseKey\":\"A1B2C3D4E5F6G7H8\"},\"SOAP-ENV:actor\":\"http://schemas.xmlsoap.org/soap/actor/next\"},\"Profile\":{}},\"Body\":{\"IsAuthorized\":{\"IsAuthorizedRequest\":{}}}}"}},"response":[]},{"name":"Change Payment Date (deprecated)","request":{"url":"https://development.avalara.net/Tax/TaxSvc.asmx?ApplyPayment","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"Header\":{\"Security\":{\"UsernameToken\":{\"Account\":1234567890,\"LicenseKey\":\"A1B2C3D4E5F6G7H8\"},\"SOAP-ENV:actor\":\"http://schemas.xmlsoap.org/soap/actor/next\"},\"Profile\":{}},\"Body\":{\"ApplyPayment\":{\"ApplyPaymentRequest\":{}}}}"}},"response":[]},{"name":"Mark Documents as Reconciled (deprecated)","request":{"url":"https://development.avalara.net/Tax/TaxSvc.asmx?ReconcileTaxHistory","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"Header\":{\"Security\":{\"UsernameToken\":{\"Account\":1234567890,\"LicenseKey\":\"A1B2C3D4E5F6G7H8\"},\"SOAP-ENV:actor\":\"http://schemas.xmlsoap.org/soap/actor/next\"},\"Profile\":{}},\"Body\":{\"ReconcileTaxHistory\":{\"ReconcileTaxHistoryRequest\":{}}}}"}},"response":[]},{"name":"Validate an Address","request":{"url":"https://development.avalara.net/Address/AddressSvc.asmx?Validate","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"description":"Normalizes a single US or Canadian address, providing a non-ambiguous USPS address match.","body":{"mode":"raw","raw":"{\"Header\":{\"Security\":{\"UsernameToken\":{\"Account\":1234567890,\"LicenseKey\":\"A1B2C3D4E5F6G7H8\"},\"SOAP-ENV:actor\":\"http://schemas.xmlsoap.org/soap/actor/next\"},\"Profile\":{}},\"Body\":{\"Validate\":{\"ValidateRequest\":{\"TextCase\":\"Default\",\"Address\":{\"AddressCode\":\"01\",\"Line1\":\"45 Fremont Street\",\"Line2\":\"Suite 100\",\"Line3\":\"ATTN Accounts Payable\",\"City\":\"Chicago\",\"Region\":\"IL\",\"Country\":\"US\",\"PostalCode\":\"60602\",\"Latitude\":\"47.627935\",\"Longitude\":\"-122.51702\",\"TaxRegionId\":1}}}}}"}},"response":[]}]},"tagName":null};
+</script>
+<script src="/developer-dot/public/js/api-bundle.js"></script>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'developeravalaracom'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</main>
+        </section>
+          
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/dynamic/swagger/avatax/soap.yaml"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

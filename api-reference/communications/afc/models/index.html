@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communications SOAP | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="Communications SOAP | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="API solutions for end-to-end tax compliance"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=communications>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/communications">communications</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav apis ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Communications" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid api_references">
+        
+          
+
+
+<div class="breadcrumbs">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li><span class="text-uppercase">Tax Calculation API</span>s</li>
+            <li class="text-uppercase"><a href="/developer-dot/communications">Avalara communications</a></li>
+            <li class="text-uppercase">api reference</li>
+        </ul>
+    </div>
+</div>
+  
+        <section class="row padding-sides">
+            <nav class="col-md-3 api-ref">
+                 <div id='the-nav' class='nav-wrapper hidden-xs hidden-sm api-ref-nav' style='height: 100%; overflow-y: auto;'>
+    <ul class='api-ref-side-nav nav nav-pills nav-stacked'>
+        
+        
+
+        
+        
+
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/communications/afc-rest">Communications REST API</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/communications/afc">Communications SOAP</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                        
+                            <div style="padding-left:10px;">
+    <ul class='api-ref-side-nav-active nav nav-pills nav-stacked sub-nav'>
+        
+            
+            
+            
+
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/BeginCustomerBatch">BeginCustomerBatch</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcAdjWithFipsCode">CalcAdjWithFipsCode</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcAdjWithNpaNxx">CalcAdjWithNpaNxx</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcAdjWithOverrides">CalcAdjWithOverrides</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcAdjWithPCode">CalcAdjWithPCode</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcAdjWithZipAddress">CalcAdjWithZipAddress</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcCustAdj">CalcCustAdj</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcCustTaxes">CalcCustTaxes</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcJurisdiction">CalcJurisdiction</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcProRatedAdj">CalcProRatedAdj</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcProRatedTaxes">CalcProRatedTaxes</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcReverseAdjWithFipsCode">CalcReverseAdjWithFipsCode</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcReverseAdjWithNpaNxx">CalcReverseAdjWithNpaNxx</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcReverseAdjWithPCode">CalcReverseAdjWithPCode</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcReverseAdjWithZipCode">CalcReverseAdjWithZipCode</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcReverseTaxesWithFipsCode">CalcReverseTaxesWithFipsCode</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcReverseTaxesWithNpaNxx">CalcReverseTaxesWithNpaNxx</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcReverseTaxesWithPCode">CalcReverseTaxesWithPCode</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcReverseTaxesWithZipAddress">CalcReverseTaxesWithZipAddress</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcTaxesInCustMode">CalcTaxesInCustMode</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcTaxesWithFipsCode">CalcTaxesWithFipsCode</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcTaxesWithNpaNxx">CalcTaxesWithNpaNxx</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcTaxesWithOverrides">CalcTaxesWithOverrides</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcTaxesWithPCode">CalcTaxesWithPCode</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CalcTaxesWithZipAddress">CalcTaxesWithZipAddress</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/CreateReport">CreateReport</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/FipsToPCode">FipsToPCode</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/GetAddress">GetAddress</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/GetEZTaxDbVersion">GetEZTaxDbVersion</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/GetEZTaxVersion">GetEZTaxVersion</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/GetOptionalFieldKeyDesc">GetOptionalFieldKeyDesc</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/GetServerTime">GetServerTime</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/GetTaxCategory">GetTaxCategory</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/GetTaxDescription">GetTaxDescription</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/GetTaxRates">GetTaxRates</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/GetVersion">GetVersion</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/NpaNxxToPCode">NpaNxxToPCode</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/PCodeToFips">PCodeToFips</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/ProcessCustomerBatch">ProcessCustomerBatch</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/UpdateOptionalFieldKeyDesc">UpdateOptionalFieldKeyDesc</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/communications/afc/methods/ZipToPCode">ZipToPCode</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+            <li><a style="color:#ff6600; overflow: hidden;" href="/developer-dot/api-reference/communications/afc/models">Models</a></li>
+            
+        
+    </ul>
+</div>
+
+                        
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/communications/afc-geo">Communications SOAP Geocoding</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+
+        
+    </ul>
+</div>
+ 
+            </nav>
+            <main class="col-md-9 small-no-padding"><h1>Communications SOAP - Models</h1>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Summary</th>
+        </tr>
+    </thead>
+    <tbody>
+
+            <tr>
+                <td><a href="AddressDataArray">AddressDataArray</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="BadRequest">BadRequest</a></td>
+                <td><p>IIS rejection - Insure schemas match binding and that prefixes are matched.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="BeginCustomerBatchBody">BeginCustomerBatchBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="BeginCustomerBatchEnvelope">BeginCustomerBatchEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="BeginCustomerBatchObject">BeginCustomerBatchObject</a></td>
+                <td><p>The object used for starting a batch calculation.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="BeginCustomerBatchRespEnvelope">BeginCustomerBatchRespEnvelope</a></td>
+                <td><p>Flags the beginning of a customer transaction batch and returns a customer batch ID that can be used to submit each transaction and process the entire batch.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithFipsCodeBody">CalcAdjWithFipsCodeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithFipsCodeEnvelope">CalcAdjWithFipsCodeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithFipsCodeObject">CalcAdjWithFipsCodeObject</a></td>
+                <td><p>The object used for calculating adjustments using a FIPS code.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithFipsCodeRespEnvelope">CalcAdjWithFipsCodeRespEnvelope</a></td>
+                <td><p>Returns an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithNpaNxxBody">CalcAdjWithNpaNxxBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithNpaNxxEnvelope">CalcAdjWithNpaNxxEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithNpaNxxObject">CalcAdjWithNpaNxxObject</a></td>
+                <td><p>The object used for calculating adjustments with NpaNxx.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithNpaNxxRespEnvelope">CalcAdjWithNpaNxxRespEnvelope</a></td>
+                <td><p>Returns an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithOverridesBody">CalcAdjWithOverridesBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithOverridesEnvelope">CalcAdjWithOverridesEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithOverridesObject">CalcAdjWithOverridesObject</a></td>
+                <td><p>The object used for calculating taxes using a overrides.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithOverridesRespEnvelope">CalcAdjWithOverridesRespEnvelope</a></td>
+                <td><p>Returns an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithPCodeBody">CalcAdjWithPCodeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithPCodeEnvelope">CalcAdjWithPCodeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithPCodeObject">CalcAdjWithPCodeObject</a></td>
+                <td><p>The object used for calculating adjustments using a FIPS code.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithPCodeRespEnvelope">CalcAdjWithPCodeRespEnvelope</a></td>
+                <td><p>Returns an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithZipAddressBody">CalcAdjWithZipAddressBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithZipAddressEnvelope">CalcAdjWithZipAddressEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithZipAddressObject">CalcAdjWithZipAddressObject</a></td>
+                <td><p>The object used for calculating taxes using a zip address.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcAdjWithZipAddressRespEnvelope">CalcAdjWithZipAddressRespEnvelope</a></td>
+                <td><p>Returns an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcCustAdjBody">CalcCustAdjBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcCustAdjEnvelope">CalcCustAdjEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcCustAdjObject">CalcCustAdjObject</a></td>
+                <td><p>The object used for calculating a single batch transaction.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcCustAdjRespEnvelope">CalcCustAdjRespEnvelope</a></td>
+                <td><p>Retruns a boolean value indicating success (true) or failure (false).</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcCustTaxesBody">CalcCustTaxesBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcCustTaxesEnvelope">CalcCustTaxesEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcCustTaxesObject">CalcCustTaxesObject</a></td>
+                <td><p>The object used for calculating a single batch transaction.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcCustTaxesRespEnvelope">CalcCustTaxesRespEnvelope</a></td>
+                <td><p>Retruns a boolean value indicating success (true) or failure (false).</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcJurisdictionBody">CalcJurisdictionBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcJurisdictionEnvelope">CalcJurisdictionEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcJurisdictionObject">CalcJurisdictionObject</a></td>
+                <td><p>The object used for determining jurisdiction.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcJurisdictionRespEnvelope">CalcJurisdictionRespEnvelope</a></td>
+                <td><p>Returns the PCode at the lowest taxing jurisdiction.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcProRatedAdjBody">CalcProRatedAdjBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcProRatedAdjEnvelope">CalcProRatedAdjEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcProRatedAdjObject">CalcProRatedAdjObject</a></td>
+                <td><p>The object used for calculating prorated adjustment.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcProRatedAdjRespEnvelope">CalcProRatedAdjRespEnvelope</a></td>
+                <td><p>Returns an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcProRatedTaxesBody">CalcProRatedTaxesBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcProRatedTaxesEnvelope">CalcProRatedTaxesEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcProRatedTaxesObject">CalcProRatedTaxesObject</a></td>
+                <td><p>The object used for calculating prorated taxes.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcProRatedTaxesRespEnvelope">CalcProRatedTaxesRespEnvelope</a></td>
+                <td><p>Returns an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithFipsCodeBody">CalcReverseAdjWithFipsCodeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithFipsCodeEnvelope">CalcReverseAdjWithFipsCodeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithFipsCodeObject">CalcReverseAdjWithFipsCodeObject</a></td>
+                <td><p>The object used for calculating reverse taxes using a FIPS code.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithFipsCodeRespEnvelope">CalcReverseAdjWithFipsCodeRespEnvelope</a></td>
+                <td><p>Returns the calculated base sale amount for the transaction and an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithNpaNxxBody">CalcReverseAdjWithNpaNxxBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithNpaNxxEnvelope">CalcReverseAdjWithNpaNxxEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithNpaNxxObject">CalcReverseAdjWithNpaNxxObject</a></td>
+                <td><p>The object used for calculating reverse taxes using an NpaNxx value.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithNpaNxxRespEnvelope">CalcReverseAdjWithNpaNxxRespEnvelope</a></td>
+                <td><p>Returns the calculated base sale amount for the transaction and an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithPCodeBody">CalcReverseAdjWithPCodeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithPCodeEnvelope">CalcReverseAdjWithPCodeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithPCodeObject">CalcReverseAdjWithPCodeObject</a></td>
+                <td><p>The object used for calculating reverse taxes using a PCode.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithPCodeRespEnvelope">CalcReverseAdjWithPCodeRespEnvelope</a></td>
+                <td><p>Returns the calculated base sale amount for the transaction and an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithZipCodeBody">CalcReverseAdjWithZipCodeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithZipCodeEnvelope">CalcReverseAdjWithZipCodeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithZipCodeObject">CalcReverseAdjWithZipCodeObject</a></td>
+                <td><p>The object used for calculating reverse taxes using a zip code.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseAdjWithZipCodeRespEnvelope">CalcReverseAdjWithZipCodeRespEnvelope</a></td>
+                <td><p>Returns the calculated base sale amount for the transaction and an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithFipsCodeBody">CalcReverseTaxesWithFipsCodeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithFipsCodeEnvelope">CalcReverseTaxesWithFipsCodeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithFipsCodeObject">CalcReverseTaxesWithFipsCodeObject</a></td>
+                <td><p>The object used for calculating reverse taxes using a FIPS code.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithFipsCodeRespEnvelope">CalcReverseTaxesWithFipsCodeRespEnvelope</a></td>
+                <td><p>Returns the calculated base sale amount for the transaction and an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithNpaNxxBody">CalcReverseTaxesWithNpaNxxBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithNpaNxxEnvelope">CalcReverseTaxesWithNpaNxxEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithNpaNxxObject">CalcReverseTaxesWithNpaNxxObject</a></td>
+                <td><p>The object used for calculating reverse taxes using an NpaNxx.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithNpaNxxRespEnvelope">CalcReverseTaxesWithNpaNxxRespEnvelope</a></td>
+                <td><p>Returns the calculated base sale amount for the transaction and an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithPCodeBody">CalcReverseTaxesWithPCodeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithPCodeEnvelope">CalcReverseTaxesWithPCodeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithPCodeObject">CalcReverseTaxesWithPCodeObject</a></td>
+                <td><p>The object used for calculating reverse taxes using a PCode.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithPCodeRespEnvelope">CalcReverseTaxesWithPCodeRespEnvelope</a></td>
+                <td><p>Returns the calculated base sale amount for the transaction and an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithZipAddressBody">CalcReverseTaxesWithZipAddressBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithZipAddressEnvelope">CalcReverseTaxesWithZipAddressEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithZipAddressObject">CalcReverseTaxesWithZipAddressObject</a></td>
+                <td><p>The object used for calculating reverse taxes using a Zip Address.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcReverseTaxesWithZipAddressRespEnvelope">CalcReverseTaxesWithZipAddressRespEnvelope</a></td>
+                <td><p>Returns the calculated base sale amount for the transaction and an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesInCustModeBody">CalcTaxesInCustModeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesInCustModeEnvelope">CalcTaxesInCustModeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesInCustModeObject">CalcTaxesInCustModeObject</a></td>
+                <td><p>The object used for calculating taxes in customer mode.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesInCustModeRespEnvelope">CalcTaxesInCustModeRespEnvelope</a></td>
+                <td><p>Data structure containing an array of TaxData objects for each individual transaction processed and CustomerTaxData array containing the summarized taxes for the customer batch.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithFipsCodeBody">CalcTaxesWithFipsCodeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithFipsCodeEnvelope">CalcTaxesWithFipsCodeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithFipsCodeObject">CalcTaxesWithFipsCodeObject</a></td>
+                <td><p>The object used for calculating taxes with FIPS Codes.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithFipsCodeRespEnvelope">CalcTaxesWithFipsCodeRespEnvelope</a></td>
+                <td><p>Transaction data for performing tax calculations.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithNpaNxxBody">CalcTaxesWithNpaNxxBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithNpaNxxEnvelope">CalcTaxesWithNpaNxxEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithNpaNxxObject">CalcTaxesWithNpaNxxObject</a></td>
+                <td><p>The object used for calculating taxes with NpaNxx.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithNpaNxxRespEnvelope">CalcTaxesWithNpaNxxRespEnvelope</a></td>
+                <td><p>Transaction data for performing tax calculations.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithOverridesBody">CalcTaxesWithOverridesBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithOverridesEnvelope">CalcTaxesWithOverridesEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithOverridesObject">CalcTaxesWithOverridesObject</a></td>
+                <td><p>The object used for calculating taxes with overrides.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithOverridesRespEnvelope">CalcTaxesWithOverridesRespEnvelope</a></td>
+                <td><p>Returns an array of TaxData objects that contain the information about the taxes applied.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithPCodeBody">CalcTaxesWithPCodeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithPCodeEnvelope">CalcTaxesWithPCodeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithPCodeObject">CalcTaxesWithPCodeObject</a></td>
+                <td><p>The object used for calculating taxes with PCode.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithPCodeRespEnvelope">CalcTaxesWithPCodeRespEnvelope</a></td>
+                <td><p>Transaction data for performing tax calculations.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithZipAddressBody">CalcTaxesWithZipAddressBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithZipAddressEnvelope">CalcTaxesWithZipAddressEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithZipAddressObject">CalcTaxesWithZipAddressObject</a></td>
+                <td><p>The object used for calculating taxes with Zip Address.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CalcTaxesWithZipAddressRespEnvelope">CalcTaxesWithZipAddressRespEnvelope</a></td>
+                <td><p>Transaction data for performing tax calculations.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CategoryExemption">CategoryExemption</a></td>
+                <td><p>Category Exemption Class</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CreateReport">CreateReport</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CreateReportBody">CreateReportBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CreateReportEnvelope">CreateReportEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CreateReportObject">CreateReportObject</a></td>
+                <td><p>The object used to request creation of a report.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CreateReportRespEnvelope">CreateReportRespEnvelope</a></td>
+                <td><p>Returns a boolean as a string. ‘true’ indicates success and ‘false’ indicates failure.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CustomLogField">CustomLogField</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CustomLogFieldList">CustomLogFieldList</a></td>
+                <td><p>List of columns to include in the report when using the �customlog� report type.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CustomLogFields">CustomLogFields</a></td>
+                <td><p>Container for zero or more CustomLogField sepcifications.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="CustomerTaxData">CustomerTaxData</a></td>
+                <td><p>Customer taxes when using Customer Mode.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="Exclusion">Exclusion</a></td>
+                <td><p>Exclusions Class</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FaultDetail">FaultDetail</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FipsToPCodeBody">FipsToPCodeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FipsToPCodeEnvelope">FipsToPCodeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FipsToPCodeObject">FipsToPCodeObject</a></td>
+                <td><p>The object used for converting a FIPS code to a PCode.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="FipsToPCodeRespEnvelope">FipsToPCodeRespEnvelope</a></td>
+                <td><p>Returns the PCode corresponding to the submitted FIPS value.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetAddressBody">GetAddressBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetAddressEnvelope">GetAddressEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetAddressObject">GetAddressObject</a></td>
+                <td><p>The object used for getting an address.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetAddressRespEnvelope">GetAddressRespEnvelope</a></td>
+                <td><p>This method returns the addresses for the specified jurisdiction.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetEZTaxDbVersion">GetEZTaxDbVersion</a></td>
+                <td><p>The request to fetch the database version.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetEZTaxDbVersionBody">GetEZTaxDbVersionBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetEZTaxDbVersionEnvelope">GetEZTaxDbVersionEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetEZTaxDbVersionRespEnvelope">GetEZTaxDbVersionRespEnvelope</a></td>
+                <td><p>Returns the version of the AFC database as a string.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetEZTaxVersion">GetEZTaxVersion</a></td>
+                <td><p>The request to fetch the EZTax Net version.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetEZTaxVersionBody">GetEZTaxVersionBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetEZTaxVersionEnvelope">GetEZTaxVersionEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetEZTaxVersionRespEnvelope">GetEZTaxVersionRespEnvelope</a></td>
+                <td><p>Returns the tax engine version information as a string.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetOptionalFieldKeyDesc">GetOptionalFieldKeyDesc</a></td>
+                <td><p>The request to retrieve the Field Key Descriptions.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetOptionalFieldKeyDescBody">GetOptionalFieldKeyDescBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetOptionalFieldKeyDescEnvelope">GetOptionalFieldKeyDescEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetOptionalFieldKeyDescRespEnvelope">GetOptionalFieldKeyDescRespEnvelope</a></td>
+                <td><p>Returns the Field Key Descriptions.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetServerTimeBody">GetServerTimeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetServerTimeEnvelope">GetServerTimeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetServerTimeObject">GetServerTimeObject</a></td>
+                <td><p>The object used to get the current server time. Syntax: a: GetServerTime /</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetServerTimeRespEnvelope">GetServerTimeRespEnvelope</a></td>
+                <td><p>Returns the server date and time as a formatted string.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetTaxCategoryBody">GetTaxCategoryBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetTaxCategoryEnvelope">GetTaxCategoryEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetTaxCategoryObject">GetTaxCategoryObject</a></td>
+                <td><p>The object used for fetching a Tax Type Category string.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetTaxCategoryRespEnvelope">GetTaxCategoryRespEnvelope</a></td>
+                <td><p>This method returns a string describing the tax category for the specified tax type.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetTaxDescriptionBody">GetTaxDescriptionBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetTaxDescriptionEnvelope">GetTaxDescriptionEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetTaxDescriptionObject">GetTaxDescriptionObject</a></td>
+                <td><p>The object used for fetching a Tax Type Description string.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetTaxDescriptionRespEnvelope">GetTaxDescriptionRespEnvelope</a></td>
+                <td><p>This method returns a string describing the tax description for the specified tax type.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetTaxRatesBody">GetTaxRatesBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetTaxRatesEnvelope">GetTaxRatesEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetTaxRatesObject">GetTaxRatesObject</a></td>
+                <td><p>The object used for getting tax rates.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetTaxRatesRespEnvelope">GetTaxRatesRespEnvelope</a></td>
+                <td><p>Determines the tax rate information for a jurisdiction identified by the input PCode.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetVersion">GetVersion</a></td>
+                <td><p>The request to fetch the Web Service version.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetVersionBody">GetVersionBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetVersionEnvelope">GetVersionEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="GetVersionRespEnvelope">GetVersionRespEnvelope</a></td>
+                <td><p>Returns the version of the AFC SaaS Pro Web Service as a string.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="Header">Header</a></td>
+                <td><p>The SOAP API uses standard security to authenticate the account or user.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="HeaderResp">HeaderResp</a></td>
+                <td><p>The SOAP API uses standard security to authenticate the account or user.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="InternalServerError">InternalServerError</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="Nexus">Nexus</a></td>
+                <td><p>Please see ‘TM_00116_AFC SaaS Pro Telecom Developer Manual.pdf’ or ‘TM_00117_AFC SaaS Pro Sales and Use Developer Manual.pdf’ for details.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NpaNxxToPCodeBody">NpaNxxToPCodeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NpaNxxToPCodeEnvelope">NpaNxxToPCodeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NpaNxxToPCodeObject">NpaNxxToPCodeObject</a></td>
+                <td><p>The object used for converting an NpaNxx to PCode.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="NpaNxxToPCodeRespEnvelope">NpaNxxToPCodeRespEnvelope</a></td>
+                <td><p>Returns the PCode corresponding to the submitted NpaNxx value.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="OptionalField">OptionalField</a></td>
+                <td><p>Data structure used to provide optional alphanumeric data for transactions.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="OptionalKeyData">OptionalKeyData</a></td>
+                <td><p>Data structure used to provide optional alphanumeric data for transactions.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="OverrideList">OverrideList</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="PCodeToFipsBody">PCodeToFipsBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="PCodeToFipsEnvelope">PCodeToFipsEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="PCodeToFipsObject">PCodeToFipsObject</a></td>
+                <td><p>The object used for converting a PCode to a FIPS code.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="PCodeToFipsRespEnvelope">PCodeToFipsRespEnvelope</a></td>
+                <td><p>Returns the FIPS code corresponding to the submitted PCode value.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ProcessCustomerBatchBody">ProcessCustomerBatchBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ProcessCustomerBatchEnvelope">ProcessCustomerBatchEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ProcessCustomerBatchObject">ProcessCustomerBatchObject</a></td>
+                <td><p>The object used to submit a Process Customer Batch request.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ProcessCustomerBatchRespEnvelope">ProcessCustomerBatchRespEnvelope</a></td>
+                <td><p>Returns a CustomerTaxData array containing the summarized taxes for the customer batch. And, if requested, an array of TaxData objects for each individual transaction processed.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="Security">Security</a></td>
+                <td><p>SOAP element containing authentication strategy.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="SecurityResp">SecurityResp</a></td>
+                <td><p>SOAP element containing response certification information.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxBracket">TaxBracket</a></td>
+                <td><p>Array of Tax Bracket Information structures.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxBracketInfo">TaxBracketInfo</a></td>
+                <td><p>Tax Bracket Info</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxData">TaxData</a></td>
+                <td><p>Zero or more array elements containing tax data.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxExemption">TaxExemption</a></td>
+                <td><p>Tax Exemption class</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxRateHistory">TaxRateHistory</a></td>
+                <td><p>Tax Rate History Class</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxRateInfo">TaxRateInfo</a></td>
+                <td><p>Tax Rate Info Class</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TaxRateOverrideInfo">TaxRateOverrideInfo</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="TimestampResp">TimestampResp</a></td>
+                <td><p>SOAP element containing time and date stamp.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="Transaction">Transaction</a></td>
+                <td><p>Note: Only select one from each of the BillTo, Origination and Termination options.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="UpdateOptionalFieldKeyDesc">UpdateOptionalFieldKeyDesc</a></td>
+                <td><p>The object used to update a single Optional Field Key Description.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="UpdateOptionalFieldKeyDescBody">UpdateOptionalFieldKeyDescBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="UpdateOptionalFieldKeyDescEnvelope">UpdateOptionalFieldKeyDescEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="UpdateOptionalFieldKeyDescRespEnvelope">UpdateOptionalFieldKeyDescRespEnvelope</a></td>
+                <td><p>Retruns a boolean value indicating success (true) or failure (false).</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="UsernameToken">UsernameToken</a></td>
+                <td><p>SOAP element containing username and password.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ZipAddress">ZipAddress</a></td>
+                <td><p>Zip Address Class. Select only one BillToxxx option.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ZipToPCodeBody">ZipToPCodeBody</a></td>
+                <td><p>Container for the request payload.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ZipToPCodeEnvelope">ZipToPCodeEnvelope</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ZipToPCodeObject">ZipToPCodeObject</a></td>
+                <td><p>The object used for converting a zip address to PCode.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="ZipToPCodeRespEnvelope">ZipToPCodeRespEnvelope</a></td>
+                <td><p>Returns the PCode corresponding to the submitted zip address.</p>
+</td>
+            </tr>
+            <tr>
+                <td><a href="custBatchId">custBatchId</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="optionalFieldDesc">optionalFieldDesc</a></td>
+                <td>
+</td>
+            </tr>
+            <tr>
+                <td><a href="reportInfo">reportInfo</a></td>
+                <td><p>Fields that specify the reports to provide, the type of sorted report to generate, the sepcifications for the sorted report and the email delivery address. Note: If TimeSpan is provided, EndDate is not required.</p>
+</td>
+            </tr>
+    </tbody>
+</table>
+<br></main>
+        </section>
+          
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/dynamic/swagger/communications/afc.yaml"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

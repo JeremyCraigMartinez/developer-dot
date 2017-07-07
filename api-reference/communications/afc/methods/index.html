@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communications SOAP | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="Communications SOAP | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="API solutions for end-to-end tax compliance"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=communications>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/communications">communications</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav apis ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Communications" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid api_references">
+        
+          
+
+
+<div class="breadcrumbs">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li><span class="text-uppercase">Tax Calculation API</span>s</li>
+            <li class="text-uppercase"><a href="/developer-dot/communications">Avalara communications</a></li>
+            <li class="text-uppercase">api reference</li>
+        </ul>
+    </div>
+</div>
+  
+        <section class="row padding-sides">
+            <nav class="col-md-3 api-ref">
+                 <div id='the-nav' class='nav-wrapper hidden-xs hidden-sm api-ref-nav' style='height: 100%; overflow-y: auto;'>
+    <ul class='api-ref-side-nav nav nav-pills nav-stacked'>
+        
+        
+
+        
+        
+
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/communications/afc-rest">Communications REST API</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/communications/afc">Communications SOAP</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                        
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/communications/afc-geo">Communications SOAP Geocoding</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+
+        
+    </ul>
+</div>
+ 
+            </nav>
+            <main class="col-md-9 small-no-padding"><h1>Communications SOAP - Methods</h1>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Purpose</th>
+            <th>Summary</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FBeginCustomerBatch">BeginCustomerBatch</a></td>
+    <td>Begin Customer Batch</td>
+    <td class='markdown-description'><p>This method flags the beginning of a customer transaction batch and returns a customer batch ID that can be used to submit each transaction and process the entire batch.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcAdjWithFipsCode">CalcAdjWithFipsCode</a></td>
+    <td>Calculate Adjustments with Fips Code</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs appropriate tax adjustment calculations. Origination, Termination, and Bill To information is passed using FIPS Codes.
+Adjustment transactions are primarily used to process refunds or credits. They rely on the AdjustmentMethod field.
+Discounts can also be processed by setting the DiscountType field in the adjustment transaction.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcAdjWithNpaNxx">CalcAdjWithNpaNxx</a></td>
+    <td>Calculate Adjustments With NpaNxx</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs appropriate tax calculations.  Origination, Termination, and Bill To information is passed using NpaNxx.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcAdjWithOverrides">CalcAdjWithOverrides</a></td>
+    <td>Calculate Adjustments with Overrides</td>
+    <td class='markdown-description'><p>Accepts transaction data and tax rate override data to perform tax adjustment calculations with provided override information.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcAdjWithPCode">CalcAdjWithPCode</a></td>
+    <td>Calculate Adjustment with PCode.</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs appropriate tax adjustment calculations. Origination, Termination, and Bill To information is passed using PCodes.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcAdjWithZipAddress">CalcAdjWithZipAddress</a></td>
+    <td>Calculate Adjustment with Zip Address</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs appropriate tax adjustment calculations. Origination, Termination, and Bill To information is passed using Zip addresses.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcCustAdj">CalcCustAdj</a></td>
+    <td>Calc Cust Adj</td>
+    <td class='markdown-description'><p>Submits an adjustment for the specified customer batch.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcCustTaxes">CalcCustTaxes</a></td>
+    <td>Calculate Customer Taxes in Batch Mode.</td>
+    <td class='markdown-description'><p>Submits a single transaction to be processed for a customer batch.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcJurisdiction">CalcJurisdiction</a></td>
+    <td>Calculate Jurisdiction</td>
+    <td class='markdown-description'><p>Determines the taxing jurisdiction for a transaction and returns the PCode at the lowest jurisdiction level.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcProRatedAdj">CalcProRatedAdj</a></td>
+    <td>Calculate Pro-rated Adjustments</td>
+    <td class='markdown-description'><p>Accepts a pro-rated percentage that is used to calculate the adjustment amount on the transaction and perform tax calculations. Bill To, Origination and Termination may be entered as PCode, FIPS Codes, Zip Address or NpaNxx.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcProRatedTaxes">CalcProRatedTaxes</a></td>
+    <td>Calculate Pro-rated Taxes</td>
+    <td class='markdown-description'><p>Accepts a pro-rated percentage that is used to calculate the taxable amount on the transaction and perform tax calculations. Bill To, Origination and Termination may be entered as PCode, FIPS Codes, Zip Address or NpaNxx.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcReverseAdjWithFipsCode">CalcReverseAdjWithFipsCode</a></td>
+    <td>Calculate Reverse Adjustments with FIPS Code</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs reverse adjustments in order to arrive at the base sale amount and taxes for the desired total charge. Origination, Termination, and Bill To information is passed using FIPS Codes.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcReverseAdjWithNpaNxx">CalcReverseAdjWithNpaNxx</a></td>
+    <td>Calculate Reverse Adjustment With NpaNxx</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs reverse adjustments in order to arrive at the base sale amount and taxes for the desired total charge. Origination, Termination, and Bill To information is passed using NpaNxx values.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcReverseAdjWithPCode">CalcReverseAdjWithPCode</a></td>
+    <td>Calculate Reverse Adjustment with PCode</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs reverse adjustments in order to arrive at the base sale amount and taxes for the desired total charge. Origination, Termination, and Bill To information is passed using PCodes.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcReverseAdjWithZipCode">CalcReverseAdjWithZipCode</a></td>
+    <td>Calculate Reverse Adjustment With Zip Code</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs reverse adjustments in order to arrive at the base sale amount and taxes for the desired total charge. Origination, Termination, and Bill To information is passed using ZipAddress objects.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcReverseTaxesWithFipsCode">CalcReverseTaxesWithFipsCode</a></td>
+    <td>Calculate Reverse Taxes With FIPS Code</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs a reverse tax calculation in order to arrive at the base sale amount and taxes for the desired total charge. Origination, Termination, and Bill To information is passed using FIPS Codes.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcReverseTaxesWithNpaNxx">CalcReverseTaxesWithNpaNxx</a></td>
+    <td>Calculate Reverse Taxes With NpaNxx</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs a reverse tax calculation in order to arrive at the base sale amount and taxes for the desired total charge. Origination, Termination, and Bill To information is passed using NpaNxxs.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcReverseTaxesWithPCode">CalcReverseTaxesWithPCode</a></td>
+    <td>Calculate Reverse Taxes With PCode</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs a reverse tax calculation in order to arrive at the base sale amount and taxes for the desired total charge. Origination, Termination, and Bill To information is passed using PCodes.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcReverseTaxesWithZipAddress">CalcReverseTaxesWithZipAddress</a></td>
+    <td>Calculate Reverse Taxes With Zip Address</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs a reverse tax calculation in order to arrive at the base sale amount and taxes for the desired total charge. Origination, Termination, and Bill To information is passed using Zip Addresses.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcTaxesInCustMode">CalcTaxesInCustMode</a></td>
+    <td>Calculate Taxes in Customer/Invoice Mode</td>
+    <td class='markdown-description'><p>Processes a batch of telecom and/or sales and use transactions and adjustments in customer mode.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcTaxesWithFipsCode">CalcTaxesWithFipsCode</a></td>
+    <td>Calculate Taxes with Fips Code</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs appropriate tax calculations. Origination, Termination, and Bill To information is passed using FIPS Codes.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcTaxesWithNpaNxx">CalcTaxesWithNpaNxx</a></td>
+    <td>Calculate Taxes with NpaNxx</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs appropriate tax calculations. Origination, Termination, and Bill To information is passed using NpaNxx.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcTaxesWithOverrides">CalcTaxesWithOverrides</a></td>
+    <td>Calculate Taxes with Overrides</td>
+    <td class='markdown-description'><p>This method accepts transaction and override data and performs appropriate tax calculations. Origination, Termination, and Bill To information is passed using PCode, FIPS Code, NpaNxx, or Zip Address.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcTaxesWithPCode">CalcTaxesWithPCode</a></td>
+    <td>Calculate Taxes with PCode</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs appropriate tax calculations. Origination, Termination, and Bill To information is passed using PCodes.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCalcTaxesWithZipAddress">CalcTaxesWithZipAddress</a></td>
+    <td>Calculate Taxes with Zip Addresses</td>
+    <td class='markdown-description'><p>This method accepts transaction data and performs appropriate tax calculations. Origination, Termination, and Bill To information is passed using Zip Addresses.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FCreateReport">CreateReport</a></td>
+    <td>Create Report</td>
+    <td class='markdown-description'><p>Submits a request for generating a custom report based on transactions and taxes that have been processed in the web service.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FFipsToPCode">FipsToPCode</a></td>
+    <td>Fips to PCode</td>
+    <td class='markdown-description'><p>This method returns the PCode for the specified FIPS value.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FGetAddress">GetAddress</a></td>
+    <td>Get Address</td>
+    <td class='markdown-description'><p>This method returns the addresses for the specified jurisdiction.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FGetEZTaxDbVersion">GetEZTaxDbVersion</a></td>
+    <td>Get EZTax DB Version</td>
+    <td class='markdown-description'><p>This method returns the version of the underlying AFC database used by the AFC engine.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FGetEZTaxVersion">GetEZTaxVersion</a></td>
+    <td>Get EZTax Version</td>
+    <td class='markdown-description'><p>This method returns the version of the AFC engine used in the background for performing tax calculations.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FGetOptionalFieldKeyDesc">GetOptionalFieldKeyDesc</a></td>
+    <td>Get Optional Field Key Descriptions</td>
+    <td class='markdown-description'><p>This API returns the description for each optional field key in the OptionalField array of the Transaction that has been updated using the UpdateOptionalFieldKeyDesc API. The description values specified will be used when generating reports that contain these optional fields.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FGetServerTime">GetServerTime</a></td>
+    <td>Get Server Time</td>
+    <td class='markdown-description'><p>Get the current server time.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FGetTaxCategory">GetTaxCategory</a></td>
+    <td>Get Tax Category</td>
+    <td class='markdown-description'><p>This method returns the tax category for the specified tax type.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FGetTaxDescription">GetTaxDescription</a></td>
+    <td>Get Tax Description</td>
+    <td class='markdown-description'><p>This method returns the description for the specified tax type.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FGetTaxRates">GetTaxRates</a></td>
+    <td>Get Tax Rates</td>
+    <td class='markdown-description'><p>Determines the tax rate information for a jurisdiction identified by the input PCode.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FGetVersion">GetVersion</a></td>
+    <td>Get Version</td>
+    <td class='markdown-description'><p>Returns the current version of the AvaTax for Communications service.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FNpaNxxToPCode">NpaNxxToPCode</a></td>
+    <td>NpaNxx to PCode</td>
+    <td class='markdown-description'><p>This method returns the PCode for the specified NpaNxx value.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FPCodeToFips">PCodeToFips</a></td>
+    <td>PCode to Fips</td>
+    <td class='markdown-description'><p>This method returns the FIPS code for the specified PCode value.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FProcessCustomerBatch">ProcessCustomerBatch</a></td>
+    <td>Process Customer Batch</td>
+    <td class='markdown-description'><p>Processes a customer batch and returns the tax calculation results.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FUpdateOptionalFieldKeyDesc">UpdateOptionalFieldKeyDesc</a></td>
+    <td>Update Optional Field KeyDescriptions</td>
+    <td class='markdown-description'><p>This API is used to update the description for each optional field key thereby indicating what each field in the OptionalField array of the Transaction is used for (e.g. invoice number, line item number, etc.). The values specified will be used when generating reports that contain these optional fields.</p>
+</td>
+</tr>
+<tr>
+    <td><a href="/developer-dot/api-reference%2Fcommunications%2Fafc%2Fmethods%2FZipToPCode">ZipToPCode</a></td>
+    <td>Zip to PCode</td>
+    <td class='markdown-description'><p>This method returns the PCode for the specified ZIP Address.</p>
+</td>
+</tr>
+    </tbody>
+</table>
+<br>
+</main>
+        </section>
+          
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/dynamic/swagger/communications/afc.yaml"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,follow" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getProcessList | Tax Configurations | Avalara Developer</title>
+
+    
+    <meta name="description" content="API solutions for end-to-end tax compliance">
+
+    
+    <meta property="og:title" content="getProcessList | Tax Configurations | Avalara Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://developer.avalara.com/" />
+    <meta property="og:site_name" content="Avalara Developer Network" />
+    <meta property="og:description" content="retrive list of Process."/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-dot/public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-dot/public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-dot/public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-dot/public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-dot/public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-dot/public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-dot/public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-dot/public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-dot/public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-dot/public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-dot/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-dot/public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-dot/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/developer-dot/public/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff ">
+    <meta name="msapplication-TileImage" content="/developer-dot/public/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
+
+    <link rel="stylesheet" href="/developer-dot/public/css/style.css"> 
+    <!-- Adobe Dynamic Tab Manager Tag Manager -->
+    <script src="https://assets.adobedtm.com/bc10a2a9cf337c664f8f74e778a1987125aea184/satelliteLib-0387aefee1ddb8b2a9db7e4165c8d84dc0de8621.js"></script>
+    <!-- End Adobe Dynamic Tab Manager Tag Manager -->
+</head>
+ 
+
+<body id="top" data-product=avaTaxBr>
+    <header>
+        <div class="pageTitle">
+            <a href="/developer-dot/">
+                <img src="/developer-dot/public/images/Avalara_logo.svg" alt="Avalara Developer Network">
+                <span>Developer</span>
+            </a>
+            <span class="slash">/&nbsp;</span><a href="/developer-dot/avataxbr">avaTaxBr</a>
+        </div>
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span>Menu</span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav apis ">
+                    <li class="apis visible-xs-block"><a href="/developer-dot/avalara-apis"><span class="text-uppercase">API</span>s</a></li>
+                    <li class="apis dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">API</span>s <i class="caret"></i></a>
+                        <div class="dropdown-menu dropdown-menu-large">
+                            <div class="row">
+                                <div class="col-md-12"><a href="/developer-dot/avalara-apis">APIs overview</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Tax calculation</h2>
+                                    
+                                    <h4>Avalara AvaTax</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avatax">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/avatax/use-cases">Use cases</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avatax/rest/v2">API reference</a></li>
+                                        
+                                        <br/>
+                                        <li><a href="/developer-dot/avatax/get-started">Set up your AvaTax sandbox</a></li>
+                                    </ul>
+                                     
+                                    <h4>Avalara Communications</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/communications">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/communications/afc-rest">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara Excise</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/excise">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/excise/5_18_0">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara LandedCost</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/landedcost">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/landedcost">API reference</a></li>
+                                        
+                                    </ul>
+                                     
+                                    <h4>Avalara AvaTax Brazil</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/avataxbr">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/avataxbr/transactions-api">API Reference</a></li>
+                                        
+                                        <li><a href="/developer-dot/avataxbr/clients">Clients</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <h2>Compliance document management</h2>
+                                    
+                                    <h4>Avalara CertCapture</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/certcapture">Overview</a></li>
+                                        
+                                        <li><a href="http://docs.certcapture6xrest.apiary.io/">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <h2>Returns &amp; filing</h2>
+                                     
+                                    <h4>Avalara TrustFile</h4>
+                                    <ul class="pipe">
+                                        
+                                        <li><a href="/developer-dot/trustfile">Overview</a></li>
+                                        
+                                        <li><a href="/developer-dot/api-reference/trustfile/api">API reference</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sdk dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">SDK</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li ><a href="/developer-dot/avatax/get-started">Get Started with AvaTax</a></li>
+                            <br/>
+                            <li><a href="/developer-dot/sdk/">The AvaTax SDK</a></li>
+                            <li><a href="/developer-dot/sdk/soap">SOAP SDK</a></li>
+                            <br/>
+                            <li><a target="_blank" href="https://www.nuget.org/packages/Avalara.AvaTax/">Install C# SDK via NuGet</a></li>
+                            <li><a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22net.avalara.avatax%22">Install JRE SDK via Maven</a></li>
+                            <li><a target="_blank" href="https://packagist.org/packages/avalara/avataxclient">Install PHP SDK via Composer</a></li>
+                            <li><a target="_blank" href="https://rubygems.org/gems/avatax">Install Ruby SDK via RubyGems</a></li>
+                            <li><a target="_blank" href="https://www.npmjs.com/package/avatax">Install JavaScript SDK via NPMJS</a></li>
+                        </ul>
+                    </li>
+                    <li class="tests"><a href="/developer-dot/tests/testing-your-integration/"><span class="text-uppercase">Tests</span></a></li>
+                    <!-- removing until the link to the Self-Test is fugured out -->
+                    <!--
+                    <li class="tests dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Tests</span> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large">
+
+                            <li><a href="/developer-dot/tests/self-test">Avalara Self-Test Tool</a></li>
+                            <li><a href="/developer-dot/tests/testing-your-integration/">Avalara Test Cases</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="certification dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggel" data-toggle="dropdown"><span class="text-uppercase">Become Certified</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/certification/">Overview</a></li>
+                            <li><a href="/developer-dot/certification/avatax/">Avalara AvaTax</a></li>
+                            <li><a href="/developer-dot/certification/communications-certification/">Avalara Communications</a></li>
+                            <li><a href="/developer-dot/certification/excise/">Avalara Excise</a></li>
+                            <li><a href="/developer-dot/certification/certcapture/">Avalara CertCapture</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources dropdown dropdown-large hidden-xs">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="text-uppercase">Resources</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-large">
+                            <li><a href="/developer-dot/blog">Developer Blog</a></li>
+                            <li><a href="/developer-dot/resources/preferred-developers">Preferred developers</a></li>
+                            <li><a href="https://community.avalara.com/avalara/category_sets/developers">Help Forum</a></li>
+                            <li><a href="http://www.info.avalara.com/avalaradevcentral">Developer Webinar Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/blog"><span class="text-uppercase">Developer Blog</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/resources/preferred-developers"><span class="text-uppercase">Preferred developers</span></a></li>
+                    <li class="resources visible-xs-block"><a href="https://community.avalara.com/avalara/category_sets/developers"><span class="text-uppercase">Help Forum</span></a></li>
+                    <li class="resources visible-xs-block"><a href="/developer-dot/search"><span class="text-uppercase">Search</span></a></li>
+                    <li class="hdr-search-icon hidden-xs">
+                        <i class="mouse glyphicon glyphicon-search mouse"></i>
+                    </li>
+                    <form class="hdr-search-form horizontal hidden-xs hidden">
+                        <div class="row">
+                            
+                            <div class="col-md-9"><label><input type="checkbox" id="filterSite"> Search entire site</label></div>
+                            <div class="col-md-3">
+                                <button type="button" class="close" aria-label="Close"><span>&times;</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-9">
+                                <input class="form-control" type="search" placeholder="Search Developer / Avataxbr" >
+                                <span class="form-control-feedback">!</span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+
+
+                <a href="https://developer.avalara.com/avatax/signup/" class="btn btn-primary btn-signup">Sign up</a>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid api_references">
+        
+          
+
+
+<div class="breadcrumbs">
+    <div class="col-md-12">
+        <ul class="pipe">
+            <li><span class="text-uppercase">Tax Calculation API</span>s</li>
+            <li class="text-uppercase"><a href="/developer-dot/avataxbr">Avalara avaTaxBr</a></li>
+            <li class="text-uppercase">api reference</li>
+        </ul>
+    </div>
+</div>
+  
+        <section class="row padding-sides">
+            <nav class="col-md-3 api-ref">
+                 <div id='the-nav' class='nav-wrapper hidden-xs hidden-sm api-ref-nav' style='height: 100%; overflow-y: auto;'>
+    <ul class='api-ref-side-nav nav nav-pills nav-stacked'>
+        
+        
+
+        
+        
+
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/avataxbr/auth">Auth</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/avataxbr/addresses-api">Addresses</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/avataxbr/tax-compliance-api">Compliance</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/avataxbr/invoices-api">E-Invoices</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/avataxbr/transactions-api">Transactions</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/avataxbr/calculations-api">Tax Calculations</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/avataxbr/taxconf-api">Tax Configurations</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                        
+                            <div style="padding-left:10px;">
+    <ul class='api-ref-side-nav-active nav nav-pills nav-stacked sub-nav'>
+        
+            
+            
+            
+
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/createCfop">createCfop</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/createIbptFromCSV">createIbptFromCSV</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/createIcmsconfstate">createIcmsconfstate</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/createIssConfByCity">createIssConfByCity</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/createIssConfByCityServiceId">createIssConfByCityServiceId</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/createProcess">createProcess</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/createReason">createReason</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/deleteCfop">deleteCfop</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/deleteIbptFromState">deleteIbptFromState</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/deleteIcmsConf">deleteIcmsConf</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/deleteIssConf">deleteIssConf</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/deleteIssConfServiceId">deleteIssConfServiceId</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/deleteProcess">deleteProcess</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/deleteReason">deleteReason</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/getCfop">getCfop</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/getCfopList">getCfopList</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/getIcmsConfByState">getIcmsConfByState</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/getIcmsList">getIcmsList</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/getIcmsListSearch">getIcmsListSearch</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/getIssConfByCity">getIssConfByCity</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/getIssConfByCityServiceId">getIssConfByCityServiceId</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/getIssList">getIssList</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/getProcess">getProcess</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/getProcessList">getProcessList</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/getReason">getReason</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/listReason">listReason</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/updateCfop">updateCfop</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/updateIcmsconfstate">updateIcmsconfstate</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/updateIssConfByCity">updateIssConfByCity</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/updateIssConfByCityServiceId">updateIssConfByCityServiceId</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/updateProcess">updateProcess</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+                <li><a style="overflow: hidden" href="/developer-dot/api-reference/avataxbr/taxconf-api/methods/updateReason">updateReason</a></li>
+                
+            
+        
+            
+            
+            
+
+            
+            <li><a style="color:#ff6600; overflow: hidden;" href="/developer-dot/api-reference/avataxbr/taxconf-api/models">Models</a></li>
+            
+        
+    </ul>
+</div>
+
+                        
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/avataxbr/tax-docs-monitor-api">Documents</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/avataxbr/companies-api">Companies</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+            
+            
+
+            
+            
+            
+                <li>
+                    <a href="/developer-dot/api-reference/avataxbr/agast-api">Agasts</a>
+                    <!-- not quite sure how to do boolean algebra in liquid syntax -->
+                    
+                </li>
+            
+        
+
+        
+    </ul>
+</div>
+ 
+            </nav>
+            <main class="col-md-9 small-no-padding"><div id="api-console"></div>
+<script>
+    window.modelsPath = 'api-reference/avataxbr/taxconf-api/models';
+    window.__INITIAL_STATE__ = {"tagMap":null,"apiName":"AvaTax Brazil","apiDescription":"The Avatax-Brazil API exposes the most commonly services available for interacting with the AvaTax-Brazil services, allowing calculation of taxes, issuing electronic invoice documents and modifying existing transactions when allowed by tax authorities.  This API is exclusively for use by business with a physical presence in Brazil.","apiType":"SOAP","sampleAuthHeader":null,"sampleContentType":null,"auth":null,"apiEndpoints":[{"operationId":"getProcessList","name":"retrive list of Process.","description":"This operation return Process Type configurations that match with parameters queries\n","path":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/process","action":"get","sampleAuthHeader":null,"showExcludedPostBodyFields":false,"apiConsoleLoading":false,"queryString":{"accountId":{"description":"filter the configuration by accountID, if not informed, only the standard configuration will be returned\n","value":"","example":"","fieldType":"string"},"date":{"description":"When informed return valid version configuration for this date\n","value":"","example":"","fieldType":"string"},"inactive":{"description":"return the inactive versions too\n","value":"","example":"","fieldType":"boolean"}},"qsPath":"","curl":"curl\n    -X GET\n    -H 'Accept: application/json'\n    http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/process","responseSchema":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"code":{"fieldType":"string","required":true,"isExcluded":false,"description":"main unique identificator"},"class":{"fieldType":"string","required":false,"isExcluded":false,"description":"Natureza da Opreração - 'Describe kind of this transaction, summary"},"stockImpact":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Inform that the process has inventory impact."},"financialImpact":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Inform that the process has financial impact."},"cstIPI":{"fieldType":"string","required":false,"isExcluded":false,"description":"Inform if this process is subject to IPI taxation on output process\n- 'T'  # TAXABLE\n- 'Z'  # TAXABLE WITH RATE=0.00\n- 'E'  # EXEMPT\n- 'H'  # SUSPENDED\n- 'N'  # NO TAXABLE    \n- 'I'  # IMMUNE\n- 'O'  # OTHER\n- 'OZ' # OTHER AND ZERO VALUES\n- 'R'  # RETURN OF IPI\n","enum":["T","Z","E","H","N","I","O","OZ","R"]},"ipiLegalTaxClass":{"fieldType":"string","required":false,"isExcluded":false,"description":"Legal tax classificação for IPI (enquadramento)\nWhen the processo has CST IPI 52 or 54, is mandatory inform Reason Code, see Anexo XIV - Código de Enquadramento Legal do IPI from  http://www.nfe.fazenda.gov.br/portal/exibirArquivo.aspx?conteudo=mCnJajU4BKU=\n"},"lookupIPIFromReferredTransaction":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Busca IPI para adicionar na base de calculo de ICMS do item de uma nota referenciada, Exemplo, processo de venda para entrega futura e simples remessa de uma venda de entrega futura.\nLookup IPI tax to add to ICMS Tax base from same item of Referred Transaction\n"},"accruablePISTaxation":{"fieldType":"string","required":false,"isExcluded":false,"description":"Inform if this item by nature is subject to PIS taxation or exempt\n- 'T'  # TAXABLE\n- 'Z'  # TAXABLE WITH RATE=0.00\n- 'E'  # EXEMPT\n- 'H'  # SUSPENDED\n- 'N'  # NO TAXABLE\n- 'O'  # OTHER\n- 'OZ' # OTHER AND ZERO VALUES\n","enum":["T","Z","E","H","N","O","OZ"]},"pisExemptLegalReasonCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Reference to a tax reason record ID."},"pisExemptLegalReason":{"fieldType":"string","required":false,"isExcluded":false,"description":"When specifi reason, this field has the description"},"accruableCOFINSTaxation":{"fieldType":"string","required":false,"isExcluded":false,"description":"Inform if this item by nature is subject to COFINS taxation or exempt\n- 'T'  # TAXABLE\n- 'Z'  # TAXABLE WITH RATE=0.00\n- 'E'  # EXEMPT\n- 'H'  # SUSPENDED\n- 'N'  # NO TAXABLE    \n- 'O'  # OTHER\n- 'OZ' # OTHER AND ZERO VALUES\n","enum":["T","Z","E","H","N","O","OZ"]},"cofinsExemptLegalReasonCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"When exempt, taxable with zero, suspended, not taxable, this field holds the official code number"},"cofinsExemptLegalReason":{"fieldType":"string","required":false,"isExcluded":false,"description":"When specifi reason, this field has the description"},"allowIPIcreditWhenInGoing":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Inform that the process allow IPI credit to Input process"},"icmsConf":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"state":{"fieldType":"string","required":true,"isExcluded":false,"description":"State Abreviation:\n- 'AC'\n- 'AL'\n- 'AP'\n- 'AM'\n- 'BA'\n- 'CE'\n- 'DF'\n- 'ES'\n- 'GO'\n- 'MA'\n- 'MT'\n- 'MS'\n- 'MG'\n- 'PA'\n- 'PB'\n- 'PR'\n- 'PE'\n- 'PI'\n- 'RJ'\n- 'RN'\n- 'RS'\n- 'RO'\n- 'RR'\n- 'SC'\n- 'SP'\n- 'SE'\n- 'TO'\n","enum":["AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RS","RO","RR","SC","SP","SE","TO"]},"icmsCSOSN":{"fieldType":"string","required":false,"isExcluded":false,"description":"when the company is tax regime Simples uses CSOSN and for the same type of transaction, CST and CSOSN cant match","enum":["T","E","N","O","OZ"]},"icmsCST":{"fieldType":"string","required":false,"isExcluded":false,"description":"On sales process inform the CST hat the item linked to this configuration is subject to\n- 'T' # TAXABLE 00-Tributada\n- 'E' # EXEMPT 40-Isenta\n- 'H' # SUSPENDED 50-Suspensão\n- 'D' # DEFERMENT 51-Diferimento\n- 'N' # NO TAXABLE 41-Nao tributada\n- 'O' # OTHER 90-Outras\n- 'OZ' # OTHER AND ZERO VALUES 90-Outras\n","enum":["T","E","H","D","N","O","OZ"]},"deferralrate":{"fieldType":"number","required":false,"isExcluded":false,"description":"Percentual deferral rate, applied over ICMS tax when CST is D DEFEREMENT","format":"double"},"messageCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Message to add to NF when this configuration is used"},"sameforAllDestination":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"when this attribute is true, the relationShip dont need be analysed"},"relationShip":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"state":{"fieldType":"string","required":true,"isExcluded":false,"description":"State Abreviation:\n- 'AC'\n- 'AL'\n- 'AP'\n- 'AM'\n- 'BA'\n- 'CE'\n- 'DF'\n- 'ES'\n- 'GO'\n- 'MA'\n- 'MT'\n- 'MS'\n- 'MG'\n- 'PA'\n- 'PB'\n- 'PR'\n- 'PE'\n- 'PI'\n- 'RJ'\n- 'RN'\n- 'RS'\n- 'RO'\n- 'RR'\n- 'SC'\n- 'SP'\n- 'SE'\n- 'TO'\n","enum":["AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RS","RO","RR","SC","SP","SE","TO"]},"icmsCSOSN":{"fieldType":"string","required":false,"isExcluded":false,"description":"when the company is tax regime Simples uses CSOSN and for the same type of transaction, CST and CSOSN cant match","enum":["T","E","N","O","OZ"]},"icmsCST":{"fieldType":"string","required":false,"isExcluded":false,"description":"On sales process inform the CST hat the item linked to this configuration is subject to\n- 'T' # TAXABLE 00-Tributada\n- 'E' # EXEMPT 40-Isenta\n- 'H' # SUSPENDED 50-Suspensão\n- 'D' # DEFERMENT 51-Diferimento\n- 'N' # NO TAXABLE 41-Nao tributada\n- 'O' # OTHER 90-Outras\n- 'OZ' # OTHER AND ZERO VALUES 90-Outras\n","enum":["T","E","H","D","N","O","OZ"]},"deferralrate":{"fieldType":"number","required":false,"isExcluded":false,"description":"Percentual deferral rate, applied over ICMS tax when CST is D DEFEREMENT","format":"double"},"messageCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Message to add to NF when this configuration is used"}}}}},"name":{"fieldType":"string","required":true,"isExcluded":false,"description":"Process name to Identify this configuration"},"description":{"fieldType":"string","required":false,"isExcluded":false,"description":"description detail about process"},"type":{"fieldType":"string","required":false,"isExcluded":false,"enum":["SALES","PURCHASE","SALES_RETURN","PURCHASE_RETURN","TRANSFER_RETURN","SHIPPING","SHIPPING_RETURN","TRANSFER","RECEIPT_AJUSTE","TRANSFER_AJUSTE"]},"wayType":{"fieldType":"string","required":false,"isExcluded":false,"description":"inform if the transaction is an operation to internalizing (receive) item or value","enum":["in","out"]},"goal":{"fieldType":"string","required":false,"isExcluded":false,"description":"- 'Normal' # Normal\n- 'Complementary' # Complemento de Valores\n- 'Voided' # Anulação\n- 'Replacement' # Substituto\n- 'Return' # Devolução ou retorno\n- 'Adjustment' # Ajuste\n","enum":["Normal","Complementary","Voided","Replacement","Return","Adjustment"]},"overWriteCFOP":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"inform that the configuration process overwrites the cfop configuration."},"cfops":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"code":{"fieldType":"string","required":true,"isExcluded":false,"description":"main unique identificator"},"class":{"fieldType":"string","required":false,"isExcluded":false,"description":"Natureza da Opreração - 'Describe kind of this transaction, summary"},"stockImpact":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Inform that the process has inventory impact."},"financialImpact":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Inform that the process has financial impact."},"cstIPI":{"fieldType":"string","required":false,"isExcluded":false,"description":"Inform if this process is subject to IPI taxation on output process\n- 'T'  # TAXABLE\n- 'Z'  # TAXABLE WITH RATE=0.00\n- 'E'  # EXEMPT\n- 'H'  # SUSPENDED\n- 'N'  # NO TAXABLE    \n- 'I'  # IMMUNE\n- 'O'  # OTHER\n- 'OZ' # OTHER AND ZERO VALUES\n- 'R'  # RETURN OF IPI\n","enum":["T","Z","E","H","N","I","O","OZ","R"]},"ipiLegalTaxClass":{"fieldType":"string","required":false,"isExcluded":false,"description":"Legal tax classificação for IPI (enquadramento)\nWhen the processo has CST IPI 52 or 54, is mandatory inform Reason Code, see Anexo XIV - Código de Enquadramento Legal do IPI from  http://www.nfe.fazenda.gov.br/portal/exibirArquivo.aspx?conteudo=mCnJajU4BKU=\n"},"lookupIPIFromReferredTransaction":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Busca IPI para adicionar na base de calculo de ICMS do item de uma nota referenciada, Exemplo, processo de venda para entrega futura e simples remessa de uma venda de entrega futura.\nLookup IPI tax to add to ICMS Tax base from same item of Referred Transaction\n"},"accruablePISTaxation":{"fieldType":"string","required":false,"isExcluded":false,"description":"Inform if this item by nature is subject to PIS taxation or exempt\n- 'T'  # TAXABLE\n- 'Z'  # TAXABLE WITH RATE=0.00\n- 'E'  # EXEMPT\n- 'H'  # SUSPENDED\n- 'N'  # NO TAXABLE\n- 'O'  # OTHER\n- 'OZ' # OTHER AND ZERO VALUES\n","enum":["T","Z","E","H","N","O","OZ"]},"pisExemptLegalReasonCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Reference to a tax reason record ID."},"pisExemptLegalReason":{"fieldType":"string","required":false,"isExcluded":false,"description":"When specifi reason, this field has the description"},"accruableCOFINSTaxation":{"fieldType":"string","required":false,"isExcluded":false,"description":"Inform if this item by nature is subject to COFINS taxation or exempt\n- 'T'  # TAXABLE\n- 'Z'  # TAXABLE WITH RATE=0.00\n- 'E'  # EXEMPT\n- 'H'  # SUSPENDED\n- 'N'  # NO TAXABLE    \n- 'O'  # OTHER\n- 'OZ' # OTHER AND ZERO VALUES\n","enum":["T","Z","E","H","N","O","OZ"]},"cofinsExemptLegalReasonCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"When exempt, taxable with zero, suspended, not taxable, this field holds the official code number"},"cofinsExemptLegalReason":{"fieldType":"string","required":false,"isExcluded":false,"description":"When specifi reason, this field has the description"},"allowIPIcreditWhenInGoing":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"Inform that the process allow IPI credit to Input process"},"icmsConf":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"state":{"fieldType":"string","required":true,"isExcluded":false,"description":"State Abreviation:\n- 'AC'\n- 'AL'\n- 'AP'\n- 'AM'\n- 'BA'\n- 'CE'\n- 'DF'\n- 'ES'\n- 'GO'\n- 'MA'\n- 'MT'\n- 'MS'\n- 'MG'\n- 'PA'\n- 'PB'\n- 'PR'\n- 'PE'\n- 'PI'\n- 'RJ'\n- 'RN'\n- 'RS'\n- 'RO'\n- 'RR'\n- 'SC'\n- 'SP'\n- 'SE'\n- 'TO'\n","enum":["AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RS","RO","RR","SC","SP","SE","TO"]},"icmsCSOSN":{"fieldType":"string","required":false,"isExcluded":false,"description":"when the company is tax regime Simples uses CSOSN and for the same type of transaction, CST and CSOSN cant match","enum":["T","E","N","O","OZ"]},"icmsCST":{"fieldType":"string","required":false,"isExcluded":false,"description":"On sales process inform the CST hat the item linked to this configuration is subject to\n- 'T' # TAXABLE 00-Tributada\n- 'E' # EXEMPT 40-Isenta\n- 'H' # SUSPENDED 50-Suspensão\n- 'D' # DEFERMENT 51-Diferimento\n- 'N' # NO TAXABLE 41-Nao tributada\n- 'O' # OTHER 90-Outras\n- 'OZ' # OTHER AND ZERO VALUES 90-Outras\n","enum":["T","E","H","D","N","O","OZ"]},"deferralrate":{"fieldType":"number","required":false,"isExcluded":false,"description":"Percentual deferral rate, applied over ICMS tax when CST is D DEFEREMENT","format":"double"},"messageCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Message to add to NF when this configuration is used"},"sameforAllDestination":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"when this attribute is true, the relationShip dont need be analysed"},"relationShip":{"fieldType":"array","required":false,"isExcluded":false,"items":{"required":false,"isExcluded":false,"state":{"fieldType":"string","required":true,"isExcluded":false,"description":"State Abreviation:\n- 'AC'\n- 'AL'\n- 'AP'\n- 'AM'\n- 'BA'\n- 'CE'\n- 'DF'\n- 'ES'\n- 'GO'\n- 'MA'\n- 'MT'\n- 'MS'\n- 'MG'\n- 'PA'\n- 'PB'\n- 'PR'\n- 'PE'\n- 'PI'\n- 'RJ'\n- 'RN'\n- 'RS'\n- 'RO'\n- 'RR'\n- 'SC'\n- 'SP'\n- 'SE'\n- 'TO'\n","enum":["AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RS","RO","RR","SC","SP","SE","TO"]},"icmsCSOSN":{"fieldType":"string","required":false,"isExcluded":false,"description":"when the company is tax regime Simples uses CSOSN and for the same type of transaction, CST and CSOSN cant match","enum":["T","E","N","O","OZ"]},"icmsCST":{"fieldType":"string","required":false,"isExcluded":false,"description":"On sales process inform the CST hat the item linked to this configuration is subject to\n- 'T' # TAXABLE 00-Tributada\n- 'E' # EXEMPT 40-Isenta\n- 'H' # SUSPENDED 50-Suspensão\n- 'D' # DEFERMENT 51-Diferimento\n- 'N' # NO TAXABLE 41-Nao tributada\n- 'O' # OTHER 90-Outras\n- 'OZ' # OTHER AND ZERO VALUES 90-Outras\n","enum":["T","E","H","D","N","O","OZ"]},"deferralrate":{"fieldType":"number","required":false,"isExcluded":false,"description":"Percentual deferral rate, applied over ICMS tax when CST is D DEFEREMENT","format":"double"},"messageCode":{"fieldType":"string","required":false,"isExcluded":false,"description":"Message to add to NF when this configuration is used"}}}}},"name":{"fieldType":"string","required":true,"isExcluded":false},"description":{"fieldType":"string","required":false,"isExcluded":false},"wayType":{"fieldType":"string","required":false,"isExcluded":false,"description":"inform if the transaction is an operation to internalizing item or value","enum":["in","out"]},"codInState":{"fieldType":"integer","required":false,"isExcluded":false,"description":"CFOP code (tax code operation) when the transactions are within the same state."},"codOtherState":{"fieldType":"integer","required":false,"isExcluded":false,"description":"CFOP code (tax code operation) when the transactions are to another state."},"codOtherCountry":{"fieldType":"integer","required":false,"isExcluded":false,"description":"CFOP code (tax code operation) when the transactions are to another country."},"productType":{"fieldType":"string","required":false,"isExcluded":false,"description":"this field is used to define right CFOP, one operation type can be specialized to item product, item merchandise or generic","enum":["FOR PRODUCT","FOR MERCHANDISE","NO RESTRICTION"]},"operationToTaxPayerOtherState":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"field used to indicate an operation to ICMS tax payer"},"operationWithST":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"field used to indicate an operation to items sibject to ICMS-ST"},"operationToFreeZone":{"fieldType":"boolean","required":false,"isExcluded":false,"description":"field used to indicate an operation to free zone"},"specificForProductClass":{"fieldType":"string","required":false,"isExcluded":false,"description":"field used to indicate an operation to some product class specifically","enum":["OTHERS","COMMUNICATION","ENERGY","TRANSPORT","FUEL AND LUBRICANT","VEHICLE","ALCOHOLIC BEVERAGES","WEAPONS","AMMO","PERFUME","TOBACCO"]}}}}},"responseSchemaWithRefs":{"description":"Success response","headers":{"X-Pagination-Current-Page":{"description":"The current page. Defaults to 1.","type":"number"},"X-Pagination-Limit":{"description":"The per page limit. Currently set to 10 but subject to change at any time (max 100).","type":"number"},"X-Pagination-Total-Pages":{"description":"The total number of pages in the result set. Use this along with X-Pagination-Current-Page to determine if there are any remaining pages/records to be retrieved.","type":"number"},"X-Pagination-Total-Count":{"description":"The total number of records across all pages.","type":"number"}},"schema":{"title":"Array of Configurations","type":"array","items":{"$ref":"#/definitions/ProcessScenario"}}},"produces":["application/json"],"id":20}],"postmanCollection":{"info":{"name":"AvaTax Brazil","_postman_id":"1234","description":"The Avatax-Brazil API exposes the most commonly services available for interacting with the AvaTax-Brazil services, allowing calculation of taxes, issuing electronic invoice documents and modifying existing transactions when allowed by tax authorities.  This API is exclusively for use by business with a physical presence in Brazil.","schema":"https://schema.getpostman.com/json/collection/v2.0.0/collection.json"},"item":[{"name":"retrive list of ISS","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/iss","method":"get","header":[],"description":"This operation return ISS configurations that match with parameters queries.\n","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"create a new ISS Configuration","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/iss","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{}"}},"response":[]},{"name":"get ISS information by City Code.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/iss/{cityCode}","method":"get","header":[],"description":"This operation return configurations of ISS that match with parameters queries\n","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"create a ISS Service Code in City.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/iss/{cityCode}","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"serviceAgasts\":[null],\"taxRate\":{\"ISS\":{\"period\":{}},\"ISS_RF\":{\"period\":{}},\"ISS_CPOM\":{\"period\":{}}}}"}},"response":[]},{"name":"update a ISS by City Code.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/iss/{cityCode}","method":"put","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{}"}},"response":[]},{"name":"disable a ISS by City Code.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/iss/{cityCode}","method":"delete","header":[],"body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"get ISS information by Service Code in City.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/iss/{cityCode}/{serviceCode}","method":"get","header":[],"description":"This operation return configurations of ISS that match with parameters queries\n","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"update a ISS by Service Code in City.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/iss/{cityCode}/{serviceCode}","method":"put","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"serviceAgasts\":[null],\"taxRate\":{\"ISS\":{\"period\":{}},\"ISS_RF\":{\"period\":{}},\"ISS_CPOM\":{\"period\":{}}}}"}},"response":[]},{"name":"disable a ISS by Service Code in City.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/iss/{cityCode}/{serviceCode}","method":"delete","header":[],"body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"retrive list of ICMS.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/icms/{state}","method":"get","header":[],"description":"This operation return ICMS configurations that match with parameters queries\n","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"create a new ICMS Configuration","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/icms/{state}","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"icmsSTConf\":{},\"icmsInterStateConf\":[{\"icmsSTConf\":{}}]}"}},"response":[]},{"name":"get ICMS information by State.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/icms/{state}/{code}","method":"get","header":[],"description":"This operation return configurations of icms that match with parameters queries\n","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"update a IcmsConf State,","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/icms/{state}/{code}","method":"put","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"icmsSTConf\":{},\"icmsInterStateConf\":[{\"icmsSTConf\":{}}]}"}},"response":[]},{"name":"disable a ICMS by State.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/icms/{state}/{code}","method":"delete","header":[],"body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"retrieve list of ICMS.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/icms-search/","method":"get","header":[],"description":"This operation return ICMS configurations that match with parameters queries\n","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"retrive list of CFOP.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/cfop","method":"get","header":[],"description":"This operation return CFOP configurations that match with parameters queries\n","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"create a new CFOP configuration","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/cfop","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"icmsConf\":[{\"relationShip\":[{}]}]}"}},"response":[]},{"name":"get CFOP information.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/cfop/{code}","method":"get","header":[],"description":"This operation return CFOP configuration\n","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"update a CFOP configuration","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/cfop/{code}","method":"put","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"icmsConf\":[{\"relationShip\":[{}]}]}"}},"response":[]},{"name":"disable a CFOP.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/cfop/{code}","method":"delete","header":[],"body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"retrive list of Process.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/process","method":"get","header":[],"description":"This operation return Process Type configurations that match with parameters queries\n","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"create a new Process Type configuration","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/process","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"icmsConf\":[{\"relationShip\":[{}]}],\"cfops\":[{\"icmsConf\":[{\"relationShip\":[{}]}]}]}"}},"response":[]},{"name":"get Process information.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/process/{code}","method":"get","header":[],"description":"This operation return Process Type configuration\n","body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"update a Process Type configuration","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/process/{code}","method":"put","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"icmsConf\":[{\"relationShip\":[{}]}],\"cfops\":[{\"icmsConf\":[{\"relationShip\":[{}]}]}]}"}},"response":[]},{"name":"disable a Process.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/process/{code}","method":"delete","header":[],"body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"create a new Process Type configuration","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/ibpt/{state}","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"[[null]]"}},"response":[]},{"name":"disable a IBPT.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/ibpt/{state}","method":"delete","header":[],"body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"List Legal Reasons.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/legal-reason","method":"get","header":[],"body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"Update Legal Reason.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/legal-reason","method":"put","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"referencedProcesses\":[{}],\"taxConstraint\":{}}"}},"response":[]},{"name":"Create Legal Reason.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/legal-reason","method":"post","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"referencedProcesses\":[{}],\"taxConstraint\":{}}"}},"response":[]},{"name":"Get single Legal Reason.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/legal-reason/{uuid}","method":"get","header":[],"body":{"mode":"formdata","formdata":[]}},"response":[]},{"name":"Delete a Legal Reason entry.","request":{"url":"http://avataxbr-sandbox.avalarabrasil.com.br/v2/taxconf/legal-reason/{uuid}","method":"delete","header":[],"body":{"mode":"formdata","formdata":[]}},"response":[]}]},"tagName":null};
+</script>
+<script src="/developer-dot/public/js/api-bundle.js"></script>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'developeravalaracom'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</main>
+        </section>
+          
+    </div>
+    <footer>
+        <ul class="global">
+            <li><a href="https://www.avalara.com/"><span class="icon-sphere"></span>Avalara.com</a></li>
+            <li><a href="https://help.avalara.com/"><span class="icon-help"></span>Help Center</a></li>
+        </ul>
+
+
+        <ul class="social">
+            <li class="twitter"><a href="https://twitter.com/Avalara">Twitter</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/avalara">Facebook</a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/company/avalara">LinkedIn</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/user/Avalara1">Youtube</a></li>
+        </ul>
+        
+        
+
+
+        <ul class="legal">
+            <li>&copy; 2016 Avalara, Inc. All rights reserved</li>
+            <li><a href="https://www.avalara.com/site-terms/">Terms of use</a></li>
+            <li><a href="https://www.avalara.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+
+        <ul class="github">
+            <li class="social github-icon"><a href="https://github.com/Avalara/developer-dot/edit/master/dynamic/swagger/avataxbr/taxconf-api.json"><span>GH</span> Edit this page on GitHub</a></li>
+
+        </ul>
+    </footer>
+
+    <script src="/developer-dot/public/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/developer-dot/public/js/vendor/bootstrap.min.js"></script>
+    <script src="/developer-dot/public/js/site.js"></script>
+
+    
+    <script src="/developer-dot/public/js/vendor/aws-sdk-2.5.3.min.js"></script>
+    <script>
+        AWS.config.region = 'us-west-2';
+    </script>
+
+     
+
+    <!-- Adobe Dynamic Tag Manager -->
+    <script type="text/javascript">
+        _satellite.pageBottom();
+    </script>
+    <!-- End Adobe Dynamic Tag Manager -->
+</body>
+
+</html>
