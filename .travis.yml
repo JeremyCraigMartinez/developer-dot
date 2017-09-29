@@ -32,8 +32,9 @@ install:
   - npm i --progress=false --silent
 before_script:
   - uname -a
-  - export JAVA_OPTS="-Xmx1450m"
+  - export JAVA_OPTS="-Xmx1G"
   - echo $JAVA_OPTS
+  - alias java="java -Xmx1G"
 script:
   - npm run lint
   - npm run test
