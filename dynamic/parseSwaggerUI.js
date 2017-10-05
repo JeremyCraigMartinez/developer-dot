@@ -2,7 +2,7 @@ import {buildPostmanCollection, buildAuth} from './react/api-app/helpers';
 import {buildQueryString, reduceParamsToKeyValuePair, buildCurl, buildInitialPostBodyData} from './react/shared/helpers';
 
 // Given array of parameters, filters out non-query string params and converts them to consummable shape
-const buildSchema = (schema, required = [], excludedProperties = [], propName = null, parentSchema = null) => {
+const buildSchema = (schema, required = [], excludedProperties = [], propName = null, parentSchema = []) => {
     if (schema.hasOwnProperty('x-visibility') && schema['x-visibility'] === 'hidden') {
         return undefined;
     }
@@ -17,21 +17,21 @@ const buildSchema = (schema, required = [], excludedProperties = [], propName = 
         }, {});
     }
 
-    if ((schema.type && schema.type === 'object' || schema.type === undefined) &&
-        (schema !== parentSchema)) {
-        const nestedSchemaProps = Object.keys(schema.properties).map((nestedPropName) => ({
-            [nestedPropName]: buildSchema(schema.properties[nestedPropName], schema.required, schema['x-excludedProperties'], nestedPropName, schema)
-        }));
+    if (!parentSchema.includes(schema)) {
+        if ((schema.type && schema.type === 'array')) {
+            const arraySchema = buildSchema(schema.items, schema.items.required, schema.items['x-excludedProperties'], null, [...parentSchema, schema]);
 
-        return Object.assign({required: required.includes(propName), isExcluded: excludedProperties.includes(propName)}, ...nestedSchemaProps);
-    }
+            // items holds the schema definition of objects in our array, and value holds the actual objects of said schema...
+            return {fieldType: schema.type, required: required.includes(propName), isExcluded: excludedProperties.includes(propName), items: arraySchema};
+        }
 
-    if ((schema.type && schema.type === 'array') &&
-        (schema.items !== parentSchema)) {
-        const arraySchema = buildSchema(schema.items, schema.items.required, schema.items['x-excludedProperties']);
+        if ((schema.type && schema.type === 'object' || schema.type === undefined)) {
+            const nestedSchemaProps = Object.keys(schema.properties).map((nestedPropName) => {
+                return {[nestedPropName]: buildSchema(schema.properties[nestedPropName], schema.required, schema['x-excludedProperties'], nestedPropName, [...parentSchema, schema])};
+            });
 
-        // items holds the schema definition of objects in our array, and value holds the actual objects of said schema...
-        return {fieldType: schema.type, required: required.includes(propName), isExcluded: excludedProperties.includes(propName), items: arraySchema};
+            return Object.assign({required: required.includes(propName), isExcluded: excludedProperties.includes(propName)}, ...nestedSchemaProps);
+        }
     }
 
     const objToReturn = {fieldType: schema.type, required: required.includes(propName), isExcluded: excludedProperties.includes(propName)};

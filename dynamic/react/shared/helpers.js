@@ -93,7 +93,7 @@ const fillOrRemoveRequestParamSampleData = (params, remove) => {
     }, {});
 };
 // Generates fills sample data in postBody given Post Body's schema
-const fillPostBodySampleData = (body, showExcludedPostBodyFields) => {
+const fillPostBodySampleData = (body, showExcludedPostBodyFields, parentItems = []) => {
     if (body === undefined || (body.isExcluded && !showExcludedPostBodyFields)) {
         return undefined;
     }
@@ -101,14 +101,16 @@ const fillPostBodySampleData = (body, showExcludedPostBodyFields) => {
         return body.example || undefined;
     }
 
-    if (body.fieldType === 'array') {
-        return [fillPostBodySampleData(body.items, showExcludedPostBodyFields)];
-    }
-    const objBody = Object.keys(body).filter((n) => n !== 'required' && n !== 'isExcluded').reduce((accum, propName) => {
-        return {...accum, [propName]: fillPostBodySampleData(body[propName], showExcludedPostBodyFields)};
-    }, {});
+    if (!parentItems.includes(body)) {
+        if (body.fieldType === 'array') {
+            return [fillPostBodySampleData(body.items, showExcludedPostBodyFields, [...parentItems, body.items])];
+        }
+        const objBody = Object.keys(body).filter((n) => n !== 'required' && n !== 'isExcluded').reduce((accum, propName) => {
+            return {...accum, [propName]: fillPostBodySampleData(body[propName], showExcludedPostBodyFields, [...parentItems, body[propName]])};
+        }, {});
 
-    return objBody;
+        return objBody;
+    }
 };
 
 // This is mainly used to dynamically build a cURL req based on user's API console input!
@@ -141,7 +143,7 @@ const buildCurl = (sampleAuthHeader, endpoint, staticValues = false) => {
 };
 
 // Generates initial postBody given Post Body's schema
-const buildInitialPostBodyData = (body, showExcludedPostBodyFields) => {
+const buildInitialPostBodyData = (body, showExcludedPostBodyFields, parentItems = []) => {
     if (body === undefined || (body.isExcluded && !showExcludedPostBodyFields)) {
         return undefined;
     }
@@ -149,14 +151,16 @@ const buildInitialPostBodyData = (body, showExcludedPostBodyFields) => {
         return undefined;
     }
 
-    if (body.fieldType && body.fieldType === 'array') {
-        return [buildInitialPostBodyData(body.items, showExcludedPostBodyFields)];
-    }
-    const objBody = Object.keys(body).filter((n) => n !== 'required' && n !== 'isExcluded').reduce((accum, propName) => {
-        return {...accum, [propName]: buildInitialPostBodyData(body[propName], showExcludedPostBodyFields)};
-    }, {});
+    if (!parentItems.includes(body)) {
+        if (body.fieldType && body.fieldType === 'array') {
+            return [buildInitialPostBodyData(body.items, showExcludedPostBodyFields, [...parentItems, body.items])];
+        }
+        const objBody = Object.keys(body).filter((n) => n !== 'required' && n !== 'isExcluded').reduce((accum, propName) => {
+            return {...accum, [propName]: buildInitialPostBodyData(body[propName], showExcludedPostBodyFields, [...parentItems, body[propName]])};
+        }, {});
 
-    return objBody;
+        return objBody;
+    }
 };
 const fillOrRemoveSampleData = (endpointState, remove = false) => {
     if (endpointState.queryString) {
